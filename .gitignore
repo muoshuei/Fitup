@@ -1,0 +1,30 @@
+# created by virtualenv automatically
+image.jpg
+pull up.py
+pushupcode.py
+pose.py
+Scripts
+Lib
+share
+# dependencies
+frontend/node_modules
+frontend/.pnp
+frontend.pnp.js
+
+# testing
+frontend/coverage
+# production
+frontend/build
+
+# misc
+frontend/.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+__pycache__
