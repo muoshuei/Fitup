@@ -1,0 +1,70 @@
+.top {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c4a60;
+}
+.bottom {
+  height: 20px;
+}
+.select {
+  display: flex;
+  justify-content: center;
+  background-color: #0f0c05;
+  padding: 40px;
+}
+select1 select, text, option {
+  font-size: 28px;    
+  font-weight: bold;
+}
+
+select1 select {
+  margin-right: 50px;
+}
+.chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #f1eef1;    
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1eef1;
+  padding: 20px;
+}
+button1 button {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  background-color: #0c4a60;
+  margin-left: 35px;
+  margin-right: 35px;
+  height: 60px;
+}
+.barweektime {
+  width: 60px;
+}
+.barmonthtime {
+  width: 25px;
+}
+.baryeartime {
+  width: 60px;
+}
+
+.barsets {
+  height: 50px;
+}
+
+.chart-text, .chart-text1 {
+  color: white;
+}
+
+.webs polygon {
+  color: white;
+  fill:white;
+  stroke: black;
+}

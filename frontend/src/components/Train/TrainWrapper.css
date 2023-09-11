@@ -1,0 +1,76 @@
+canvas{
+    margin: 5px;
+}
+.topbar {
+    padding: 10px 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    font-size:large;
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.train_container {
+    padding-top: 36px;
+    padding-bottom: 40px;
+}
+.bottombar{
+    padding: 10px 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
+    font-size:large;
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.train_overlay{
+    position: fixed; /* Sit on top of the page content */
+    display: flex; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.train-spinning-timer{
+    width: 100px;
+    height: 100px;
+    border: 10px solid #FFFFFF;
+    border-bottom-color: #00FF00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite; 
+    z-index: 3;
+    position: absolute;
+}
+.train-timer-text{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 36px;
+    z-index: 4;
+}

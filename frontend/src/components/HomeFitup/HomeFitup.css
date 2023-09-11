@@ -1,0 +1,29 @@
+.animation, .animation_layer {
+	height: 1000px;
+}
+
+.animation {
+  display: block;
+	position: relative;
+	z-index: 10;
+}
+
+.animation_layer {
+	background-position: bottom center;
+	background-size: auto 1038px;
+	background-repeat: repeat-x;
+	width: 100%;
+	position: absolute;
+}
+.animation_layer.parallax {
+	position: fixed;
+}
+
+#background {
+  background-image: url(./images/sky.png);
+}
+
+
+#mountain {
+  background-image: url(.images/mountain.png);
+}

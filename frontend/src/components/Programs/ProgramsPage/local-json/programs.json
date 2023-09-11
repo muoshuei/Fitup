@@ -1,0 +1,636 @@
+{
+    "abs":{
+        "name":"腹部",
+        "sets":{
+            "weak":{
+                "restIntervalInSec":90,
+                "warmup":{
+                    
+                },
+                "exerciseList":[
+                    {
+                        "name": "仰臥起坐",
+                        "description": "8下6組"
+                    },
+                    {
+                        "name": "棒式",
+                        "description": "60秒"
+                    },
+                    {
+                        "name": "登山式",
+                        "description": "35下3組"
+                    },
+                    {
+                        "name": "單車式捲腹",
+                        "description": "8下3組"
+                    }
+                ]
+            },
+            "medium":{
+                "restIntervalInSec":90,
+                "warmup":{},
+                "exerciseList":[
+                    {
+                        "name": "仰臥起坐",
+                        "description": "10下6組"
+                    },
+                    {
+                        "name": "棒式",
+                        "description": "120秒"
+                    },
+                    {
+                        "name": "登山式",
+                        "description": "50下3組"
+                    },
+                    {
+                        "name": "單車式捲腹",
+                        "description": "10下4組"
+                    },
+                    {
+                        "name": "仰臥抬腿",
+                        "description": "8下3組"
+                    }
+                ]
+            },
+            "strong":{
+                "restIntervalInSec":120,
+                "warmup":{},
+                "exerciseList":[
+                    {
+                        "name": "仰臥起坐",
+                        "description": "12下6組"
+                    },
+                    {
+                        "name": "棒式",
+                        "description": "180秒"
+                    },
+                    {
+                        "name": "登山式",
+                        "description": "60下3組"
+                    },
+                    {
+                        "name": "單車式捲腹",
+                        "description": "12下4組"
+                    },
+                    {
+                        "name": "仰臥抬腿",
+                        "description": "10下3組"
+                    }
+                ]
+            }
+        }
+    },
+    "arm":{
+        "name":"手臂",
+        "sets":{
+            "weak":{
+                "restIntervalInSec":90,
+                "warmup":{
+                    "name": "二頭彎舉",
+                    "description": "較輕重量8下2組"
+                },
+                "exerciseList":[
+                    {
+                        "name": "二頭彎舉",
+                        "description": "8下5組"
+                    },
+                    {
+                        "name": "錘式彎舉",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "俯身啞鈴臂屈伸",
+                        "description": "8下5組"
+                    },
+                    {
+                        "name": "伏地挺身",
+                        "description": "8下6組"
+                    }
+                ]
+            },
+            "medium":{
+                "restIntervalInSec":90,
+                "warmup":{
+                    "name": "二頭彎舉",
+                    "description": "較輕重量8下2組"
+                },
+                "exerciseList":[
+                    {
+                        "name": "二頭彎舉",
+                        "description": "10下5組"
+                    },
+                    {
+                        "name": "三頭屈伸",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "錘式彎舉",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "俯身啞鈴臂屈伸",
+                        "description": "10下5組"
+                    },
+                    {
+                        "name": "伏地挺身",
+                        "description": "10下6組"
+                    }
+                ]
+            },
+            "strong":{
+                "restIntervalInSec":120,
+                "warmup":{
+                    "name": "二頭彎舉",
+                    "description": "較輕重量8下2組"
+                },
+                "exerciseList":[
+                    {
+                        "name": "二頭彎舉",
+                        "description": "12下6組"
+                    },
+                    {
+                        "name": "三頭屈伸",
+                        "description": "12下6組"
+                    },
+                    {
+                        "name": "錘式彎舉",
+                        "description": "8下5組"
+                    },
+                    {
+                        "name": "俯身啞鈴臂屈伸",
+                        "description": "10下5組"
+                    },
+                    {
+                        "name": "伏地挺身",
+                        "description": "10下6組"
+                    }
+                ]
+            }
+        }
+    },
+    "chest":{
+        "name":"胸",
+        "sets":{
+            "weak":{
+                "restIntervalInSec":90,
+                "warmup":{
+                    "name": "啞鈴握推",
+                    "description": "較輕重量8下2組"
+                },
+                "exerciseList":[
+                    {
+                        "name": "啞鈴臥推",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "啞鈴上夾胸",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "窄距上斜胸推",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "平躺啞鈴飛鳥",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "伏地挺身",
+                        "description": "8下4組"
+                    }
+                ]
+            },
+            "medium":{
+                "restIntervalInSec":90,
+                "warmup":{
+                    "name": "啞鈴握推",
+                    "description": "較輕重量8下2組"
+                },
+                "exerciseList":[
+                    {
+                        "name": "啞鈴臥推",
+                        "description": "10下4組"
+                    },
+                    {
+                        "name": "啞鈴上夾胸",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "窄距上斜胸推",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "仰臥屈臂上拉",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "平躺啞鈴飛鳥",
+                        "description": "10下4組"
+                    },
+                    {
+                        "name": "伏地挺身",
+                        "description": "10下4組"
+                    }
+                ]
+            },
+            "strong":{
+                "restIntervalInSec":120,
+                "warmup":{
+                    "name": "啞鈴握推",
+                    "description": "較輕重量8下2組"
+                },
+                "exerciseList":[
+                    {
+                        "name": "啞鈴臥推",
+                        "description": "12下5組"
+                    },
+                    {
+                        "name": "啞鈴上夾胸",
+                        "description": "10下5組"
+                    },
+                    {
+                        "name": "窄距上斜胸推",
+                        "description": "8下5組"
+                    },
+                    {
+                        "name": "仰臥屈臂上拉",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "平躺啞鈴飛鳥",
+                        "description": "12下5組"
+                    },
+                    {
+                        "name": "伏地挺身",
+                        "description": "12下4組"
+                    }
+                ]
+            }
+        }
+    },
+    "leg":{
+        "name":"腿部",
+        "sets":{
+            "weak":{
+                "restIntervalInSec":90,
+                "warmup":{},
+                "exerciseList":[
+                    {
+                        "name": "深蹲",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "前跨蹲",
+                        "description": "10下4組"
+                    },
+                    {
+                        "name": "羅馬尼亞硬舉(啞鈴)",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "啞鈴保加利亞單腿蹲",
+                        "description": "20下4組"
+                    },
+                    {
+                        "name": "伏臥啞鈴腿彎舉",
+                        "description": "8下3組"
+                    }
+                ]
+            },
+            "medium":{
+                "restIntervalInSec":90,
+                "warmup":{},
+                "exerciseList":[
+                    {
+                        "name": "深蹲",
+                        "description": "10下4組"
+                    },
+                    {
+                        "name": "前跨蹲",
+                        "description": "12下4組"
+                    },
+                    {
+                        "name": "羅馬尼亞硬舉(啞鈴)",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "啞鈴保加利亞單腿蹲",
+                        "description": "20下4組"
+                    },
+                    {
+                        "name": "伏臥啞鈴腿彎舉",
+                        "description": "10下4組"
+                    }
+                ]
+            },
+            "strong":{
+                "restIntervalInSec":120,
+                "warmup":{},
+                "exerciseList":[
+                    {
+                        "name": "深蹲",
+                        "description": "12下5組"
+                    },
+                    {
+                        "name": "前跨蹲",
+                        "description": "12下4組"
+                    },
+                    {
+                        "name": "羅馬尼亞硬舉(啞鈴)",
+                        "description": "10下5組"
+                    },
+                    {
+                        "name": "啞鈴保加利亞單腿蹲",
+                        "description": "20下4組"
+                    },
+                    {
+                        "name": "伏臥啞鈴腿彎舉",
+                        "description": "12下5組"
+                    }
+                ]
+            }
+        }
+    },
+    "shoulder":{
+        "name":"肩膀",
+        "sets":{
+            "weak":{
+                "restIntervalInSec": 90,
+                "warmup":
+                {
+                    "name": "啞鈴肩推",
+                    "description": "較輕重量8下2組"
+                },
+                "exerciseList":[
+                    {
+                        "name": "啞鈴肩推",
+                        "description": "8~12下4組"
+                    },
+                    {
+                        "name": "啞鈴前平舉",
+                        "description": "8下3組"
+                    },
+                    {
+                        "name": "啞鈴側平舉",
+                        "description": "8下3組"
+                    },
+                    {
+                        "name": "俯身啞鈴飛鳥",
+                        "description": "8下3組"
+                    },
+                    {
+                        "name": "阿諾肩推",
+                        "description": "8下3組"
+                    },
+                    {
+                        "name": "伏地挺身",
+                        "description": "8下4組"
+                    }
+                ]
+            },
+            "medium":{
+                "restIntervalInSec": 90,
+                "warmup":{
+                    "name": "啞鈴肩推",
+                    "description": "較輕重量8下2組"
+                },
+                "exerciseList":[
+                    {
+                        "name": "啞鈴肩推",
+                        "description": "8~12下4組"
+                    },
+                    {
+                        "name": "啞鈴前平舉",
+                        "description": "8下4組"
+                    },
+                    {
+                        "name": "啞鈴側平舉",
+                        "description": "8下3組"
+                    },
+                    {
+                        "name": "俯身啞鈴飛鳥",
+                        "description": "8下3組"
+                    },
+                    {
+                        "name": "阿諾肩推",
+                        "description": "12下4組"
+                    },
+                    {
+                        "name": "過頭前平舉",
+                        "description": "8下3組"
+                    },
+                    {
+                        "name": "伏地挺身",
+                        "description": "10下4組"
+                    }
+                ]
+            },
+            "strong":{
+                "restIntervalInSec": 120,
+                "warmup":{
+                    "name": "啞鈴肩推",
+                    "description": "較輕重量8下2組"
+                },
+                "exerciseList":[
+                    {
+                        "name": "啞鈴肩推",
+                        "description": "8~12下4組"
+                    },
+                    {
+                        "name": "啞鈴前平舉",
+                        "description": "12下3組"
+                    },
+                    {
+                        "name": "啞鈴側平舉",
+                        "description": "12下3組"
+                    },
+                    {
+                        "name": "俯身啞鈴飛鳥",
+                        "description": "10下4組"
+                    },
+                    {
+                        "name": "阿諾肩推",
+                        "description": "10下3組"
+                    },
+                    {
+                        "name": "過頭前平舉",
+                        "description": "10下3組"
+                    },
+                    {
+                        "name": "伏地挺身",
+                        "description": "12下4組"
+                    },
+                    {
+                        "name": "直立划船",
+                        "description": "8下3組"
+                    }
+                ]
+            }
+        }
+            
+    },
+    "body":{
+        "name":"全身",
+        "sets":{
+            "weak":{
+                "restIntervalInSec":120,
+                "warmup":{},
+                "exerciseList":[
+                    {
+                        "name": "啞鈴肩推",
+                        "description": "8下2組"
+                    },
+                    {
+                        "name": "俯身啞鈴飛鳥",
+                        "description": "8下2組"
+                    },
+                    {
+                        "name": "啞鈴上夾胸",
+                        "description": "8下2組"
+                    },
+                    {
+                        "name": "伏地挺身",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "二頭彎舉",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "三頭屈伸",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "仰臥起坐",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "單車式捲腹",
+                        "description": "8下2組"
+                    },
+                    {
+                        "name": "深蹲",
+                        "description": "8下2組"
+                    },
+                    {
+                        "name": "羅馬尼亞硬舉(啞鈴)",
+                        "description": "8下2組"
+                    }
+                ]
+            },
+            "medium":{
+                "restIntervalInSec":120,
+                "warmup":{},
+                "exerciseList":[
+                    {
+                        "name": "啞鈴肩推",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "啞鈴側平舉",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "阿諾肩推",
+                        "description": "8下2組"
+                    },
+                    {
+                        "name": "啞鈴臥推",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "啞鈴上夾胸",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "伏地挺身",
+                        "description": "8下2組"
+                    },
+                    {
+                        "name": "二頭彎舉",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "三頭屈伸",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "仰臥起坐",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "單車式捲腹",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "深蹲",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "羅馬尼亞硬舉(啞鈴)",
+                        "description": "8下2組"
+                    }
+                ]
+            },
+            "strong":{
+                "restIntervalInSec":150,
+                "warmup":{},
+                "exerciseList":[
+                    {
+                        "name": "啞鈴肩推",
+                        "description": "12下2組"
+                    },
+                    {
+                        "name": "啞鈴側平舉",
+                        "description": "12下2組"
+                    },
+                    {
+                        "name": "阿諾肩推",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "啞鈴臥推",
+                        "description": "12下2組"
+                    },
+                    {
+                        "name": "啞鈴上夾胸",
+                        "description": "12下2組"
+                    },
+                    {
+                        "name": "伏地挺身",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "二頭彎舉",
+                        "description": "12下2組"
+                    },
+                    {
+                        "name": "三頭屈伸",
+                        "description": "12下2組"
+                    },
+                    {
+                        "name": "仰臥起坐",
+                        "description": "10下2組"
+                    },
+                    {
+                        "name": "登山式",
+                        "description": "50下2組"
+                    },
+                    {
+                        "name": "單車式捲腹",
+                        "description": "12下2組"
+                    },
+                    {
+                        "name": "深蹲",
+                        "description": "12下2組"
+                    },
+                    {
+                        "name": "羅馬尼亞硬舉(啞鈴)",
+                        "description": "10下2組"
+                    }
+                ]
+            }
+        }
+        
+    }
+}

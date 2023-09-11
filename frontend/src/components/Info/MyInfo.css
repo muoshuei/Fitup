@@ -1,0 +1,96 @@
+.Back {
+    width: 1200px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.Back img:hover {
+    content: url('/src/components/Info/MyInfoPic/Back1.png');
+}
+.InfoTitle {
+    font-size: 50px;
+    font-family: '微軟正黑體';
+    font-weight: bold;
+    margin: 20px;
+    width: 1200px;
+}
+
+.InfoIcon {
+    border-radius: 50%;
+    background-color: #B5B5B5;
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+.InfoState {
+    display: flex;
+    flex-direction: column;
+}
+
+.InfoTop {
+    width: 1200px;
+}
+
+.InfoBot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.Infoline {
+    padding: 10px;
+    font-size: xx-large;
+    font-family: '微軟正黑體';
+    font-weight: bold;
+    text-align: right;
+}
+
+.InfoSex {
+    height: 20px;
+    width: 20px;
+}
+
+.Mail, .Password {
+    width: 300px;
+}
+
+.Height, .Weight, .BMI{
+    width: 80px;    
+}
+
+.InfoEditButton {
+    border-radius: 10px;
+    border-width: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    width: 200px;
+    background-color: #00c8ff;
+}
+
+.InfoEditButton:hover {
+    background-color: #002a35;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }

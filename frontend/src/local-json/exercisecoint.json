@@ -1,0 +1,577 @@
+{   
+    "default":{
+        "id" : "default",
+        "name": "default",
+        "detail": {
+            "type": "countBased",
+            "count": 1
+        }
+    },
+    "p1_1": {
+        "id" : "p1_1",
+        "name": "伏地挺身",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "p1_2":{
+        "id" : "p1_2",
+        "name": "伏地挺身",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "p1_3": {
+        "id" : "p1_3",
+        "name": "伏地挺身",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+
+    "s1_1":{
+        "id" : "s1_1",
+        "name": "啞鈴肩推",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "s1_2":{
+        "id" : "s1_2",
+        "name": "啞鈴肩推",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "s1_3":{
+        "id" : "s1_3",
+        "name": "啞鈴肩推",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "s2_1":{
+        "id" : "s2_1",
+        "name":"啞鈴前平舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "s2_2":{
+        "id" : "s2_2",
+        "name":"啞鈴前平舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "s2_3":{
+        "id" : "s2_3",
+        "name":"啞鈴前平舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "s3_1":{
+        "id" : "s3_1",
+        "name":"啞鈴側平舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "s3_2":{
+        "id" : "s3_2",
+        "name":"啞鈴側平舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "s3_3":{
+        "id" : "s3_3",
+        "name":"啞鈴側平舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "s4_1":{
+        "id" : "s4_1",
+        "name":"俯身啞鈴飛鳥",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "s4_2":{
+        "id" : "s4_2",
+        "name":"俯身啞鈴飛鳥",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "s4_3":{
+        "id" : "s4_3",
+        "name":"俯身啞鈴飛鳥",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "s5_1":{
+        "id" : "s5_1",
+        "name":"直立划船",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+
+    "s6_1":{
+        "id" : "s6_1",
+        "name":"阿諾肩推",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "s6_2":{
+        "id" : "s6_2",
+        "name":"阿諾肩推",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "s6_3":{
+        "id" : "s6_3",
+        "name":"阿諾肩推",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "s7_1":{
+        "id" : "s7_1",
+        "name":"過頭前平舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "s7_2":{
+        "id" : "s7_2",
+        "name":"過頭前平舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "s7_3":{
+        "id" : "s7_3",
+        "name":"過頭前平舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+
+    "c1_1":{
+        "id" : "c1_1",
+        "name":"啞鈴臥推",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "c1_2":{
+        "id" : "c1_2",
+        "name":"啞鈴臥推",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "c1_3":{
+        "id" : "c1_3",
+        "name":"啞鈴臥推",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "c2_1":{
+        "id" : "c2_1",
+        "name":"啞鈴上夾胸",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "c2_2":{
+        "id" : "c2_2",
+        "name":"啞鈴上夾胸",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "c2_3":{
+        "id" : "c2_3",
+        "name":"啞鈴上夾胸",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "c3_1":{
+        "id" : "c3_1",
+        "name":"窄距上斜胸推",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+
+    "c4_1":{
+        "id" : "c4_1",
+        "name":"仰臥屈臂上拉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+
+    "c5_1":{
+        "id" : "c5_1",
+        "name":"平躺啞鈴飛鳥",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "c5_2":{
+        "id" : "c5_2",
+        "name":"平躺啞鈴飛鳥",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "c5_3":{
+        "id" : "c5_3",
+        "name":"平躺啞鈴飛鳥",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    
+    "ar1_1":{
+        "id" : "ar1_1",
+        "name":"二頭彎舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "ar1_2":{
+        "id" : "ar1_2",
+        "name":"二頭彎舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "ar1_3":{
+        "id" : "ar1_3",
+        "name":"二頭彎舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "ar2_1":{
+        "id" : "ar2_1",
+        "name":"三頭屈伸",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "ar2_2":{
+        "id" : "ar2_2",
+        "name":"三頭屈伸",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "ar2_3":{
+        "id" : "ar2_3",
+        "name":"三頭屈伸",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "ar3_1":{
+        "id" : "ar3_1",
+        "name":"錘式彎舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+
+    "ar4_1":{
+        "id" : "ar4_1",
+        "name":"俯身啞鈴臂屈伸",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "ar4_2":{
+        "id" : "ar4_2",
+        "name":"俯身啞鈴臂屈伸",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+
+
+    "ab1_1":{
+        "id" : "ab1_1",
+        "name":"仰臥起坐",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "ab1_2":{
+        "id" : "ab1_2",
+        "name":"仰臥起坐",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "ab1_3":{
+        "id" : "ab1_3",
+        "name":"仰臥起坐",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "ab2_1":{
+        "id" : "ab2_1",
+        "name":"棒式",
+        "detail" : {
+            "type" : "timeBased",
+            "count" : 60
+        }
+    },
+    "ab2_2":{
+        "id" : "ab2_2",
+        "name":"棒式",
+        "detail" : {
+            "type" : "timeBased",
+            "count" : 120
+        }
+    },
+    "ab2_3":{
+        "id" : "ab2_3",
+        "name":"棒式",
+        "detail" : {
+            "type" : "timeBased",
+            "count" : 180
+        }
+    },
+
+    "ab3_1":{
+        "id" : "ab3_1",
+        "name":"登山式",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 35
+        }
+    },
+    "ab3_2":{
+        "id" : "ab3_2",
+        "name":"登山式",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 50
+        }
+    },
+    "ab3_3":{
+        "id" : "ab3_3",
+        "name":"登山式",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 60
+        }
+    },
+
+    "ab4_1":{
+        "id" : "ab4_1",
+        "name":"單車式捲腹",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "ab4_2":{
+        "id" : "ab4_2",
+        "name":"單車式捲腹",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "ab4_3":{
+        "id" : "ab4_3",
+        "name":"單車式捲腹",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "ab5_1":{
+        "id" : "ab5_1",
+        "name":"仰臥抬腿",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "ab5_2":{
+        "id" : "ab5_2",
+        "name":"仰臥抬腿",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+
+
+    "l1_1":{
+        "id" : "l1_1",
+        "name":"深蹲",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "l1_2":{
+        "id" : "l1_2",
+        "name":"深蹲",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "l1_3":{
+        "id" : "l1_3",
+        "name":"深蹲",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "l2_2":{
+        "id" : "l2_2",
+        "name":"前跨蹲",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "l2_3":{
+        "id" : "l2_3",
+        "name":"前跨蹲",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    },
+
+    "l3_1":{
+        "id" : "l3_1",
+        "name":"啞鈴羅馬尼亞硬舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "l3_2":{
+        "id" : "l3_2",
+        "name":"啞鈴羅馬尼亞硬舉",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+
+    "l4_1":{
+        "id" : "l4_1",
+        "name":"啞鈴保加利亞單腿蹲",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 20
+        }
+    },
+
+    "l5_1":{
+        "id" : "l5_1",
+        "name":"前跨蹲",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 8
+        }
+    },
+    "l5_2":{
+        "id" : "l5_2",
+        "name":"前跨蹲",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 10
+        }
+    },
+    "l5_3":{
+        "id" : "l5_3",
+        "name":"前跨蹲",
+        "detail" : {
+            "type" : "countBased",
+            "count" : 12
+        }
+    }
+}

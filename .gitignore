@@ -1,8 +1,4 @@
 # created by virtualenv automatically
-image.jpg
-pull up.py
-pushupcode.py
-pose.py
 Scripts
 Lib
 share
@@ -28,3 +24,8 @@ frontend/yarn-debug.log*
 frontend/yarn-error.log*
 
 __pycache__
+
+#custom
+mydatabase1.db
+mediapipe.html
+Externals/

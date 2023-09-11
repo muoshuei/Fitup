@@ -1,0 +1,90 @@
+.program-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1.program {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.program-menus-container {
+  display: flex;
+  gap: 30px;
+}
+
+.program-menu {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33.33%;
+  padding: 20px;
+}
+
+h2.program {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul.program {
+  list-style: none;
+  padding: 2px;
+  border: 1px solid #ccc;
+  overflow: scroll;
+  height: 55%;
+}
+
+li.program-menu-item {
+  margin: 10px 0;
+  display: flex; /* 使用 flex 屬性將內容橫向排列 */
+  align-items: center; /* 垂直置中對齊內容 */
+}
+
+li.program-menu-item::before {
+  content: "\00a0\00a0\00a0"; /* 在每個 li 前面加入三個不換行的空白字元（&nbsp;），這裡使用 Unicode 代碼 */
+}
+
+li.program-menu-item:nth-child(1),
+li.program-menu-item:nth-child(2) {
+  flex-direction: column; /* 將 "組間休息" 和 "熱身組" 列的內容改為垂直排列 */
+  align-items: center; /* 水平置中對齊內容 */
+  white-space: nowrap; /* 禁止換行 */
+}
+
+.program-menu {
+  /* 設定菜單容器為相對定位，以便內部按鈕使用絕對定位 */
+  /* position: relative; */
+   margin: 0;
+}
+
+.program-add-button {
+  /* 使用絕對定位來固定按鈕位置 */
+  /* position: absolute;  */
+  /* 距離菜單容器底部 20px */
+  /* bottom: 20px;  */
+  /* 水平置中 */
+  /* left: 50%;  */
+  /* 水平居中 */
+  transform: translateX(50%); 
+  
+  padding: 10px 20px;
+  background-color: #00c8ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 50%;
+}
+
+.program-add-button:hover {
+  background-color: #8300b3;
+}
+
+/* You can further customize the styling to match your preferences. */
+
+
+
+

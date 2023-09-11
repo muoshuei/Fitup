@@ -1,0 +1,130 @@
+/* GLOBAL STYLES */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.first-page-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  height: 300%;
+}
+
+.carousel-inner .carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-carousel {
+  max-height: calc(100vh - 150px); /* Adjust the height of the carousel to leave space for exercise buttons */
+}
+
+.custom-carousel-image {
+  object-fit: contain; /* Keeps the original size of the image within the carousel */
+  width: 100%;
+  height: auto; /* Set height to auto to maintain aspect ratio */
+}
+
+.custom-carousel-caption {
+  position: absolute;
+  top: 70%; /* 垂直下移50% */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+}
+
+.carousel .carousel-inner .carousel-item:not(.active) .custom-carousel-caption {
+  display: none;
+}
+
+/* Buttons */
+.btn2 {
+  background-color: #6aaef1;
+  color: #f9f7f7;
+  font-size: 24px;
+  width: 240px;
+  height: 50px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: absolute;
+  top: 160%; /* 垂直下移70% */
+  left: 50%; /* 保持水平居中 */
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+.btn-primary.mb-3 {
+  background-color: #6aaef1;
+  color: #f9f7f7;
+  transform: translate(530%, 500%);
+}
+
+.btn5 {
+  background-color: #6aaef1;
+  color: #f9f7f7;
+  font-size: 24px;
+  width: 220px;
+  height: 50px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-top: 30%;
+}
+
+/* Exercise Images and Buttons */
+.exercise-container {
+  background-color: #f1eef1;
+  padding: 20px;
+  text-align: center;
+}
+
+.container .row .col-md-3 {
+  margin-bottom: 30px;
+}
+
+/* Move only the buttons */
+.custom-button {
+  margin-top: 20%; /* 将按钮位置往下移动20% */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%; /* 设置高度为100% */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container img {
+  width: auto; /* 让图片自适应宽度 */
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RESPONSIVE CSS */
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .image-container {
+    height: 200px;
+  }
+
+  .btn2,
+  .btn5 {
+    width: 180px;
+    height: 40px;
+  }
+}

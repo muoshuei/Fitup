@@ -1,0 +1,18 @@
+{
+    "programDetails": [
+        {
+            "id" : "s1",
+            "detail" : {
+                "type": "setBased",
+                "setCount": 8
+            }
+        },
+        {
+            "id" : "s2",
+            "detail" : {
+                "type": "timeBased",
+                "setCount": 120
+            }
+        }
+    ]
+}

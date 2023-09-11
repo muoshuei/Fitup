@@ -1,0 +1,49 @@
+
+  .login2{
+    margin-left: 680px;
+    width: 300px;
+    padding: 20px;
+    height: 470px;
+    border-radius: 5px;
+    background-color: rgb(248, 247, 249);
+    color: black;
+  }
+
+form > div {
+    margin-bottom: 1px; /* 調整每行元素之間的行距 */
+  }
+  
+div label {
+    margin-right: 10px; /* 調整 label 與文字框之間的距離 */
+  }
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9; /* 設置透明度為 50% */
+}
+
+.btn-rectangle {
+  width: 250px; 
+  height: 40px; 
+  padding: 0; 
+  border-radius: 0; 
+  text-align: center; 
+  line-height: 40px; 
+}
+
+.move {
+  margin-left: 10px; 
+  margin-top: 6px;
+}
+
+.white-text {
+  color: white; /* 設定文字顏色為白色 */
+  text-decoration: none; /* 移除預設的文字底線 */
+}
+
+

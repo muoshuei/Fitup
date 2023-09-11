@@ -1,0 +1,72 @@
+/* <!--導覽列文字顏色、背景顏色--> */
+.nav-link-custom {
+    color:#000f14f1;
+    letter-spacing: 2px;
+}
+
+/* <!--說明文字間格--> */
+.navbardown {
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+
+/* <!--你的居家教練名稱--> */
+.coach-title {
+ margin-top: 8px; 
+ font-family: Arial, sans-serif; 
+ font-size: 22px; 
+ font-weight: bold; 
+ color: #333;
+ letter-spacing: 2.5px;
+}
+
+
+.topnav-usericon-container{
+  border-radius: 50%;
+  background-color: #B5B5B5;
+  top: 0;
+  left: 0;
+  width: 3vw;
+  height: 3vw;
+}
+.topnav-usericon-container:hover{
+  background-color: #959595
+}
+
+.topnav-usericon{
+  width: 100%;
+  height: 100%;
+  padding: 12.5%;
+}
+.topnav-usericon-expandable{
+  display: none;
+ 
+}
+.topnav-usericon-link:hover + .topnav-usericon-expandable, .topnav-usericon-expandable:hover{
+  display: block;
+}
+.topnav-dropdown-item-custom{
+  background-color: #FFFFFF;
+}
+.topnav-dropdown-item-custom:hover{
+  background-color: #B5B5B5;
+}
+
+.action-link:hover + .action-expandable, .action-expandable:hover{
+  display: block;
+}
+.action-dropdown-item-custom{
+  background-color: #FFFFFF;
+}
+.action-dropdown-item-custom:hover{
+  background-color: #B5B5B5;
+}
+.topnav-right-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+

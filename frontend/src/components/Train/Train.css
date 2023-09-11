@@ -1,0 +1,55 @@
+
+.display_panel {
+      width: 100%;
+      display: flex;
+}
+.output_canvas {
+      width: 1280px;
+      height: 720px;
+}
+.canvas_panel {
+      float: left;
+      background-color:rgb(197, 197, 197);
+      border-radius: 10px;
+      margin:5px;
+}
+.font {
+  font-size: 24px;
+  font-family: "Microsoft JhengHei", Arial, sans-serif;
+  font-weight: bold;
+}
+.font_warning{
+    font-size: 20px;
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    font-weight: bold;
+    color: red;
+}
+.exercise_hints {
+    height: 150px;
+}
+.right_panel {
+      text-align: left;
+      padding: 5px;
+      /* background-color: rgb(191, 244, 245); */
+      margin-top: 10px;
+      margin-bottom: 10px;
+}
+.data_panel {
+      padding: 5px;
+}
+.button_panel {
+      padding: 5px;
+}
+.top_right_bar {
+      padding: 5px;
+}
+.bot_right_bar {
+      padding: 5px;
+}
+.btn_custom {
+      margin: 5px;
+}
+.logo_image {
+      height:30px;
+      width:70px;
+}

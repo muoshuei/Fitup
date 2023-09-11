@@ -1,0 +1,187 @@
+.custom-btn:hover {
+  
+  padding: 10px;
+  background-color: #f1eef1;
+  color: #141414;
+  border: #141617 solid;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  width: 160px; 
+  height: 50px; 
+  margin-top: 20px;
+  
+}
+
+.custom-btn{
+  
+  padding: 10px;
+  background-color: #0c4a60 ;
+  color: #fefefe;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  width: 160px; 
+  height: 50px; 
+  margin-top: 20px;
+  
+}
+/* <!--導覽列文字顏色、背景顏色--> */
+
+.nav-link-custom {
+    color:#000f14f1;
+    letter-spacing: 2px;
+    font-size: 30px; 
+}
+
+.bg-amos{
+  background-color: #f1eef1 ;
+}
+.step {
+  margin-bottom: 0.8em; 
+  font-size: 16px;
+    }
+
+.step2 {
+  margin-bottom: 2em; 
+  font-size: 18px;
+    }
+
+.btn-container {
+ display: flex;
+ justify-content: flex-start;
+
+}
+p {
+  margin-bottom: 25px; 
+}
+/* 
+<!--說明文字間格--> */
+
+.navbardown {
+position: fixed;
+bottom: 0;
+width: 100%;
+
+
+}
+
+/* <!--你的居家教練名稱--> */
+.coach-title {
+ margin-top: 8px; 
+ font-family: Arial, sans-serif; 
+ font-size: 22px; 
+ font-weight: bold; 
+ color: #333;
+ letter-spacing: 2.5px;
+}
+
+.navbar {
+  height: 150px; 
+}
+
+.Content-container {
+
+  margin-left: 70px; 
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; 
+}
+
+.centered-video {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#textblock {
+  background-color: #e7f3fe;
+  height: 100vh;
+}
+
+#textblock-container {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+#textblock-title {
+  color: #20201c;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: "Helvetica Neue";
+}
+
+#textblock-content {
+  color: #121111;
+  font-size: 20px;
+}
+
+#textblock-footer {
+  color: #1e1d1b;
+  font-size: 15px;
+  font-weight: 400;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  margin-bottom: 20px;
+
+}
+
+#textblock-devsense {
+  text-decoration: none;
+  color: #080808;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#text{
+  position: absolute;
+  color:#fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  
+  
+}
+
+.custom-button {
+  color:#010b1a;
+  background-color:#fffbfb;
+  border:2px #010b1a solid;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 100px; 
+  height: 50px; 
+
+
+  
+}
+
+.custom-button:hover{
+  color:#f6f6f7;
+  background-color:#010b1a ;
+  border:2px #fff solid;
+}
+
