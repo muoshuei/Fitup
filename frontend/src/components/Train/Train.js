@@ -8,11 +8,11 @@ import {
   } from '@mediapipe/drawing_utils';
 import exerciseMap from '../../local-json/exercise.json';
 import exerciseDetails from '../../local-json/exercisecoint.json';
-import AccuracyManager from './scripts/AccuracyManager';
-import ExerciseCountManager from './scripts/ExerciseCountManager';
+import AccuracyManager from './modules/AccuracyManager';
+import ExerciseCountManager from './modules/ExerciseCountManager';
 
-import AngleCalculator from './scripts/AngleCalculator';
-import ExerciseParser from './scripts/ExerciseParser';
+import AngleCalculator from './modules/AngleCalculator';
+import ExerciseParser from './modules/ExerciseParser';
 
 
 
