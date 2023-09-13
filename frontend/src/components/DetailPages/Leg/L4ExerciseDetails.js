@@ -2,11 +2,14 @@
 import React from 'react';
  
 import l4 from './images/L4.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 const L4ExerciseDetails = () => {
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -133,7 +136,7 @@ const L4ExerciseDetails = () => {
      
     </div>
     </div>
-
+    </>
 
     );
 };

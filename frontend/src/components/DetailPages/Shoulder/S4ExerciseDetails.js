@@ -1,8 +1,11 @@
 import React from 'react';
 import s4 from './images/s4.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 const S4ExerciseDetails = () => {
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -108,7 +111,7 @@ const S4ExerciseDetails = () => {
     </div>
     </div>
 
-
+    </>
     );
 };
 

@@ -2,11 +2,14 @@
 import React from 'react';
  
 import abs2 from './images/Abs2.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 const B2ExerciseDetails = () => {
     return (
+    <>
+    <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -113,7 +116,7 @@ const B2ExerciseDetails = () => {
         </div>
     </div>
 
-
+    </>
     );
 };
 

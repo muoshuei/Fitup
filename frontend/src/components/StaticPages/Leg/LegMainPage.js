@@ -13,6 +13,8 @@ import L2 from './images/L2.png';
 import L3 from './images/L3.png';
 import L4 from './images/L4.png';
 import L5 from './images/L5.png';
+import TopNavbar from '../../TopNavbar/TopNavbar';
+import { useNavigate } from 'react-router-dom';
 
 function LegMainPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -23,7 +25,7 @@ function LegMainPage() {
   const handleImageChange = (index) => {
     setCurrentImageIndex(index);
   };
-
+  const navigate = useNavigate();
   const toggleImageSet = () => {
     if (showImages) {
       setShowFirstSet(!showFirstSet);
@@ -47,6 +49,8 @@ function LegMainPage() {
   const exerciseNames = showFirstSet ? exerciseNamesFirstSet : exerciseNamesSecondSet;
 
   return (
+    <>
+    <TopNavbar></TopNavbar>
     <div className="first-page-container">
       <div className="carousel-container">
         <Carousel fade className="custom-carousel">
@@ -105,7 +109,7 @@ function LegMainPage() {
                           <button
                             className="btn btn5 custom-button"
                             style={{ marginBottom: '-30px' }} // 調整按鈕位置
-                            onClick={() => handleImageChange(currentImageIndex + index)}
+                            onClick={() => {navigate("/action/leg/" + (1+index+(showFirstSet?0:4)))}}
                           >
                             {exerciseNames[currentImageIndex + index]}
                           </button>
@@ -120,6 +124,7 @@ function LegMainPage() {
         )}
       </div>
     </div>
+    </>
   );
 }
 

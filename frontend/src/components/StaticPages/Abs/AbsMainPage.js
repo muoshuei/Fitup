@@ -13,6 +13,8 @@ import Abs2 from './images/Abs2.png';
 import Abs3 from './images/Abs3.png';
 import Abs4 from './images/Abs4.png';
 import Abs5 from './images/Abs5.png';
+import TopNavbar from '../../TopNavbar/TopNavbar';
+import { useNavigate } from 'react-router-dom';
 
 function AbsMainPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -23,7 +25,7 @@ function AbsMainPage() {
   const handleImageChange = (index) => {
     setCurrentImageIndex(index);
   };
-
+  const navigate = useNavigate();
   const toggleImageSet = () => {
     if (showImages) {
       setShowFirstSet(!showFirstSet);
@@ -47,6 +49,9 @@ function AbsMainPage() {
   const exerciseNames = showFirstSet ? exerciseNamesFirstSet : exerciseNamesSecondSet;
 
   return (
+    <>
+    <TopNavbar></TopNavbar>
+    
     <div className="first-page-container">
       <div className="carousel-container">
         <Carousel fade className="custom-carousel">
@@ -108,7 +113,7 @@ function AbsMainPage() {
                           <button
                             className="btn btn5 custom-button"
                             style={{ marginBottom: '-30px' }} // 調整按鈕位置
-                            onClick={() => handleImageChange(currentImageIndex + index)}
+                            onClick={() => {navigate("/action/abs/" + (1+index+(showFirstSet?0:4)))}}
                           >
                             {exerciseNames[currentImageIndex + index]}
                           </button>
@@ -123,6 +128,7 @@ function AbsMainPage() {
         )}
       </div>
     </div>
+    </>
   );
 }
 

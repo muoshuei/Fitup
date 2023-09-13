@@ -14,6 +14,8 @@ import c3 from './images/c3.png';
 import c4 from './images/c4.png';
 import c5 from './images/c5.png';
 import p1 from './images/p1.jpg';
+import TopNavbar from '../../TopNavbar/TopNavbar';
+import { useNavigate } from 'react-router-dom';
 
 function ChestMainPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -24,7 +26,7 @@ function ChestMainPage() {
   const handleImageChange = (index) => {
     setCurrentImageIndex(index);
   };
-
+  const navigate = useNavigate();
   const toggleImageSet = () => {
     if (showImages) {
       setShowFirstSet(!showFirstSet);
@@ -48,6 +50,9 @@ function ChestMainPage() {
   const exerciseNames = showFirstSet ? exerciseNamesFirstSet : exerciseNamesSecondSet;
 
   return (
+    <>
+    <TopNavbar></TopNavbar>
+    
     <div className="first-page-container">
       <div className="carousel-container">
         <Carousel fade className="custom-carousel">
@@ -106,7 +111,16 @@ function ChestMainPage() {
                           <button
                             className="btn btn5 custom-button"
                             style={{ marginBottom: '-30px' }} // 調整按鈕位置
-                            onClick={() => handleImageChange(currentImageIndex + index)}
+                            onClick={
+                              () => {
+                                if(exerciseNames[currentImageIndex + index] == "伏地挺身"){
+                                  navigate("/action/p/1");
+                                }
+                                else{
+                                  navigate("/action/chest/" + (1+index+(showFirstSet?0:4)));
+                                }
+                              }
+                            }
                           >
                             {exerciseNames[currentImageIndex + index]}
                           </button>
@@ -121,6 +135,7 @@ function ChestMainPage() {
         )}
       </div>
     </div>
+    </>
   );
 }
 

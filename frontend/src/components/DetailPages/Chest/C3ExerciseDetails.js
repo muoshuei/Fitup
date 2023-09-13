@@ -2,11 +2,14 @@
 import React from 'react';
  
 import c3 from './images/c3.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 const C3ExerciseDetails = () => {
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -125,7 +128,7 @@ const C3ExerciseDetails = () => {
     </div>
     </div>
 
-
+      </>
     );
 };
 

@@ -50,9 +50,7 @@ function TrainWrapper(props){
 
     useEffect(()=>{
         if(time <= 0){
-            if(index < programList.length){
-                setIndex((index) => index + 1);            
-            }
+            handleNext();
             setAchieved(false);
             setTime(30);
         } 
@@ -71,11 +69,11 @@ function TrainWrapper(props){
                 : <Train key={index} exerciseId={"s2_1"} handleAchieved={handleAchieved}></Train>}
             </div>
             <div className="bottombar">
-                {index !== 0 ? <button onClick={handlePrev}>上個動作</button> : <></>}
+                {/* {index !== 0 ? <button onClick={handlePrev}>上個動作</button> : <></>} */}
                 <div>{index}/{programList.length - 1}</div>
                 {index === programList.length - 1 
                 ? <Link to="/program/new">回到菜單頁面</Link>
-                : <button onClick={handleNext}>下個動作</button>}
+                : <></>}
             </div>
 
             {achieved 

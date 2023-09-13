@@ -3,6 +3,7 @@ import l1 from './images/L1.png'
 import vl1 from './videos/l1.mp4'
 import { useState } from 'react';
 import  { useRef } from 'react';
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 const L1ExerciseDetails = () => {
@@ -17,6 +18,8 @@ const L1ExerciseDetails = () => {
         }
       };
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -142,7 +145,7 @@ const L1ExerciseDetails = () => {
       )}
     </div>
 
-
+    </>
     );
 };
 

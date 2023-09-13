@@ -51,8 +51,8 @@ const MyProgram = (props) => {
       {
         id: "sStrong",
         name: "肩膀-強",
-        image: "leg",
-        details: "這裡是訓練菜單-「腿部-強」的詳細內容"
+        image: "shoulder",
+        details: "這裡是訓練菜單-「肩膀-強」的詳細內容"
       }
     ]
     );
@@ -75,14 +75,20 @@ const MyProgram = (props) => {
 const ProgramCard = (props) => {
   const program = props.program;
   return(
-    <div className='menu'>
-      <img src={ImageProvider[program.image]} alt={program.name}></img>
-      <div className="menu-content">
-        <h2>{program.name}</h2>
-        <p>{program.details}</p>
-      </div>
-      <Link to={"/train"} state={{programListId: program.id ? program.id : "default"}}>確認</Link>
-    </div>
+    
+      <div className='menu'>
+          <Link to={"/train"} state={{programListId: program.id ? program.id : "default"}}>
+          
+            <img src={ImageProvider[program.image]} alt={program.name}></img>
+            <div className="menu-content">
+              <h2>{program.name}</h2>
+              <p>{program.details}</p>
+            </div>
+          </Link>
+        {/* <Link to={"/train"} state={{programListId: program.id ? program.id : "default"}}>立即開始偵測</Link> */}
+      </div> 
+    
+    
   )
 }
 

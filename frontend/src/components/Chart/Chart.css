@@ -56,10 +56,10 @@ button1 button {
 }
 
 .barsets {
-  height: 50px;
+  height: 40px;
 }
 
-.chart-text, .chart-text1 {
+.text1 {
   color: white;
 }
 

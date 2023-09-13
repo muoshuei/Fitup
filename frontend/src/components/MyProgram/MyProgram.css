@@ -27,13 +27,15 @@ h1 {
 .menu {
   width: 48%;
   margin-bottom: 20px;
-  border: 1px solid #ddd;
+  border: 2px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff; /* 白色背景，使菜單區域突顯出來 */
 }
-
+.menu:hover{
+  transform: scale(1.025);
+}
 .menu img {
   width: 100%;
   height: 200px;
@@ -44,6 +46,11 @@ h1 {
 
 .menu-content {
   padding: 15px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
 }
 
 .menu h2 {
@@ -51,6 +58,7 @@ h1 {
   margin-bottom: 10px;
   font-size: 24px;
   text-align: center;
+
 }
 
 .menu p {

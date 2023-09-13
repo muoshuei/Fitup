@@ -2,11 +2,14 @@
 import React from 'react';
  
 import arm4 from './images/arm4.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 const H4ExerciseDetails = () => {
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -107,7 +110,7 @@ const H4ExerciseDetails = () => {
     </div>
     </div>
 
-
+      </>
     );
 };
 

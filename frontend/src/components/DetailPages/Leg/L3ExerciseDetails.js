@@ -2,11 +2,14 @@
 import React from 'react';
  
 import l3 from './images/L3.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 const L3ExerciseDetails = () => {
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -126,7 +129,7 @@ const L3ExerciseDetails = () => {
     </div>
     </div>
 
-
+    </>
     );
 };
 

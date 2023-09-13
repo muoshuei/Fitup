@@ -2,11 +2,14 @@
 import React from 'react';
  
 import l2 from './images/L2.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 const L2ExerciseDetails = () => {
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -120,7 +123,7 @@ const L2ExerciseDetails = () => {
     </div>
     </div>
 
-
+    </>
     );
 };
 

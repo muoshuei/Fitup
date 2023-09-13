@@ -3,7 +3,9 @@
     color:#000f14f1;
     letter-spacing: 2px;
 }
-
+.navbar-custom{
+  background-color: #CCCCCC;
+}
 /* <!--說明文字間格--> */
 .navbardown {
 position: fixed;

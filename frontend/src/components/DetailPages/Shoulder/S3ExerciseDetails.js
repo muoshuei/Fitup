@@ -1,11 +1,14 @@
 import React from 'react';
 
 import s3 from './images/s3.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 const S3ExerciseDetails = () => {
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -119,7 +122,7 @@ const S3ExerciseDetails = () => {
     </div>
     </div>
 
-
+    </>
     );
 };
 

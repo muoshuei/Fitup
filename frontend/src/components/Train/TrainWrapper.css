@@ -74,3 +74,9 @@ canvas{
     font-size: 36px;
     z-index: 4;
 }
+
+.train-wrapper-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

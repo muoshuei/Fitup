@@ -179,35 +179,20 @@ export function drawCurvechart(thisyear, thismonth, today, monthday, timetype, b
                 .attr('stroke', Cons.color[j])
                 .attr('stroke-width', '5px');
                 //訓練動作文字標示
-                if(bodyparttype == 'arm' && (j == 3 || j == 4)) {
-                    curvetxtexp(j, xAxisWidth, optionsText);
-                }
-                else {
-                    svg.append('text')
-                    .attr('id', 'T' + (j + 1))
-                    .text(optionsText[j + 1])
-                    .attr("text-anchor", "left")
-                    .attr('x', xAxisWidth + 150)
-                    .attr('y', 120 + (30 * j))
-                    .style('font-size', '25px');
-                }
+                svg.append('text')
+                .attr('id', 'T' + (j + 1))
+                .text(optionsText[j + 1])
+                .attr("text-anchor", "left")
+                .attr('x', xAxisWidth + 150)
+                .attr('y', 120 + (30 * j))
+                .style('font-size', '25px');                
                 //訓練動作顏色標示
                 points = (xAxisWidth + 120) + ',' + (98 + (30 * j)) + ' ' + (xAxisWidth + 145) + ',' + (98 + (30 * j)) + ' ' + (xAxisWidth + 145) + ',' + (123 + (30 * j)) + ' ' + (xAxisWidth + 120) + ',' + (123 + (30 * j));
-                if(bodyparttype == 'arm' && j == 4) {
-                    points = (xAxisWidth + 120) + ',' + (128 + (30 * j)) + ' ' + (xAxisWidth + 145) + ',' + (128 + (30 * j)) + ' ' + (xAxisWidth + 145) + ',' + (153 + (30 * j)) + ' ' + (xAxisWidth + 120) + ',' + (153 + (30 * j)); 
                     svg.append('polygon')
                     .attr('id', 'P' + (j + 1))
                     .attr('points', points)
                     .attr('stroke', Cons.color[j])
                     .attr('fill', Cons.color[j]);
-                }
-                else {
-                    svg.append('polygon')
-                    .attr('id', 'P' + (j + 1))
-                    .attr('points', points)
-                    .attr('stroke', Cons.color[j])
-                    .attr('fill', Cons.color[j]);
-                }
                 break;
             case 'lastmonth':
                 for(let k = todays-30; k < todays; k++) {
@@ -232,35 +217,20 @@ export function drawCurvechart(thisyear, thismonth, today, monthday, timetype, b
                 .attr('stroke', Cons.color[j])
                 .attr('stroke-width', '5px');
                 //訓練動作文字標示
-                if(bodyparttype == 'arm' && (j == 3 || j == 4)) {
-                    curvetxtexp(j, xAxisWidth, optionsText);
-                }
-                else {
-                    svg.append('text')
-                    .attr('id', 'T' + (j + 1))
-                    .text(optionsText[j + 1])
-                    .attr("text-anchor", "left")
-                    .attr('x', xAxisWidth + 150)
-                    .attr('y', 120 + (30 * j))
-                    .style('font-size', '25px');
-                }
+                svg.append('text')
+                .attr('id', 'T' + (j + 1))
+                .text(optionsText[j + 1])
+                .attr("text-anchor", "left")
+                .attr('x', xAxisWidth + 150)
+                .attr('y', 120 + (30 * j))
+                .style('font-size', '25px');                
                 //訓練動作顏色標示
                 points = (xAxisWidth + 120) + ',' + (98 + (30 * j)) + ' ' + (xAxisWidth + 145) + ',' + (98 + (30 * j)) + ' ' + (xAxisWidth + 145) + ',' + (123 + (30 * j)) + ' ' + (xAxisWidth + 120) + ',' + (123 + (30 * j));
-                if(bodyparttype == 'arm' && j == 4) {
-                    points = (xAxisWidth + 120) + ',' + (128 + (30 * j)) + ' ' + (xAxisWidth + 145) + ',' + (128 + (30 * j)) + ' ' + (xAxisWidth + 145) + ',' + (153 + (30 * j)) + ' ' + (xAxisWidth + 120) + ',' + (153 + (30 * j)); 
-                    svg.append('polygon')
-                    .attr('id', 'P' + (j + 1))
-                    .attr('points', points)
-                    .attr('stroke', Cons.color[j])
-                    .attr('fill', Cons.color[j]);
-                }
-                else {
-                    svg.append('polygon')
-                    .attr('id', 'P' + (j + 1))
-                    .attr('points', points)
-                    .attr('stroke', Cons.color[j])
-                    .attr('fill', Cons.color[j]);
-                }
+                svg.append('polygon')
+                .attr('id', 'P' + (j + 1))
+                .attr('points', points)
+                .attr('stroke', Cons.color[j])
+                .attr('fill', Cons.color[j]);                
                 break;
         }
     }
@@ -276,46 +246,75 @@ export function drawBartimechart(thisyear, thismonth, today, thisweekday, monthd
     let actiontime = Src.getacttime(bodyparttype, actiontype);
     let BartimeData1 = [];
     let svg = d3.select('.chart').select('svg');
-    //判斷是否為閏年
-    if((thisyear%4 == 0 && thisyear%100 != 0) || thisyear%400 == 0) {
-        for(let i = actiontime; i < actiontime + Cons.year[0] + 1; i++) { //多一天
-            BartimeData1.push(BartimeData[i]);
-        }
-    }
-    else {
-        for(let i = actiontime; i < actiontime + Cons.year[0]; i++) {
-            BartimeData1.push(BartimeData[i]);
-        }
-    }
     //傳入資料
     if(actiontype == '全部') {
+        for(let j = 0; j < 365; j++) {
+            BartimeData1.push(0);
+        }
         let actionnum = d3.select('#action').selectAll("option").size();
-        for(let i = 1; i < actionnum-1; i++) {
+        for(let i = 0; i < actionnum-1; i++) {
             let actiontimesum = actiontime + Cons.year[0] * i;
             for(let j = 0; j < 365; j++) {
                 BartimeData1[j] += BartimeData[actiontimesum+j];
             }
         }
     }
+    else {
+        for(let i = actiontime; i < actiontime + 365; i++) {
+            BartimeData1.push(BartimeData[i]);
+        }
+    }
+
     //日期、繪圖輸入
     if(timetype == 'week') { //這週
-        for(let i = 0; i < Cons.week.length; i++) {
-            timedata.push((thismonth + 1) + '/' + (today - thisweekday + i) + "\n" + Cons.week[i]); 
+        if((today-thisweekday-1) < 0) {
+            for(let i = 0; i < thisweekday; i++) {
+                timedata.push((thismonth) + '/' + (Cons.month[thismonth-1]-thisweekday+1+i) + '\n' + Cons.week[i]); 
+            }
+            for(let i = 0; i < Cons.week.length-thisweekday; i++) {
+                timedata.push((thismonth + 1) + '/' + (today+i) + '\n' + Cons.week[thisweekday+i]); 
+            }
+            for(let i = todays-thisweekday-1; i < todays; i++) {
+                fituptime.push(BartimeData1[i]);                        
+            }
         }
-        for(let i = todays-thisweekday-1; i < todays; i++) {
-            fituptime.push(BartimeData1[i]);                        
+        else {
+            for(let i = 0; i < Cons.week.length; i++) {
+                timedata.push((thismonth + 1) + '/' + (today - thisweekday + i) + '\n' + Cons.week[i]); 
+            }
+            for(let i = todays-thisweekday-1; i < todays; i++) {
+                fituptime.push(BartimeData1[i]);                        
+            }
         }
     }
     else if(timetype == 'lastweek') { //過去7天
         for(let i = todays-Cons.week.length; i < todays; i++) {
             fituptime.push(BartimeData1[i]); 
         }
-        let startweekday = Cons.week.length-(thisweekday+1);
-        for(let i = 0; i < startweekday; i ++) {
-            timedata.push((thismonth + 1) + '/' + (today - 6 + i) + "\n" + Cons.week[thisweekday+1+i]); 
+        if((today-Cons.week.length+1) <= 0) {
+            let weekcount = [];
+            let startweekday = Cons.week.length-(thisweekday+1);
+            for(let i = 0; i < startweekday; i++) {
+                weekcount.push(Cons.week[thisweekday+1+i]); 
+            }
+            for(let i = 0; i < Cons.week.length-startweekday; i++) {                        
+                weekcount.push(Cons.week[i]); 
+            }
+            for(let i = 0; i < Cons.week.length-today; i++) {
+                timedata.push(thismonth + '/' + (Cons.month[thismonth - 1]-today+i) + '\n' + weekcount[i]);
+            }
+            for(let i = Cons.week.length-today; i < Cons.week.length; i++) {
+                timedata.push((thismonth+1) + '/' + (i-(Cons.week.length-today)+1) + '\n' + weekcount[i]);
+            }
         }
-        for(let i = 0; i < Cons.week.length-startweekday; i++) {                        
-            timedata.push((thismonth + 1) + '/' + (today - thisweekday + i) + "\n" + Cons.week[i]); 
+        else {
+            let startweekday = Cons.week.length-(thisweekday+1);
+            for(let i = 0; i < startweekday; i ++) {
+                timedata.push((thismonth + 1) + '/' + (today - 6 + i) + '\n' + Cons.week[thisweekday+1+i]); 
+            }
+            for(let i = 0; i < Cons.week.length-startweekday; i++) {                        
+                timedata.push((thismonth + 1) + '/' + (today - thisweekday + i) + '\n' + Cons.week[i]); 
+            }
         }
     }
     else if(timetype == 'month'){ //這個月
@@ -420,10 +419,10 @@ export function drawBartimechart(thisyear, thismonth, today, thisweekday, monthd
             return xScale(timedata[i]) + (padding * 2) + 55;
         })
         .attr('y', function(d) { //y座標
-            return yAxisWidth - (d * 40) + (padding * 4.5) ;
+            return yAxisWidth - (d * 40) + (padding * 3) ;
         })
         .attr('height', function(d){ //Bar高度
-            return d * 38;
+            return d * 40;
         });
         //加入時間文字
         let fittime = svg.append('g')
@@ -716,7 +715,7 @@ export function drawRadarchart(radius, total, arc, fivepoint, fivepointnum, Curv
 }
 
 export function drawBarsetschart(thisyear, thismonth, today, thisweekday, monthday, timetype, bodyparttype, BarsetsData) { //繪製長條圖(運動組數)
-    let width = 1000; //長條圖寬度
+    let width = 1200; //長條圖寬度
     let height = 720; //長條圖高度
     let padding = 30; //內距
     let actionname = actname(bodyparttype);
@@ -727,8 +726,8 @@ export function drawBarsetschart(thisyear, thismonth, today, thisweekday, monthd
     let svg = d3.select('.chart').select('svg');
     //繪圖輸入
     if(timetype == 'today') {
-        for(let i = actiontime; i < actiontime + Cons.year[0] * actionnum; i = i + Cons.year[0]) {
-            let sum = BarsetsData[i+today];
+        for(let i = 0; i < actionname.length; i++) {
+            let sum = BarsetsData[actiontime+today+Cons.year[0]*i];
             fitupsets.push(sum);
         }
     }
@@ -769,7 +768,7 @@ export function drawBarsetschart(thisyear, thismonth, today, thisweekday, monthd
     .attr('height', height) //長度
     .style('padding', padding + 'px'); //內距
     //x, y軸長度設定
-    let xAxisWidth = width - (padding * 8); //x軸長度
+    let xAxisWidth = width - (padding * 14); //x軸長度
     let yAxisWidth = height - (padding * 8); //y軸長度
     let xScale = d3.scaleLinear(); //x比例尺
     let yScale = d3.scaleBand(); //y比例尺
@@ -779,7 +778,7 @@ export function drawBarsetschart(thisyear, thismonth, today, thisweekday, monthd
         if(fitupsets[i] > max) {
             max = fitupsets[i];
         }
-    }
+    }   
     //x軸定義
     xScale.rangeRound([0, xAxisWidth]) //值域
     .domain([0, max]) //定義域
@@ -794,14 +793,14 @@ export function drawBarsetschart(thisyear, thismonth, today, thisweekday, monthd
     svg.append("g")
     .call(xAxis)
     .attr("class", "xAxis")
-    .attr("transform", "translate(" + (padding * 3) + "," + (height - (padding * 5)) + ")")
+    .attr("transform", "translate(" + (padding * 7) + "," + (height - (padding * 5)) + ")")
     .selectAll('text')
     .style('font-family', '微軟正黑體') //x軸字體設定
     .style('font-size', 20)
     .style('font-weight', 'bold')                
     //x軸標示
     svg.append("text")
-    .attr("x", xAxisWidth + 130)
+    .attr("x", xAxisWidth + 250)
     .attr("y", yAxisWidth + 100)
     .attr("text-anchor", "middle")
     .attr('class', 'xText')
@@ -813,18 +812,28 @@ export function drawBarsetschart(thisyear, thismonth, today, thisweekday, monthd
     svg.append("g")
     .call(yAxis)
     .attr("class", "yAxis")
-    .attr("transform", "translate(" + (padding * 3) + "," + (padding * 3) + ")")
+    .attr("transform", "translate(" + (padding * 7) + "," + (padding * 3) + ")")
     .selectAll('text')
     .style('font-family', '微軟正黑體') //y軸字體設定
     .style('font-size', 20);
     //y軸標示
     svg.append("text")
-    .attr("x", 100)
-    .attr("y", 60)
+    .attr("x", 210)
+    .attr("y", 80)
     .attr("text-anchor", "middle")
     .attr('class', 'yText')
     .style("font-size", "25px")
     .text("動作名稱");
+    let space = 0;
+    if(bodyparttype == 'shoulder') {
+        space = 100;
+    }
+    else if(bodyparttype == 'chest') {
+        space = 110;
+    }
+    else {
+        space = 118;
+    }
 
     let bar = svg.selectAll('rect') // 畫出長條圖 
     .data(fitupsets) //設定資料
@@ -832,10 +841,10 @@ export function drawBarsetschart(thisyear, thismonth, today, thisweekday, monthd
     .attr('class', 'barsets') //調整rect的css屬性
     .attr('fill', '#abdff1')
     .attr('x', function(d) { //x座標
-        return 0 + padding * 3;
+        return 0 + padding * 7;
     })
     .attr('y', function(d, i) { //y座標
-        return yScale(actionname[i]) + (padding * 2) + 45;
+        return yScale(actionname[i]) + space;
     })
     .attr('width', function(d) {
         return d * 10;})
@@ -961,33 +970,4 @@ function drawcurvexy(xAxisWidth, yAxisWidth, width, height, padding, timedata) {
     .attr('class', 'yText')
     .style("font-size", "25px")
     .text("正確率\(%\)");
-}
-
-function curvetxtexp(j, xAxisWidth, optionsText) {
-    let svg = d3.select('.chart').select('svg');
-    if(j == 3) {
-        svg.append('text')
-        .attr('id', 'T' + (j + 1))
-        .text('三頭肌徒手撐體')
-        .attr("text-anchor", "left")
-        .attr('x', xAxisWidth + 150)
-        .attr('y', 120 + (30 * j))
-        .style('font-size', '25px');
-        svg.append('text')
-        .attr('id', 'T' + (j + 2))
-        .text('(反向伏地挺身)')
-        .attr("text-anchor", "left")
-        .attr('x', xAxisWidth + 150)
-        .attr('y', 150 + (30 * j))
-        .style('font-size', '25px');
-    }
-    else {
-        svg.append('text')
-        .attr('id', 'T' + (j + 2))
-        .text(optionsText[j + 1])
-        .attr("text-anchor", "left")
-        .attr('x', xAxisWidth + 150)
-        .attr('y', 150 + (30 * j))
-        .style('font-size', '25px');
-    }
 }

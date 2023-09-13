@@ -2,12 +2,15 @@
 import React from 'react';
  
 import c5 from './images/c5.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 
 const C5ExerciseDetails = () => {
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -121,7 +124,7 @@ const C5ExerciseDetails = () => {
      
         </div>
     </div>
-
+      </>
 
     );
 };

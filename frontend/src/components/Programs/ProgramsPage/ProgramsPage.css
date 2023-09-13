@@ -13,6 +13,7 @@ h1.program {
 
 .program-menus-container {
   display: flex;
+  justify-content: center;
   gap: 30px;
 }
 
@@ -60,15 +61,7 @@ li.program-menu-item:nth-child(2) {
 }
 
 .program-add-button {
-  /* 使用絕對定位來固定按鈕位置 */
-  /* position: absolute;  */
-  /* 距離菜單容器底部 20px */
-  /* bottom: 20px;  */
-  /* 水平置中 */
-  /* left: 50%;  */
-  /* 水平居中 */
   transform: translateX(50%); 
-  
   padding: 10px 20px;
   background-color: #00c8ff;
   color: #fff;
@@ -86,5 +79,57 @@ li.program-menu-item:nth-child(2) {
 /* You can further customize the styling to match your preferences. */
 
 
+/*開始訓練按鈕*/
+/* .start-button {
+  width: 152px;
+  border: none;
+  justify-content: center;
+  bottom: 10px;
+  background-color: #00c8ff;
+  color: #fff;
+  margin: 10px auto 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
 
+.start-button:hover {
+  background-color: #002a35;
+} */
 
+/*加入我的菜單按鈕*/
+.program-button {
+  bottom: 5px;
+  left: 25%;
+  right: 25%;
+  width: 152px;
+  justify-content: center;
+  margin: 10px auto 0;
+  padding: 10px 20px;
+  background-color: #00c8ff;
+  color: #fff;
+  border: none;  
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.program-button:hover {
+  background-color: #002a35;
+}
+
+.program-buttons{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.program-image{
+  max-width: 100%;
+}
+
+.program-expanded{
+  display:block;
+}
+.program-unexpanded{
+  display: none;
+}

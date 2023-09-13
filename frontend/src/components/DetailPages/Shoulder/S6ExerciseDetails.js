@@ -2,11 +2,14 @@
 import React from 'react';
 
 import s6 from './images/s6.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 const S6ExerciseDetails = () => {
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -144,7 +147,7 @@ const S6ExerciseDetails = () => {
     </div>
     </div>
 
-
+    </>
     );
 };
 

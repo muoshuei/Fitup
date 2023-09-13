@@ -1,11 +1,14 @@
 import React from 'react';
 
 import s7 from './images/s7.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 const S7ExerciseDetails = () => {
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -96,7 +99,7 @@ const S7ExerciseDetails = () => {
     </div>
     </div>
 
-
+    </>
     );
 };
 

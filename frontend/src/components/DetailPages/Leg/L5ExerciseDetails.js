@@ -2,11 +2,14 @@
 import React from 'react';
  
 import l5 from './images/L5.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 const L5ExerciseDetails = () => {
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -130,7 +133,7 @@ const L5ExerciseDetails = () => {
     </div>
     </div>
 
-
+    </>
     );
 };
 

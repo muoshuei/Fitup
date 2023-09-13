@@ -4,6 +4,7 @@ import p1 from './images/p1.jpg'
 import vp1 from './videos/p1.mp4'
 import { useState } from 'react';
 import  { useRef } from 'react';
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 const P1ExerciseDetails = () => {
@@ -19,6 +20,8 @@ const P1ExerciseDetails = () => {
       };
 
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       
       <div className="row">
@@ -141,7 +144,7 @@ const P1ExerciseDetails = () => {
       
       )}
   </div>
-
+  </>
 
     );
 };

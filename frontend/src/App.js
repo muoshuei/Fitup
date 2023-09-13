@@ -10,6 +10,7 @@ import APITest from './components/APITest/APITest';
 import SpeechTest from './components/SpeechTest/SpeechTest';
 
 import routes from './routes';
+import testRoutes from './testRoutes';
 // import Feature from './components/Feature/Feature';
 
 function App() {
@@ -19,9 +20,7 @@ function App() {
       <BrowserRouter>
           <Routes>
             {routes.map((e) => <Route key={e.path} path={e.path} element={e.element}></Route>)}
-            
-            <Route path="/apitest" element={<APITest></APITest>}></Route>
-            <Route path="/speechtest" element={<SpeechTest></SpeechTest>}></Route>
+            {testRoutes.map((e) => <Route key={e.path} path={e.path} element={e.element}></Route>)}
 
           </Routes>
       </BrowserRouter>

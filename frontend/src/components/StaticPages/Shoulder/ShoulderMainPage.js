@@ -16,6 +16,8 @@ import s5 from './images/s5.png';
 import s6 from './images/s6.png';
 import s7 from './images/s7.png';
 import p1 from './images/p1.jpg';
+import TopNavbar from '../../TopNavbar/TopNavbar';
+import { useNavigate } from 'react-router-dom';
 
 function ShoulderMainPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -26,7 +28,7 @@ function ShoulderMainPage() {
   const handleImageChange = (index) => {
     setCurrentImageIndex(index);
   };
-
+  const navigate = useNavigate();
   const toggleImageSet = () => {
     if (showImages) {
       setShowFirstSet(!showFirstSet);
@@ -42,7 +44,7 @@ function ShoulderMainPage() {
 
   const exerciseImagesFirstSet = [s1, s2, s3, s4];
   const exerciseNamesFirstSet = ['啞鈴肩推', '啞鈴前平舉', '啞鈴側平舉', '俯身啞鈴飛鳥'];
-
+  
   const exerciseImagesSecondSet = [s5, s6, s7, p1];
   const exerciseNamesSecondSet = ['直立划船', '阿諾肩推', '過頭前平舉', '伏地挺身'];
 
@@ -50,6 +52,8 @@ function ShoulderMainPage() {
   const exerciseNames = showFirstSet ? exerciseNamesFirstSet : exerciseNamesSecondSet;
 
   return (
+    <>
+    <TopNavbar></TopNavbar>
     <div className="first-page-container">
       <div className="carousel-container">
         <Carousel fade className="custom-carousel">
@@ -108,7 +112,16 @@ function ShoulderMainPage() {
                           <button
                             className="btn btn5 custom-button"
                             style={{ marginBottom: '-30px' }} // 調整按鈕位置
-                            onClick={() => handleImageChange(currentImageIndex + index)}
+                            onClick={
+                              () => {
+                                if(exerciseNames[currentImageIndex + index] == "伏地挺身"){
+                                  navigate("/action/p/1");
+                                }
+                                else{
+                                  navigate("/action/shoulder/" + (1+index+(showFirstSet?0:4)));
+                                }
+                              }
+                            }
                           >
                             {exerciseNames[currentImageIndex + index]}
                           </button>
@@ -123,6 +136,7 @@ function ShoulderMainPage() {
         )}
       </div>
     </div>
+    </>
   );
 }
 

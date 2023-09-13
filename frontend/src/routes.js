@@ -45,6 +45,7 @@ import L2ExerciseDetails from './components/DetailPages/Leg/L2ExerciseDetails';
 import L3ExerciseDetails from './components/DetailPages/Leg/L3ExerciseDetails';
 import L4ExerciseDetails from './components/DetailPages/Leg/L4ExerciseDetails';
 import L5ExerciseDetails from './components/DetailPages/Leg/L5ExerciseDetails';
+import NewProgramsPage from "./components/Programs/ProgramsPage/NewProgramsPage";
 
 const routes = [
     {
@@ -97,7 +98,7 @@ const routes = [
     },
     {
         path: "/program/:entry",
-        element: <ProgramsPage />
+        element: <NewProgramsPage />
     },
     {
         path: "/chart",
@@ -219,8 +220,6 @@ const routes = [
         path: "/action/p/1",
         element: <P1ExerciseDetails/>
     },
-    
-
 ]
 
 export default routes;

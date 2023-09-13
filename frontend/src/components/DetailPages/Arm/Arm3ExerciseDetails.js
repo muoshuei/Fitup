@@ -2,11 +2,14 @@
 import React from 'react';
  
 import arm3 from './images/arm3.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 const H3ExerciseDetails = () => {
     return (
+      <>
+  <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -106,7 +109,7 @@ const H3ExerciseDetails = () => {
      
     </div>
     </div>
-
+      </>
 
     );
 };

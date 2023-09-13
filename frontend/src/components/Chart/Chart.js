@@ -2,9 +2,9 @@ import React, {useState, useRef, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Chart.css';
 import * as d3 from 'd3';
-import * as Draw from './Drawchart.js';
-import * as Cons from './Constdata.js';
-import * as Src from './Script.js';
+import * as Draw from './ChartComponent/Drawchart.js';
+import * as Cons from './ChartComponent/Constdata.js';
+import * as Src from './ChartComponent/Script.js';
 const Chart = () => {    
 
     const choosechart = () => {
@@ -41,22 +41,22 @@ const Chart = () => {
     const [monthday, setMonthday] = useState(0);
     
     //動作正確率隨機亂數值(最大為100%，數值取到小數點後第二位)
-    let CurveData = []; //11680    
-    for(let i = 0; i < 11680; i++) {
+    let CurveData = []; //10950    
+    for(let i = 0; i < 10950; i++) {
         let RandNum = Math.round(Math.random() * 100 * 100) / 100;
         CurveData.push(RandNum);
     } 
 
     //運動時長隨機亂數值(最大為12小時，數值取到小數點後第一位)
-    let BartimeData = []; //11680
-    for(let i = 0;i < 11680; i++) {
+    let BartimeData = []; //10950
+    for(let i = 0;i < 10950; i++) {
         let RandNum = Math.floor(Math.round(Math.random() * 12 * 10)) / 10;
         BartimeData.push(RandNum);
     }
 
     //運動組數隨機亂數值(最大為60組)
-    let BarsetsData = []; //11680
-    for(let i = 0;i < 11680; i++) {
+    let BarsetsData = []; //10950
+    for(let i = 0;i < 10950; i++) {
         let RandNum = Math.floor(Math.round(Math.random() * 60));
         BarsetsData.push(RandNum);
     }
@@ -108,7 +108,7 @@ const Chart = () => {
             </div>
             <div class="select"> {/*時間、部位、動作選擇*/}
                 <select1>
-                    <text class="chart-text">時間:</text>
+                    <text class="text1">時間:</text>
                     <select id="time" onChange={() => {                        
                         choosechart();                        
                     }}>
@@ -116,7 +116,7 @@ const Chart = () => {
                         <option value="lastmonth">最近一個月</option>
                         <option value="year">今年</option>
                     </select>
-                    <text class="chart-text">訓練部位:</text>
+                    <text class="text1">訓練部位:</text>
                     <select id="bodypart" onChange={() => {                        
                         Src.bodypartchange();
                         choosechart();
@@ -127,7 +127,7 @@ const Chart = () => {
                         <option value="abs">腹</option>
                         <option value="leg">腿</option>                
                     </select>
-                    <text class="chart-text1">訓練動作:</text>
+                    <text class="text1">訓練動作:</text>
                     <select id="action" onChange={() => {                        
                         if(charttype == 'curve') {
                             Src.actionchange(charttype);

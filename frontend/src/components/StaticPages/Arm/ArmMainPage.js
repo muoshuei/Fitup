@@ -13,6 +13,8 @@ import arm2 from './images/arm2.png';
 import arm3 from './images/arm3.png';
 import arm4 from './images/arm4.png';
 import p1 from './images/p1.jpg';
+import TopNavbar from '../../TopNavbar/TopNavbar';
+import { useNavigate } from 'react-router-dom';
 
 function ArmMainPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -20,10 +22,11 @@ function ArmMainPage() {
   const [showImages, setShowImages] = useState(true); // 控制是否顯示圖片和按鈕
   const [buttonText, setButtonText] = useState('往下一頁'); // 控制按鈕字樣
 
+  
   const handleImageChange = (index) => {
     setCurrentImageIndex(index);
   };
-
+  const navigate = useNavigate();
   const toggleImageSet = () => {
     if (showImages) {
       setShowFirstSet(!showFirstSet);
@@ -47,6 +50,8 @@ function ArmMainPage() {
   const exerciseNames = showFirstSet ? exerciseNamesFirstSet : exerciseNamesSecondSet;
 
   return (
+    <>
+    <TopNavbar></TopNavbar>
     <div className="first-page-container">
       <div className="carousel-container">
         <Carousel fade className="custom-carousel">
@@ -105,7 +110,16 @@ function ArmMainPage() {
                           <button
                             className="btn btn5 custom-button"
                             style={{ marginBottom: '-30px' }} // 調整按鈕位置
-                            onClick={() => handleImageChange(currentImageIndex + index)}
+                            onClick={
+                              () => {
+                                if(exerciseNames[currentImageIndex + index] == "伏地挺身"){
+                                  navigate("/action/p/1");
+                                }
+                                else{
+                                  navigate("/action/arm/" + (1+index+(showFirstSet?0:4)));
+                                }
+                              }
+                            }
                           >
                             {exerciseNames[currentImageIndex + index]}
                           </button>
@@ -120,6 +134,7 @@ function ArmMainPage() {
         )}
       </div>
     </div>
+    </>
   );
 }
 

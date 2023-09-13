@@ -1,12 +1,12 @@
- 
-import React from 'react';
- 
+ import React from 'react';
 import abs1 from './images/Abs1.png'
-
-
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 const C1ExerciseDetails = () => {
     return (
+    <>
+    <TopNavbar></TopNavbar>
+    
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -112,16 +112,9 @@ const C1ExerciseDetails = () => {
              
               </div>
             </div>
-
-
-            <div className="col-12">
-              <p></p>
-            </div>
-
-         
-     
         </div>
     </div>
+    </>
 
 
     );

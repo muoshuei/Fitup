@@ -2,12 +2,15 @@
 import React from 'react';
 
 import s5 from './images/s5.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 
 const S5ExerciseDetails = () => {
     return (
+      <>
+      <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -113,7 +116,7 @@ const S5ExerciseDetails = () => {
     </div>
     </div>
 
-
+    </>
     );
 };
 

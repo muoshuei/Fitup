@@ -30,7 +30,6 @@
 .right_panel {
       text-align: left;
       padding: 5px;
-      /* background-color: rgb(191, 244, 245); */
       margin-top: 10px;
       margin-bottom: 10px;
 }
@@ -39,6 +38,9 @@
 }
 .button_panel {
       padding: 5px;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
 }
 .top_right_bar {
       padding: 5px;
@@ -47,7 +49,8 @@
       padding: 5px;
 }
 .btn_custom {
-      margin: 5px;
+      margin: 5px 0px;
+      width: 100%;
 }
 .logo_image {
       height:30px;

@@ -2,11 +2,14 @@
 import React from 'react';
  
 import abs3 from './images/Abs3.png'
+import TopNavbar from '../../TopNavbar/TopNavbar';
 
 
 
 const B3ExerciseDetails = () => {
     return (
+    <>
+    <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">
        <div className="col-4 text">               
@@ -113,7 +116,7 @@ const B3ExerciseDetails = () => {
      
         </div>
     </div>
-
+    </>
 
     );
 };

@@ -13,6 +13,7 @@ import ExerciseCountManager from './modules/ExerciseCountManager';
 
 import AngleCalculator from './modules/AngleCalculator';
 import ExerciseParser from './modules/ExerciseParser';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -39,6 +40,8 @@ function Train(props){
         }
     );
     
+    const navigate = useNavigate();
+
     const detail = 
     exerciseDetails[props.exerciseId] 
     ? exerciseDetails[props.exerciseId].detail
@@ -52,7 +55,7 @@ function Train(props){
     const startButton = useRef(null);
     const pauseButton = useRef(null);
     const resetButton = useRef(null);
-    const saveButton = useRef(null);
+    const leaveButton = useRef(null);
 
     const ssu = new SpeechSynthesisUtterance();
     const handleSpeak = (msg) => {
@@ -79,6 +82,7 @@ function Train(props){
         if(data.exerciseCount >= requireCount){
             props.handleAchieved(30);
             handlePause();
+            handleSave();
         }
     }, [data.exerciseCount])
 
@@ -224,7 +228,7 @@ function Train(props){
             accuracy: accuracyManager.getAccuracy(),
             time: accuracyManager.getTotalTimeInSeconds(),
             count: exerciseCountManager.count,
-            date: "YYYY/MM/DD",
+            date: "YYYY/MM/DD", //TODO - change this to proper date format
             type: name
         };
         const response = await fetch(
@@ -259,12 +263,11 @@ function Train(props){
                     </div>
                     
                     <DataPanel name={lookupMap.name} timerState={timerState} parts={lookupMap.parts} data={data} detail={detail}></DataPanel>
-                    <div className = "button_panel">
-                        <button className="btn btn-primary btn-custom" ref={startButton} id="start" onClick={handleStart}>開始偵測</button>
-                        <button className="btn btn-secondary btn-custom" ref={pauseButton} id="pause" onClick={handlePause}>暫停偵測</button>
-                        <button className="btn btn-danger btn-custom" ref={resetButton} id="reset" onClick={handleReset}>　重置　</button>
-                        
-                        <button className="btn btn-primary btn-custom" ref={saveButton} id="save" onClick={handleSave}>儲存資料</button>
+                    <div className = "button-panel">
+                        <button className="btn btn-primary btn_custom" ref={startButton} id="start" onClick={handleStart}>開始偵測</button>
+                        <button className="btn btn-secondary btn_custom" ref={pauseButton} id="pause" onClick={handlePause}>暫停偵測</button>
+                        <button className="btn btn-danger btn_custom" ref={resetButton} id="reset" onClick={handleReset}>　重置　</button>
+                        <button className="btn btn-warning btn_custom" ref={leaveButton} id="leave" onClick={()=>{navigate('/program/new')}}>離開偵測</button>
                         
                     </div>
                 </div>
