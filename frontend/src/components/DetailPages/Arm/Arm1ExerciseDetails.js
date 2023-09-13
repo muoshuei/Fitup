@@ -8,7 +8,7 @@ import TopNavbar from '../../TopNavbar/TopNavbar';
 
 const H1ExerciseDetails = () => {
     return (
-      <>
+    <>
     <TopNavbar></TopNavbar>
     <div className="Content-container">
       <div className="row">

@@ -56,7 +56,7 @@ function TrainWrapper(props){
         } 
     },[time])
     return (
-        <div>
+        <div className="train_wrapper_container">
             <div className="topbar">
                 <Link to="/" className="logo_image_container">
                     <img src={LogoImage} className="logo_image" alt="Logo" />
@@ -69,7 +69,7 @@ function TrainWrapper(props){
                 : <Train key={index} exerciseId={"s2_1"} handleAchieved={handleAchieved}></Train>}
             </div>
             <div className="bottombar">
-                {/* {index !== 0 ? <button onClick={handlePrev}>上個動作</button> : <></>} */}
+                {index !== 0 ? <button onClick={handlePrev}>上個動作</button> : <></>}
                 <div>{index}/{programList.length - 1}</div>
                 {index === programList.length - 1 
                 ? <Link to="/program/new">回到菜單頁面</Link>
