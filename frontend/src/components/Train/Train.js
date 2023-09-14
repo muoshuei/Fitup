@@ -22,8 +22,7 @@ const accuracyManager = new AccuracyManager();
 const exerciseCountManager = new ExerciseCountManager();
 const angleCalculator = new AngleCalculator();
 const parser = new ExerciseParser();
-
-    
+const date = new Date();
     
 function Train(props){
     const [inputVideoReady, setInputVideoReady] = useState(false);
@@ -228,7 +227,7 @@ function Train(props){
             accuracy: accuracyManager.getAccuracy(),
             time: accuracyManager.getTotalTimeInSeconds(),
             count: exerciseCountManager.count,
-            date: "YYYY/MM/DD", //TODO - change this to proper date format
+            date: `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,"0")}-${String(date.getDate()).padStart(2, '0')}`, //TODO - change this to proper date format
             type: name
         };
         const response = await fetch(
