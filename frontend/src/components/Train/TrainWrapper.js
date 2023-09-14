@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import fitnessMenu from "../../local-json/fitnessmenu.json"
 import "./TrainWrapper.css";
 import LogoImage from '../assets/fitup3.png';
+import { timeDays } from "d3";
 
 
 function TrainWrapper(props){
@@ -53,8 +54,15 @@ function TrainWrapper(props){
             handleNext();
             setAchieved(false);
             setTime(30);
+
         } 
     },[time])
+    useEffect(()=>{
+        if(index >= programList.length){
+            navigate("/program/mine");
+            return;
+        }
+    },[index])
     return (
         <div className="train_wrapper_container">
             <div className="topbar">
@@ -70,7 +78,7 @@ function TrainWrapper(props){
             </div>
             <div className="bottombar">
                 {index !== 0 ? <button onClick={handlePrev}>上個動作</button> : <></>}
-                <div>{index}/{programList.length - 1}</div>
+                <div>{index}/{programList.length}</div>
                 {index === programList.length - 1 
                 ? <Link to="/program/new">回到菜單頁面</Link>
                 : <></>}

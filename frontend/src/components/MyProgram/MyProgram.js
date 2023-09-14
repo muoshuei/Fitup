@@ -25,34 +25,16 @@ const MyProgram = (props) => {
   const [programList, setProgramList] = useState(
     [
       {
-        id: "arMedium",
-        name:"手臂-中",
-        image: "arm",
-        details: "這裡是訓練菜單-「手臂-弱」的詳細內容"
-      },
-      {
         id: "arWeak",
         name: "手臂-弱",
         image: "arm",
         details: "這裡是訓練菜單-「手臂-弱」的詳細內容"
       },
       {
-        id: "lMedium",
-        name: "腿部-中",
-        image: "leg",
-        details: "這裡是訓練菜單-「腿部-中」的詳細內容"
-      },
-      {
-        id: "lStrong",
-        name: "腿部-強",
-        image: "leg",
-        details: "這裡是訓練菜單-「腿部-強」的詳細內容"
-      },
-      {
-        id: "sStrong",
-        name: "肩膀-強",
-        image: "shoulder",
-        details: "這裡是訓練菜單-「肩膀-強」的詳細內容"
+        id: "demo",
+        name: "展示用菜單",
+        image: "body",
+        details: "這是展示用菜單"
       }
     ]
     );

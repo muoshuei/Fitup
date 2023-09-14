@@ -1,17 +1,21 @@
 import React from 'react';
 
 
-import f1 from '../../images/f1t.png';
-import f2 from '../../images/f2t.png';
-import f3 from '../../images/f3t.png';
-import f4 from '../../images/f4t.png';
-import hp from '../../images/homepage5.png';
+import f1 from './images/f1t.png';
+import f2 from './images/f2t.png';
+import f3 from './images/f3t.png';
+import f4 from './images/f4t.png';
+import hp from './images/homepage5.png';
 
 import './Feature.css';
+import TopNavbar from '../TopNavbar/TopNavbar';
 
 
 const Feature = () => {
   return (
+    <>
+    <TopNavbar></TopNavbar>
+    
     <div className="container">
       <div className="row">
       <div className="col-12">
@@ -93,6 +97,7 @@ const Feature = () => {
 
       </div>
     </div>
+    </>
   );
 };
 

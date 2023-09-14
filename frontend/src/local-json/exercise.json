@@ -44,8 +44,8 @@
                     {
                         "type":"surfaces",
                         "joints":[[12,24,23],[26,25,24]],
-                        "ub":180,
-                        "lb":150,
+                        "ub":35,
+                        "lb":0,
                         "name":"腰部",
                         "correction":
                         {  

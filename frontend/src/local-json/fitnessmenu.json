@@ -4,6 +4,11 @@
         "name": "動作-強度",
         "order" : ["p1_1"]
     },
+    "demo":{
+        "menuId": "demo",
+        "name": "動作-強度",
+        "order" : ["p1_1"]
+    },
     "sWeak": {
         "menuid" : "sWeak",
         "name": "肩-弱",

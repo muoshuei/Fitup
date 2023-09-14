@@ -77,7 +77,7 @@ def process():
 
 if __name__ == '__main__':
     host = '127.0.0.1'
-    port = 8017
+    port = 8000
     debug = True
     options = None
     app.run(host, port, debug, options)

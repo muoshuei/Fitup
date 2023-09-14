@@ -1,5 +1,7 @@
 import Chart from "./components/Chart/Chart";
+import Feature from "./components/Feature/Feature";
 import HomePage from "./components/HomePage/HomePage";
+import HomeFitup from "./components/HomeFitup/HomeFitup"
 import ChangeInfo from "./components/Info/ChangeInfo";
 import MyProgram from "./components/MyProgram/MyProgram";
 import ProgramNavPage from "./components/Programs/ProgramNavPage/ProgramNavPage";
@@ -50,7 +52,7 @@ import NewProgramsPage from "./components/Programs/ProgramsPage/NewProgramsPage"
 const routes = [
     {
         path: "/",
-        element: <HomePage />
+        element: <HomeFitup/>
     },
     {
         path: "/home",
@@ -220,6 +222,10 @@ const routes = [
         path: "/action/p/1",
         element: <P1ExerciseDetails/>
     },
+    {
+        path: "/feature",
+        element: <Feature/>
+    }
 ]
 
 export default routes;

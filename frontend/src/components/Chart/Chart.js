@@ -5,6 +5,7 @@ import * as d3 from 'd3';
 import * as Draw from './ChartComponent/Drawchart.js';
 import * as Cons from './ChartComponent/Constdata.js';
 import * as Src from './ChartComponent/Script.js';
+import TopNavbar from '../TopNavbar/TopNavbar';
 const Chart = () => {    
 
     const choosechart = () => {
@@ -80,6 +81,8 @@ const Chart = () => {
         Draw.drawCurvechart(thisyear, thismonth, today, monthday, timetype, bodyparttype, CurveData);
     }, [])
     return (
+        <>
+        <TopNavbar></TopNavbar>
         <div>
             {/*圖表*/}
             <div class="top"> {/*圖表類型選擇*/}
@@ -158,6 +161,7 @@ const Chart = () => {
                 <svg></svg>       
             </div>           
         </div>
+        </>
     );
 
 }
