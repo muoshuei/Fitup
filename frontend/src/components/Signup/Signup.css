@@ -1,10 +1,10 @@
-.container {
+/* .container {
     display: flex;
-    justify-content: center; /* 將內容水平置中 */
-    align-items: center; /* 將內容垂直置中 */
-    height: 100vh; /* 設置容器高度，讓內容垂直置中 */
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
   
-  }
+  } */
   .login2{
     margin-left: 680px;
     width: 300px;
