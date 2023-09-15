@@ -14,7 +14,7 @@ import ExerciseCountManager from './modules/ExerciseCountManager';
 import AngleCalculator from './modules/AngleCalculator';
 import ExerciseParser from './modules/ExerciseParser';
 import { useNavigate } from 'react-router-dom';
-
+import Cookies from 'js-cookie';
 
 
 
@@ -223,12 +223,16 @@ function Train(props){
         setTimerState("重置");
     }
     const handleSave = async () => {
+        const storedUserData = Cookies.get('userData');
+        // 将从 Cookie 中读取的数据反序列化为 JSON 对象
+        const parsedUserData = JSON.parse(storedUserData); 
         var obj = {
             accuracy: accuracyManager.getAccuracy(),
             time: accuracyManager.getTotalTimeInSeconds(),
             count: exerciseCountManager.count,
             date: `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,"0")}-${String(date.getDate()).padStart(2, '0')}`, //TODO - change this to proper date format
-            type: name
+            type: name,
+            id: parsedUserData.info_id
         };
         const response = await fetch(
             "https://localhost:8000/process",

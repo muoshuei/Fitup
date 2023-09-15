@@ -133,3 +133,8 @@ li.program-menu-item:nth-child(2) {
 .program-unexpanded{
   display: none;
 }
+.Star{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}

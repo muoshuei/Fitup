@@ -66,17 +66,22 @@ const TopNavbar = () => {
               </div>
 
 
-            <li className="nav-item">
+            <div className="nav-item">
                 {userData 
-                ? (<p>
-                    <Link to="/info" className='nav-link nav-link-custom'>
-                      <b>個人資訊</b>
-                    </Link>
-                  </p>)
+                ? (<>
+                  <a href="#" className='nav-link nav-link-custom action-link'>
+                    <b>個人資訊</b>
+                  </a>
+                  <div className='dropdown-menu action-expandable'>
+                    <Link to='/info' className='dropdown-item action-dropdown-item-custom'>詳細資訊</Link>
+                    <Link to='/chart' className='dropdown-item action-dropdown-item-custom'>我的圖表</Link>
+                  </div>
+                  </>
+                  )
                 : (
                   <p className='nav-link nav-link-custom'>登入以查看個人資訊</p>
                 )}
-            </li>
+            </div>
           </ul>
           
         </div>

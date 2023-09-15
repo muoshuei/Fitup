@@ -1,7 +1,7 @@
 import './Signup.css';
 import React from 'react';
 import { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
+
 import { Link,useNavigate} from 'react-router-dom';
 import SignUpBG from './images/signupbg.png';
 const Signup = () => {

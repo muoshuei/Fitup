@@ -37,7 +37,9 @@
     font-size: 20px;
   }
 
- 
+.white-text{
+  color:#fdfdfd;
+}
 .blue-title-text{
   color:#0c4a60;
 }

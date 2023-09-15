@@ -5,10 +5,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import './styles/action.css'
-import APITest from './components/APITest/APITest';
-import SpeechTest from './components/SpeechTest/SpeechTest';
-
+import './styles/action.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import routes from './routes';
 import testRoutes from './testRoutes';
 // import Feature from './components/Feature/Feature';

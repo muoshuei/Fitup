@@ -1,12 +1,63 @@
 from flask import Flask, render_template, request, jsonify
 import mysql.connector
 
-app = Flask(__name__, static_url_path='', static_folder='build', template_folder='build')
+app = Flask(__name__, static_url_path='', static_folder='./frontend/build', template_folder='./frontend/build')
 
 
 @app.route('/')
 def index():
     return render_template("index.html")
+ 
+@app.route('/train', methods=['POST'])
+def process3():
+    data = request.get_json()
+    id = data['id']
+    accuracy=data['accuracy']
+    time = data['time']
+    count = data['count']
+    date = data['date']
+    type = data['type']
+    print(id,time,accuracy,count,date,type)
+
+    mydb = mysql.connector.connect(
+        host="127.0.0.1",
+        user="root",
+        port="3306",
+        password="0000",
+        database="fit_database"
+    )
+    mycursor = mydb.cursor()
+    mycursor.execute("INSERT INTO record(correct_rate,exerecise_time,set_number,exerecise_date,id,exereise_name_code) VALUES(%s,%s,%s,%s,%s,%s)",(round(accuracy,4),time,count,date,id,type))
+    mydb.commit()
+    mycursor.close()
+    mydb.close()
+    return jsonify()
+ 
+@app.route('/changeinfo', methods=['POST'])
+def process2():
+   data = request.get_json()
+
+   height=data['height'] 
+   weight=data['weight']
+   id=data['id']
+   mydb = mysql.connector.connect(
+        host="127.0.0.1",
+        user="root",
+        port="3306",
+        password="0000",
+        database="fit_database"
+    )
+   cursor = mydb.cursor(buffered=True)
+   update_query = "UPDATE user_info SET height = %s, weight = %s WHERE info_id = %s"
+   cursor.execute(update_query, (height, weight, "000"+id))   
+   cursor.execute("SELECT * FROM user_info WHERE info_id = %s",("000"+id,))
+   result=cursor.fetchone()
+   print(result)
+   res={"height":result[1],"weight":result[2],"age":result[3],"name":result[4],"gender":result[5],"id":result[6]}
+   mydb.commit()
+   cursor.close()
+   mydb.close()
+   return jsonify(res)
 
 @app.route('/signin', methods=['POST'])
 def process1():
@@ -14,7 +65,6 @@ def process1():
 
    mail=data['mail'] 
    password=data['password']
-  
 
    mydb = mysql.connector.connect(
         host="127.0.0.1",
@@ -34,20 +84,21 @@ def process1():
       print(mailresult[0])
       if passwordresult[0]==password:
          print(passwordresult[0])
-         res={"status": True}
+         mycursor.execute("SELECT * FROM user_info WHERE info_id = %s",("000"+mail,))
+         result=mycursor.fetchone()
+         print(result)
+         res={"status": True,"height":result[1],"weight":result[2],"age":result[3],"name":result[4],"gender":result[5],"id":result[6],"bmi":round(result[2] / (result[1] / 100) ** 2, 2)}
          mydb.commit()
          mycursor.close()
          mydb.close()
          return jsonify(res)
       else :
-         print("banana")
          res={"status": False}
          mydb.commit()
          mycursor.close()
          mydb.close()
          return jsonify(res)    
    else :
-      print("apple")
       res={"status": False}
       mydb.commit()
       mycursor.close()

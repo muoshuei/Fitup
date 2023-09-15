@@ -1,12 +1,8 @@
 import APITest from "./components/APITest/APITest";
-import NewProgramsPage from "./components/Programs/ProgramsPage/NewProgramsPage";
+import MyProgram from "./components/MyProgram/MyProgram";
 import SpeechTest from "./components/SpeechTest/SpeechTest";
 
 const testRoutes = [
-    {
-        path: "/newprogram/:entry",
-        element: <NewProgramsPage/>
-    },
     {
         path: "/apitest",
         element: <APITest/>

@@ -33,7 +33,7 @@ const Changeinfo = () => {
          const data = await response.json();
          console.log("成功啦!");
          setShowPopup(true);
-         const dataToStore ={info_id :data.id,height :data.height,weight:data.weight,age:data.age,gender:data.gender,name:data.name};
+         const dataToStore ={info_id :data.id,height :data.height,weight:data.weight,age:data.age,gender:data.gender,name:data.name,bmi:Math.round(data.weight / Math.pow(data.height/100, 2) *100) / 100};
          Cookies.set('userData', JSON.stringify(dataToStore), { expires: 7 });
      } 
     const handleChange = (event) => {

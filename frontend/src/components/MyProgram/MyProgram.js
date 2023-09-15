@@ -1,78 +1,80 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MyProgram.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect, useState } from 'react';
-import arm from './images/arm.jpg';
-import leg from './images/leg.jpg';
-import chest from './images/chest.jpg';
-import body from './images/body.jpg';
-import shoulder from './images/shoulder.jpg';
-import abs from './images/abs.png';
+import { Link, useNavigate } from 'react-router-dom';
 import TopNavbar from '../TopNavbar/TopNavbar';
-import { Link } from 'react-router-dom';
-import fitnessMenu from '../../local-json/fitnessmenu.json'
-const ImageProvider = 
-{
-  "arm": arm,
-  "leg": leg,
-  "shoulder": shoulder,
-  "chest": chest,
-  "abs": abs,
-  "body": body
-}
-const MyProgram = (props) => {
-  //TODO - programList should be fetched from backend in production
-  const [programList, setProgramList] = useState(
+import imageSet from '../Programs/ProgramsPage/ProgramImageProvider';
+const MyProgram = () => {
+  const [myList, setMyList] = useState(
     [
       {
         id: "arWeak",
         name: "手臂-弱",
         image: "arm",
+        strength: "weak",
         details: "這裡是訓練菜單-「手臂-弱」的詳細內容"
       },
       {
         id: "demo",
         name: "展示用菜單",
         image: "body",
+        strength: "weak",
         details: "這是展示用菜單"
-      }
+      },
+      {
+        id: "demo",
+        name: "展示用菜單",
+        image: "body",
+        strength: "weak",
+        details: "這是展示用菜單"
+      },
+      {
+        id: "demo",
+        name: "展示用菜單",
+        image: "body",
+        strength: "weak",
+        details: "這是展示用菜單"
+      },
     ]
-    );
+  );
+  const navigate = useNavigate();
+
+  const handleStart = (e) => {navigate("/train", {state: {programListId: e.target.value}})};
+  const handleRemove = (e) => {};
   return (
-    <div>
-      <TopNavbar></TopNavbar>
-      <div className="myprogram-container">
-        <h1>我的菜單</h1>
-        <div className="menu-list">
-          {programList.map((program)=>
-            <ProgramCard key={program.id} program={program}></ProgramCard>
-          )}
+    <>
+    <TopNavbar></TopNavbar>
+    
+    <div className="mymenu-container">
+      <h1>我的菜單</h1>
+      <div className="menu-list">
+        <div className="new-menu">
+          <h2 className='mymenu'>新增菜單</h2>
+          <Link to="/program/new" className='react-link'>
+            {/* <img src={ Newmenu } className="plus"></img> */}
+            <div className='plus-sign'><b>+</b></div>
+          </Link>
         </div>
+        {myList.map((e)=>
+          <ProgramCard key={e.id} program={e} handleRemove={handleRemove} handleStart={handleStart}></ProgramCard>
+        )}
+        
       </div>
     </div>
-    
+    </>
   );
 };
-
-const ProgramCard = (props) => {
-  const program = props.program;
-  return(
-    
-      <div className='menu'>
-          <Link to={"/train"} state={{programListId: program.id ? program.id : "default"}}>
-          
-            <img src={ImageProvider[program.image]} alt={program.name}></img>
-            <div className="menu-content">
-              <h2>{program.name}</h2>
-              <p>{program.details}</p>
-            </div>
-          </Link>
-        {/* <Link to={"/train"} state={{programListId: program.id ? program.id : "default"}}>立即開始偵測</Link> */}
-      </div> 
-    
-    
-  )
+const ProgramCard = ({program, handleStart, handleRemove}) => {
+    return (
+        <div className="program-menu">        
+            <h2 className='program'>{program.name}</h2>
+            <img src={imageSet[program.image][program.strength]} className='program-image'></img>
+            <div className='program-buttons'>
+              <button value={program.id} className='startdect-button' onClick={handleStart}>開始偵測</button>
+              <button className='remove-button' onClick={handleRemove}>移除菜單</button>
+            </div>          
+        </div>
+    )
 }
-
 export default MyProgram;
 
