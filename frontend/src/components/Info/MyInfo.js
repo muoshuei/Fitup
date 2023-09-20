@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 const MyInfo = () => {
 
-    const [bmi, setbmi] = useState('');
-    const [name, setname] = useState('');
-    const [gender, setgender] = useState('');
-    const [height, setheight] = useState('');
-    const [weight, setweight] = useState('');
-    const [age, setage] = useState('');
-    const [mail, setmail] = useState('');
+    const [bmi, setbmi] = useState(10);
+    const [name, setname] = useState("某某某");
+    const [gender, setgender] = useState('男性');
+    const [height, setheight] = useState(180);
+    const [weight, setweight] = useState(65);
+    const [age, setage] = useState(22);
+    const [mail, setmail] = useState("abc@mail.com");
 
     useEffect(() => {
       // 从 Cookie 中读取 JSON 数据

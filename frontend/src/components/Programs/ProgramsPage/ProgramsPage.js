@@ -35,7 +35,7 @@ const ProgramsPage = () =>{
         setExpand(tmp);
     }
     const handleAddToList = (e) => {
-        
+        //e.target.value -> "arWeak" || "lMedium" || "b"
     }
     return (
         <>

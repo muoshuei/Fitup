@@ -28,4 +28,5 @@ __pycache__
 #custom
 mydatabase1.db
 mediapipe.html
+pyvenv.cfg
 Externals/

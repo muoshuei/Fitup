@@ -7,7 +7,7 @@ import * as Cons from './ChartComponent/Constdata.js';
 import * as Src from './ChartComponent/Script.js';
 import TopNavbar from '../TopNavbar/TopNavbar';
 const Chart = () => {    
-
+    
     const choosechart = () => {
         //移除圖表
         d3.select('svg').selectAll('*').remove();

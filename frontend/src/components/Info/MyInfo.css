@@ -14,6 +14,9 @@
     font-weight: bold;
     margin: 20px;
     width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .InfoIcon {
@@ -31,6 +34,9 @@
 
 .InfoTop {
     width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .InfoBot {
