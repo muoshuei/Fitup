@@ -1,5 +1,5 @@
 import APITest from "./components/APITest/APITest";
-import MyProgram from "./components/MyProgram/MyProgram";
+import NewChart from "./components/Chart/NewChart";
 import SpeechTest from "./components/SpeechTest/SpeechTest";
 
 const testRoutes = [
@@ -10,6 +10,10 @@ const testRoutes = [
     {
         path: "/speechtest",
         element: <SpeechTest/>
+    },
+    {
+        path: "/newchart",
+        element: <NewChart/>
     }
 ];
 export default testRoutes;

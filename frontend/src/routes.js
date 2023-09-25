@@ -47,6 +47,7 @@ import L2ExerciseDetails from './components/DetailPages/Leg/L2ExerciseDetails';
 import L3ExerciseDetails from './components/DetailPages/Leg/L3ExerciseDetails';
 import L4ExerciseDetails from './components/DetailPages/Leg/L4ExerciseDetails';
 import L5ExerciseDetails from './components/DetailPages/Leg/L5ExerciseDetails';
+import NotFound from "./pages/NotFound";
 
 
 const routes = [
@@ -225,6 +226,10 @@ const routes = [
     {
         path: "/feature",
         element: <Feature/>
+    },
+    {
+        path: "*",
+        element: <NotFound />
     }
 ]
 

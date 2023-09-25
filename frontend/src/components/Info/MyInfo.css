@@ -1,58 +1,99 @@
+.basic-information{
+    margin: 0 auto; 
+    padding: 20px;
+    height: 500px;
+    width:350px;
+    border-radius: 5px;
+    background-color: rgb(248, 247, 249);
+    color: black;
+}
+.change-information{
+    margin: 0 auto; 
+    padding: 20px;
+    height: 500px;
+    width:350px;
+    border-radius: 5px;
+    background-color: rgb(248, 247, 249);
+    color: black;
+}
+.info-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* object-fit: fill; */
+    opacity: 0.7; /* 設置透明度為 50% */
+}
+
+.wrapper {
+    position: relative;
+    height: 60vh;
+    justify-content: flex-start; 
+}
 .Back {
-    width: 1200px;
+    width: 400px;
     display: flex;
     align-items: left;
     justify-content: left;
 }
 
 .Back img:hover {
-    content: url('/src/components/Info/MyInfoPic/Back1.png');
+    content: url('/src/components/Info/images/Back1.png');
 }
+table.info_table {
+    width: 100%; /* 让表格充满其容器的宽度 */
+    text-align: center; /* 设置表格中的文本水平居中对齐 */
+}
+
+/* 如果需要垂直居中对齐也可以添加以下样式 */
+td.info_table {
+    vertical-align: middle; /* 设置单元格中的内容垂直居中对齐 */
+}
+
+
+
 .InfoTitle {
-    font-size: 50px;
+    font-size: 30px;
     font-family: '微軟正黑體';
     font-weight: bold;
-    margin: 20px;
-    width: 1200px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #aba8ae;
+    color: white;
+    border-radius: 10px;
+    width:250px;
+    margin-left: 35px;
 }
 
 .InfoIcon {
     border-radius: 50%;
     background-color: #B5B5B5;
-    margin-right: 20px;
-    width: 150px;
-    height: 150px;
+    margin-right: 25px;
+    width: 60px;
+    height: 60px;
+    margin: 20px;
 }
 
-.InfoState {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .InfoTop {
-    width: 1200px;
+   
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.InfoBot {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-}
+
 
 .Infoline {
-    padding: 10px;
-    font-size: xx-large;
+    padding: 8px;
+    font-size: 16px;
     font-family: '微軟正黑體';
     font-weight: bold;
-    text-align: right;
+    text-align: center;
 }
 
 .InfoSex {
@@ -71,12 +112,14 @@
 .InfoEditButton {
     border-radius: 10px;
     border-width: 0;
-    font-size: 30px;
+    font-size: 18px;
     font-weight: bold;
     color: white;
-    width: 200px;
+    width: 250px;
     background-color: #00c8ff;
+    margin: 0px 35px;
 }
+
 
 .InfoEditButton:hover {
     background-color: #002a35;
@@ -99,4 +142,9 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  td.info_data{
+    text-align: left;
+    font-size: 16px ;
+    font-weight: bold;
   }

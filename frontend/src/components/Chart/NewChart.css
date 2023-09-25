@@ -1,0 +1,40 @@
+.chart-main-section{
+    display: flex;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.chart-sidetab{
+    width: 20%;
+    height: 75%;
+    display: block;
+}
+.chart-sidetab-element{
+    border: 2px solid rgb(77, 77, 77);
+    margin: 5px;
+    width: 70%;
+    height: 25%;
+    float: right;
+    background-color: white;
+}
+
+.chart-sidetab-element:hover{
+    transform: scale(1.1);
+    
+}
+.chart-component{
+    padding: 25px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(77, 77, 77);
+}
+
+.params-topbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

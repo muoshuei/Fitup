@@ -1,10 +1,13 @@
 import './Signin.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import SignInBG from './images/signinbg.png';
 import Cookies from 'js-cookie';
+import { sendSignInData } from '../../apis/sign';
+import { useDispatch, useSelector } from 'react-redux';
+import { signInAction } from '../../redux/actions/authActions';
 
 function Signin(){
   const [showPopup, setShowPopup] = useState(false);
@@ -13,37 +16,20 @@ function Signin(){
      mail:'',
      password: '',
   });
+  
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const userData = useSelector((state) => state.auth?.user);
+  useEffect(()=>{
 
+  },[])
   const handleSave = async () => {
-    
-   var obj = {
-      mail: formData.mail,
+    var obj = {
+      account: formData.mail,
       password: formData.password
-   };
-   console.log(obj);
-   const response = await fetch(
-        "/signin",
-        {
-            method: "POST",
-            body: JSON.stringify(obj),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }
-    )
-    const data = await response.json();
-    if(data.status===false){
-        console.log("OMG有錯");
-        setShowPopup(true);      
-    }
-    else{
-        console.log("成功啦!");
-        setShowPopupcorrect(true);  
-        const dataToStore ={info_id :data.id,height :data.height,weight:data.weight,age:data.age,gender:data.gender,name:data.name};
-        Cookies.set('userData', JSON.stringify(dataToStore), { expires: 7 });
-    }
+    };
+    await dispatch(signInAction(obj, setShowPopupcorrect, setShowPopup))
 }
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
@@ -52,8 +38,6 @@ function Signin(){
   const closePopup = () => {
     setShowPopup(false);
   };
-
-
     return (
     <div>
       {/* TODO- Render issue happens while adding background image. */ }
@@ -111,17 +95,15 @@ function Signin(){
         <div className="popup">
           <div className="popup-content">
             <p>登入成功!</p>
-            <Link to="/train" className="link-button">進入Fitup系統</Link>
+            <Link to="/home" className="link-button">進入Fitup系統</Link>
           </div>
         </div>
       )}      
       
       <div>
-        <Link to="/signup" >
-          <button type="signup" className="btn btn-success btn-block btn-sm rounded">
-            註冊
-          </button>
-        </Link>
+        <button type="signup" onClick={()=>navigate("/signup")}className="btn btn-success btn-block btn-sm rounded">
+          註冊
+        </button>
       </div>
           </div>
            

@@ -29,12 +29,12 @@ const P1ExerciseDetails = () => {
          <img src={p1} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '115px' }}>伏地挺身</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '128px', fontSize: '28px' }}>Push Up</span>
+        <b><font face="monospace">伏地挺身</font></b><br/>
+        <span>Push Up</span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn" style={{ marginLeft: '100px', backgroundcolor: '#cb77cb'}} onClick={handleClick}><b>觀看影片</b></button>                               
+      <button className="custom-btn"  onClick={handleClick}><b>觀看影片</b></button>                               
       </div>
    
     </div>

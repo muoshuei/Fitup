@@ -1,31 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import fitup from '../assets/fitup3.png';
 import usericon from './images/usericon.png'
-import {React, useState, useEffect} from 'react';
+import {React, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './TopNavbar.css';
-import Cookies from 'js-cookie';
 import "../../styles/action.css"
+import { useDispatch, useSelector } from 'react-redux';
+import { logoutAction } from '../../redux/actions/authActions';
 const TopNavbar = () => {
 
-  const [userData, setUserData] = useState('');
-  
-  useEffect(() => {
-    // 从 Cookie 中读取 JSON 数据
-    const storedUserData = Cookies.get('userData');
-    if (storedUserData) {
-      // 将从 Cookie 中读取的数据反序列化为 JSON 对象
-      const parsedUserData = JSON.parse(storedUserData);
-      const cleanedName = parsedUserData.name.replace(/"/g, '');
-      setUserData(cleanedName);
-    }
-  }, []);
+  const userData = useSelector((state) => state.auth?.userData)
+  const dispatch = useDispatch();
 
   const handleLogout = () => {
-    // 清除名为 'userData' 的 Cookie
-    Cookies.remove('userData');
-
-    // 在这里可以执行其他登出操作，例如重定向到登录页面或清除用户状态
+    dispatch(logoutAction())
   };
 
   return (
@@ -86,28 +74,27 @@ const TopNavbar = () => {
           
         </div>
         <div className='topnav-right-container'>
-          <div className='topnav-usericon-container'>
-            <a href="#" className='topnav-usericon-link'>
-              <img src={usericon} className="topnav-usericon" alt="UserIcon" />
-            </a>
-            <div className='dropdown-menu topnav-usericon-expandable'>
-              
-              <Link to='/signin' onClick={handleLogout} className='dropdown-item topnav-dropdown-item-custom'>登出</Link>
-              <Link to='/others' className='dropdown-item topnav-dropdown-item-custom'>其他</Link>
-            </div>
-          </div>
-          <div>
           {
-          userData 
-          ? 
-          (<p>歡迎, {userData}</p>) 
-          : 
-          (<p>
-            <Link to='/signin' className='dropdown-item topnav-dropdown-item-custom'>登入/註冊</Link>
-          </p>)
+            userData ?
+            <>
+              <div className='topnav-usericon-container'>
+                <a href="#" className='topnav-usericon-link'>
+                  <img src={usericon} className="topnav-usericon" alt="UserIcon" />
+                </a>
+                <div className='dropdown-menu topnav-usericon-expandable'>
+                  
+                  <Link to='/signin' onClick={handleLogout} className='dropdown-item topnav-dropdown-item-custom'>登出</Link>
+                  <Link to='/others' className='dropdown-item topnav-dropdown-item-custom'>其他</Link>
+                </div>
+              </div>
+              <div>歡迎, {userData.name}</div>
+             </> 
+            :
+            <p>
+              <Link to='/signin' className='dropdown-item topnav-dropdown-item-custom'>登入/註冊</Link>
+            </p>
           }
-            
-          </div>
+        
         </div>
       </div>
       

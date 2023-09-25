@@ -1,46 +1,63 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './MyProgram.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, useNavigate } from 'react-router-dom';
 import TopNavbar from '../TopNavbar/TopNavbar';
 import imageSet from '../Programs/ProgramsPage/ProgramImageProvider';
-const MyProgram = () => {
-  const [myList, setMyList] = useState(
-    [
-      {
-        id: "arWeak",
-        name: "手臂-弱",
-        image: "arm",
-        strength: "weak",
-        details: "這裡是訓練菜單-「手臂-弱」的詳細內容"
-      },
-      {
-        id: "demo",
-        name: "展示用菜單",
-        image: "body",
-        strength: "weak",
-        details: "這是展示用菜單"
-      },
-      {
-        id: "demo",
-        name: "展示用菜單",
-        image: "body",
-        strength: "weak",
-        details: "這是展示用菜單"
-      },
-      {
-        id: "demo",
-        name: "展示用菜單",
-        image: "body",
-        strength: "weak",
-        details: "這是展示用菜單"
-      },
-    ]
-  );
-  const navigate = useNavigate();
+import { useDispatch, useSelector } from 'react-redux';
+import { updateUserDataAction } from '../../redux/actions/authActions';
 
-  const handleStart = (e) => {navigate("/train", {state: {programListId: e.target.value}})};
-  const handleRemove = (e) => {};
+
+const MyProgram = () => {
+  const userData = useSelector((state) => state.auth?.userData)
+  const dispatch = useDispatch();
+  const [preferenceList, setPreferenceList] = useState([]);
+  useEffect(()=>{
+    setPreferenceList(
+      userData.preferenceList.map((e) => {
+        const fullNameMap = {
+          "b": "body",
+          "ab": "abs",
+          "ar": "arm",
+          "c": "chest",
+          "l": "leg",
+          "s": "shoulder"
+        }
+        const splittedId = e.charAt(0) === "a" 
+                          ? {"part": (e.slice(0,2)), "strength": (e.charAt(2).toLowerCase() + e.slice(3))}
+                          : {"part": (e.charAt(0)), "strength": (e.charAt(1).toLowerCase() + e.slice(2))}
+        const strengthMap = {"weak": "弱", "medium": "中", "strong": "強"};
+        const partNameMap = {
+          "b": "全身",
+          "ab": "腹",
+          "ar": "手",
+          "c": "胸",
+          "l": "腿",
+          "s": "肩"
+        }
+        return {
+          id: e,
+          name: ((partNameMap[splittedId.part]) + " - " + (strengthMap[splittedId.strength])),
+          image: fullNameMap[splittedId.part],
+          strength: splittedId.strength,
+        }
+      }) 
+    )
+  },[userData.preferenceList.length])
+  const navigate = useNavigate();
+  const handleStart = (e) => {
+    navigate("/train", {state: {programListId: e.target.value}})
+  };
+  const handleRemove = async (e) => {
+    await dispatch(updateUserDataAction({...userData, menu_id: e.target.value}))
+    // deleteListByUserAndMenu(userData.id, e.target.value);
+    // let index = preferenceList.indexOf(e.target.value);
+    // let tmpList = [...jsonData.list];
+    // tmpList.splice(index, 1);
+    // setJsonData({list: tmpList});
+    // preferenceList.splice(index, 1);
+  };
+
   return (
     <>
     <TopNavbar></TopNavbar>
@@ -51,11 +68,10 @@ const MyProgram = () => {
         <div className="new-menu">
           <h2 className='mymenu'>新增菜單</h2>
           <Link to="/program/new" className='react-link'>
-            {/* <img src={ Newmenu } className="plus"></img> */}
             <div className='plus-sign'><b>+</b></div>
           </Link>
         </div>
-        {myList.map((e)=>
+        {preferenceList.map((e)=>
           <ProgramCard key={e.id} program={e} handleRemove={handleRemove} handleStart={handleStart}></ProgramCard>
         )}
         
@@ -68,10 +84,10 @@ const ProgramCard = ({program, handleStart, handleRemove}) => {
     return (
         <div className="program-menu">        
             <h2 className='program'>{program.name}</h2>
-            <img src={imageSet[program.image][program.strength]} className='program-image'></img>
+            <img src={imageSet[program.image][program.strength]} className='program-image' alt="provided_image"></img>
             <div className='program-buttons'>
               <button value={program.id} className='startdect-button' onClick={handleStart}>開始偵測</button>
-              <button className='remove-button' onClick={handleRemove}>移除菜單</button>
+              <button value={program.id} className='remove-button' onClick={handleRemove}>移除菜單</button>
             </div>          
         </div>
     )

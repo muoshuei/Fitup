@@ -3,6 +3,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './HomeFitup.css';
 function App() {
+  const navigate = useNavigate();
   return (
     <div className="App">
       <Parallax pages={1.5} style={{ top: '0', left: '0' }} class="animation">
@@ -26,9 +27,9 @@ function App() {
        
         <ParallaxLayer offset={0.3} speed={0.1}>
           <section className="button-section home">
-          <Link to="/Signin">
-            <button className="custom-button"><b>Start</b></button>
-          </Link>
+            <div>
+            <button className="custom-button" onClick={()=>navigate("/signin")}><b>Start</b></button>
+            </div>
           </section>
         </ParallaxLayer>
 

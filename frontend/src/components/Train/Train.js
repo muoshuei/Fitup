@@ -15,6 +15,7 @@ import AngleCalculator from './modules/AngleCalculator';
 import ExerciseParser from './modules/ExerciseParser';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
+import { sendTrainData } from '../../apis/train';
 
 
 
@@ -22,7 +23,7 @@ const accuracyManager = new AccuracyManager();
 const exerciseCountManager = new ExerciseCountManager();
 const angleCalculator = new AngleCalculator();
 const parser = new ExerciseParser();
-const date = new Date();
+
     
 function Train(props){
     const [inputVideoReady, setInputVideoReady] = useState(false);
@@ -223,31 +224,21 @@ function Train(props){
         setTimerState("重置");
     }
     const handleSave = async () => {
-        const storedUserData = Cookies.get('userData');
+        const dateObject = new Date();
+        const user_id = Cookies.get('user_id');
+        const year = dateObject.getFullYear()
+        const month = String(dateObject.getMonth()+1).padStart(2,"0")
+        const date = String(dateObject.getDate()).padStart(2, '0')
         // 将从 Cookie 中读取的数据反序列化为 JSON 对象
-        const parsedUserData = JSON.parse(storedUserData); 
-        var obj = {
+        const obj = {
             accuracy: accuracyManager.getAccuracy(),
             time: accuracyManager.getTotalTimeInSeconds(),
             count: exerciseCountManager.count,
-            date: `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,"0")}-${String(date.getDate()).padStart(2, '0')}`, //TODO - change this to proper date format
-            type: name,
-            id: parsedUserData.info_id
+            date: `${year}-${month}-${date}`, 
+            exercise_id: name,
+            user_id: user_id
         };
-        const response = await fetch(
-            "https://localhost:8000/process",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(obj)
-                
-            }
-        )
-        if(!response.success){
-            console.log("Response error");
-        }
+        sendTrainData(obj)
     }
     return (
         <div>
@@ -271,7 +262,7 @@ function Train(props){
                         <button className="btn btn-secondary btn_custom" ref={pauseButton} id="pause" onClick={handlePause}>暫停偵測</button>
                         <button className="btn btn-danger btn_custom" ref={resetButton} id="reset" onClick={handleReset}>　重置　</button>
                         <button className="btn btn-warning btn_custom" ref={leaveButton} id="leave" onClick={()=>{navigate('/program/new')}}>離開偵測</button>
-                        
+                        <button className="btn btn-danger btn_custom" id="save" onClick={handleSave}>　重置　</button>
                     </div>
                 </div>
                 
