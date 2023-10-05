@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import App from "./App";
 import createAppStore from "./redux/store";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 const AppContainer = () => {
     const [store, setStore] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -31,9 +32,11 @@ const AppContainer = () => {
         )
     }
     return (
-        <Provider store={store}>
-            <App/>
-        </Provider>
+        <BrowserRouter>
+            <Provider store={store}>
+                <App/>
+            </Provider>
+        </BrowserRouter>
     )
 }
 

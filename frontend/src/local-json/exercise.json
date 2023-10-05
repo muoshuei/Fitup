@@ -1051,14 +1051,14 @@
                     {
                         "type":"simple",
                         "joints":[11,13,15],
-                        "ub":170,
-                        "lb":45,
+                        "ub":155,
+                        "lb":75,
                         "name":"左手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手臂過度彎曲 請調整彎曲角度",
-                            "lbMessage":"左手臂過度伸直 請稍微彎曲避免受傷"
+                            "ubMessage":"左手臂過度伸直 請稍微彎曲避免受傷",
+                            "lbMessage":"左手臂過度彎曲 請調整彎曲角度"
                         }
                         
                     }
@@ -1066,14 +1066,14 @@
                     {
                         "type":"simple",
                         "joints":[12,14,16],
-                        "ub":170,
-                        "lb":45,
+                        "ub":155,
+                        "lb":75,
                         "name":"右手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手臂過度彎曲 請調整彎曲角度",
-                            "lbMessage":"左手臂過度伸直 請稍微彎曲避免受傷"
+                            "ubMessage":"左手臂過度伸直 請稍微彎曲避免受傷",
+                            "lbMessage":"右手臂過度彎曲 請調整彎曲角度"
                         } 
                     }                                                
                 ],

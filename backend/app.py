@@ -13,9 +13,6 @@ CORS(app, resources={r"*": {"origins": "*"}})
 @app.route('/<path:path>')
 def catch_all(path):
     return render_template("index.html")
-# def index():
-#     return render_template("index.html")
-   
 
 if __name__ == '__main__':
     host = '127.0.0.1'

@@ -8,7 +8,7 @@ class ExerciseCountManager{
 
     setBounds(LB, UB){
         let distance = UB - LB;
-        let modifier = distance * 0.40;
+        let modifier = distance * 0.4;
         this.counterLB = LB + modifier;
         this.counterUB = UB - modifier;
     }

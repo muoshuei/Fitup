@@ -65,6 +65,7 @@ const ProgramsPage = () =>{
                             expand={expand[strength]}
                             navigate={navigate}
                             />
+                            
                         :  <>
                             <ProgramCard 
                             entry={entry}
@@ -104,7 +105,7 @@ const ProgramsPage = () =>{
 const ProgramCard = ({entry, strength, programListId, preferenceList, handleExpand, handleAddToList, navigate, expand}) => {
     const partData = programJson[entry];
     return (
-    <div className="program_menu">
+    <div className="program-menu">
         <div className="Star">
             {preferenceList.includes(programListId)
                 ? <img src={ Stared } alt="stared"/>
