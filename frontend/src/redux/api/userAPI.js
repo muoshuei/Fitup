@@ -1,9 +1,8 @@
-import { handleApiError } from "./utils";
+import { BASE_API_URL, handleApiError } from "./utils";
 
-const BASE_URL = 'http://localhost:8000'
 export const getUser = async (id) => {
     try {
-        const {data} = await fetch(`${BASE_URL}/api/users/${id}`,
+        const {data} = await fetch(`${BASE_API_URL}/api/users/${id}`,
         {
             method: 'GET',
             headers: {
@@ -19,7 +18,7 @@ export const getUser = async (id) => {
 }
 export const updateUser = async (formData) => {
     try {
-        const {data} = await fetch(`${BASE_URL}/api/info`,
+        const {data} = await fetch(`${BASE_API_URL}/api/info`,
         {
             method: 'PUT',
             headers: {

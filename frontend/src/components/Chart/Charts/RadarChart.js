@@ -8,7 +8,9 @@ const RadarChart = ({data}) => {
     },[])
     
     return (
-        <svg></svg>
+        <div>
+            <svg></svg> 
+        </div>
     )
 }
 
@@ -140,7 +142,7 @@ const draw = (data) => {
                 return d.y + 40;
             })
             .text(function(d,i) {
-                return fivepointnum[i] * 100 + '%';
+                return (Math.round(fivepointnum[i] * 10000) / 100) + '%';
             })
             .style('font-size', '20px');
 }

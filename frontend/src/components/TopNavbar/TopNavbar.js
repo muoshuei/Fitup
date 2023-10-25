@@ -23,7 +23,7 @@ const TopNavbar = () => {
           <img src={fitup} style={{ width: '140px', height: '60px' }} alt="Logo" />
           <h4 className="coach-title"><b>你的居家教練</b></h4>
         </Link>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="" id="navbarSupportedContent">
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <div className="nav-item">
               <Link to="/home" className="nav-link active nav-link-custom"><b>主頁</b></Link>

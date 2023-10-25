@@ -87,12 +87,12 @@
                         "joints":[11,13,15],
                         "ub":170,
                         "lb":50,
-                        "name":"左手臂",
+                        "name":"左手肘",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手大小臂夾角過小 請稍微張開",
-                            "lbMessage":"左手大小臂夾角過大 請稍微彎曲"
+                            "ubMessage":"左手大小臂夾角過大 請稍微彎曲",
+                            "lbMessage":"左手大小臂夾角過小 請稍微張開"
                         }
                         
                     }
@@ -102,13 +102,42 @@
                         "joints":[12,14,16],
                         "ub":170,
                         "lb":50,
-                        "name":"右手臂",
+                        "name":"右手肘",
                         "correction":{
                             "type": 2,
-                            "ubMessage":"右手大小臂夾角過小 請稍微張開",
-                            "lbMessage":"右手大小臂夾角過大 請稍微彎曲"
+                            "ubMessage":"右手大小臂夾角過大 請稍微彎曲",
+                            "lbMessage":"右手大小臂夾角過小 請稍微張開"
                         } 
-                    }               
+                    }
+                ,
+                {
+                    "type":"simple",
+                    "joints":[12,11,13],
+                    "ub":145,
+                    "lb":90,
+                    "name":"左手臂",
+                    "correction":
+                    {
+                        "type": 2,
+                        "ubMessage":"左手臂與肩膀夾角不宜過開",
+                        "lbMessage":"左手臂與肩膀夾角不宜過度閉合，請稍微張開"
+                    }
+                    
+                }
+            ,
+                {
+                    "type":"simple",
+                    "joints":[11,12,14],
+                    "ub":145,
+                    "lb":90,
+                    "name":"右手臂",
+                    "correction":
+                    {
+                        "type": 2,
+                        "ubMessage":"右手臂與肩膀夾角不宜過開",
+                        "lbMessage":"右手臂與肩膀夾角不宜過度閉合，請稍微張開"
+                    } 
+                }                   
                 ],
         "connections":
         [
@@ -121,7 +150,7 @@
         "joints":[11,12,13,14,15,16],
         "counterBounds":
         {
-            "lb":60,
+            "lb":80,
             "ub":150
         }
     },
@@ -133,14 +162,14 @@
                     {
                         "type":"simple",
                         "joints":[23,11,13],
-                        "ub":100,
-                        "lb":10,
+                        "ub":120,
+                        "lb":5,
                         "name":"左手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"啞鈴下放時 左手不宜超過大腿",
-                            "lbMessage":"左手啞鈴上舉高度過高 與視線平行即可"
+                            "ubMessage":"左手啞鈴上舉高度過高 與視線平行即可",
+                            "lbMessage":"啞鈴下放時 左手不宜超過大腿"
                         }
                         
                     }
@@ -148,14 +177,14 @@
                     {
                         "type":"simple",
                         "joints":[24,12,14],
-                        "ub":100,
-                        "lb":10,
+                        "ub":120,
+                        "lb":5,
                         "name":"右手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"啞鈴下放時 右手不宜超過大腿",
-                            "lbMessage":"右手啞鈴上舉高度過高 與視線平行即可"
+                            "ubMessage":"右手啞鈴上舉高度過高 與視線平行即可腿",
+                            "lbMessage":"啞鈴下放時 右手不宜超過大"
                         } 
                     }
                 ,
@@ -163,13 +192,13 @@
                         "type":"simple",
                         "joints":[11,13,15],
                         "ub":170,
-                        "lb":150,
+                        "lb":115,
                         "name":"左手肘",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手肘過於彎曲 請張開",
-                            "lbMessage":"左手大小臂伸直過度 請微微彎曲"
+                            "ubMessage":"左手大小臂伸直過度 請微微彎曲",
+                            "lbMessage":"左手肘過於彎曲 請張開"
                         } 
                     }
                 ,
@@ -177,13 +206,13 @@
                         "type":"simple",
                         "joints":[12,14,16],
                         "ub":170,
-                        "lb":150,
+                        "lb":115,
                         "name":"右手肘",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手肘過於彎曲 請張開",
-                            "lbMessage":"右手大小臂伸直過度 請微微彎曲"
+                            "ubMessage":"右手大小臂伸直過度 請微微彎曲",
+                            "lbMessage":"右手肘過於彎曲 請張開"
                         } 
                     }    
                                 
@@ -213,14 +242,14 @@
                     {
                         "type":"simple",
                         "joints":[23,11,13],
-                        "ub":100,
-                        "lb":10,
+                        "ub":130,
+                        "lb":0,
                         "name":"左手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"啞鈴下放時 左手不宜超過大腿",
-                            "lbMessage":"左手啞鈴上舉時 肩肘與地面平行即可下放"
+                            "ubMessage":"左手啞鈴上舉時 肩肘與地面平行即可下放",
+                            "lbMessage":"啞鈴下放時 左手不宜超過大腿"
                         }
                         
                     }
@@ -228,42 +257,42 @@
                     {
                         "type":"simple",
                         "joints":[24,12,14],
-                        "ub":100,
-                        "lb":10,
+                        "ub":130,
+                        "lb":0,
                         "name":"右手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"啞鈴下放時 右手不宜超過大腿",
-                            "lbMessage":"右手啞鈴上舉時 肩肘與地面平行即可下放"
+                            "ubMessage":"右手啞鈴上舉時 肩肘與地面平行即可下放",
+                            "lbMessage":"啞鈴下放時 右手不宜超過大腿"
                         } 
                     }
                 ,
                     {
                         "type":"simple",
                         "joints":[11,13,15],
-                        "ub":160,
-                        "lb":135,
+                        "ub":180,
+                        "lb":130,
                         "name":"左手肘",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手大小臂夾角過於彎曲 請適度張開",
-                            "lbMessage":"左手大小臂過於張開 請適度彎曲"
+                            "ubMessage":"左手大小臂過於張開 請適度彎曲",
+                            "lbMessage":"左手大小臂夾角過於彎曲 請適度張開"
                         } 
                     }
                 ,
                     {
                         "type":"simple",
                         "joints":[12,14,16],
-                        "ub":160,
-                        "lb":135,
+                        "ub":180,
+                        "lb":130,
                         "name":"右手肘",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手大小臂夾角過於彎曲 請適度張開",
-                            "lbMessage":"右手大小臂過於張開 請適度彎曲"
+                            "ubMessage":"右手大小臂過於張開 請適度彎曲",
+                            "lbMessage":"右手大小臂夾角過於彎曲 請適度張開"
                         } 
                     }    
                                 
@@ -299,8 +328,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左臂初始位置不宜交錯",
-                            "lbMessage":"左大臂與肩成一條直線即可 不宜過度張開"
+                            "ubMessage":"左大臂與肩成一條直線即可 不宜過度張開",
+                            "lbMessage":"左臂初始位置不宜交錯"
                         }
                         
                     }
@@ -314,8 +343,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右臂初始位置手臂不宜交錯",
-                            "lbMessage":"右大臂與肩成一條直線即可 不宜過度張開"
+                            "ubMessage":"右大臂與肩成一條直線即可 不宜過度張開",
+                            "lbMessage":"右臂初始位置手臂不宜交錯"
                         } 
                     }
                 ,
@@ -328,8 +357,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手大小臂夾角過於彎曲 請適度張開",
-                            "lbMessage":"左手大小臂過於張開 請適度彎曲"
+                            "ubMessage":"左手大小臂過於張開 請適度彎曲",
+                            "lbMessage":"左手大小臂夾角過於彎曲 請適度張開"
                         } 
                     }
                 ,
@@ -342,8 +371,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手大小臂夾角過於彎曲 請適度張開",
-                            "lbMessage":"右手大小臂過於張開 請適度彎曲"
+                            "ubMessage":"右手大小臂過於張開 請適度彎曲",
+                            "lbMessage":"右手大小臂夾角過於彎曲 請適度張開"
                         } 
                     }
                 ,
@@ -356,8 +385,8 @@
                         "correction":
                         {  
                             "type": 2,
-                            "ubMessage":"俯身過度 上半身請稍微挺立",
-                            "lbMessage":"俯身不足 請再將上半身向下傾"
+                            "ubMessage":"俯身不足 請再將上半身向下傾",
+                            "lbMessage":"俯身過度 上半身請稍微挺立"
                         }
                     }
                 ,    
@@ -425,8 +454,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"啞鈴下放時 左手不宜超過大腿",
-                            "lbMessage":"左手臂過度高舉 啞鈴上升到手肘比肩膀高一點的位置即可下放"                           
+                            "ubMessage":"左手臂過度高舉 啞鈴上升到手肘比肩膀高一點的位置即可下放",
+                            "lbMessage":"啞鈴下放時 左手不宜超過大腿"                           
                         }
                         
                     }
@@ -440,8 +469,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"啞鈴下放時 右手不宜超過大腿",
-                            "lbMessage":"右手臂過度高舉 啞鈴上升到手肘比肩膀高一點的位置即可下放"
+                            "ubMessage":"右手臂過度高舉 啞鈴上升到手肘比肩膀高一點的位置即可下放",
+                            "lbMessage":"啞鈴下放時 右手不宜超過大腿"
                         } 
                     }
                 ,
@@ -454,8 +483,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手大小臂夾角過於彎曲 請適度張開",
-                            "lbMessage":"左手大小臂過於張開 請適度彎曲"
+                            "ubMessage":"左手大小臂過於張開 請適度彎曲",
+                            "lbMessage":"左手大小臂夾角過於彎曲 請適度張開"
                         } 
                     }
                 ,
@@ -468,8 +497,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手大小臂夾角過於彎曲 請適度張開",
-                            "lbMessage":"右手大小臂過於張開 請適度彎曲"
+                            "ubMessage":"右手大小臂過於張開 請適度彎曲",
+                            "lbMessage":"右手大小臂夾角過於彎曲 請適度張開"
                         } 
                     }    
                                 
@@ -505,8 +534,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手距離請保持和肩等寬",
-                            "lbMessage":"左手臂在準備上升時 不宜過度向後打開"                           
+                            "ubMessage":"左手臂在準備上升時 不宜過度向後打開",
+                            "lbMessage":"左手距離請保持和肩等寬"                           
                         }
                         
                     }
@@ -520,8 +549,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手距離請保持和肩等寬",
-                            "lbMessage":"左手臂在準備上升時 不宜過度向後打開"
+                            "ubMessage":"右手臂在準備上升時 不宜過度向後打開",
+                            "lbMessage":"右手距離請保持和肩等寬"
                         } 
                     }
                 ,
@@ -534,8 +563,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手大小臂夾角過小 請稍微張開",
-                            "lbMessage":"左手大小臂夾角過大 請稍微彎曲"
+                            "ubMessage":"左手大小臂夾角過大 請稍微彎曲",
+                            "lbMessage":"左手大小臂夾角過小 請稍微張開"
                         } 
                     }
                 ,
@@ -548,8 +577,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手大小臂夾角過小 請稍微張開",
-                            "lbMessage":"右手大小臂夾角過大 請稍微彎曲"
+                            "ubMessage":"右手大小臂夾角過大 請稍微彎曲",
+                            "lbMessage":"右手大小臂夾角過小 請稍微張開"
                         } 
                     }    
                                 
@@ -612,8 +641,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手肘過於彎曲 請張開",
-                            "lbMessage":"左手大小臂伸直過度 請微微彎曲"
+                            "ubMessage":"左手大小臂伸直過度 請微微彎曲",
+                            "lbMessage":"左手肘過於彎曲 請張開"
                         } 
                     }
                 ,
@@ -626,8 +655,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手肘過於彎曲 請張開",
-                            "lbMessage":"右手大小臂伸直過度 請微微彎曲"
+                            "ubMessage":"右手大小臂伸直過度 請微微彎曲",
+                            "lbMessage":"右手肘過於彎曲 請張開"
                         } 
                     }    
                                 
@@ -659,13 +688,13 @@
                         "type":"simple",
                         "joints":[11,13,15],
                         "ub":170,
-                        "lb":80,
-                        "name":"左手臂",
+                        "lb":60,
+                        "name":"左手肘",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手臂過於彎曲 請再伸直一些",
-                            "lbMessage":"左手臂過度伸直 請微微彎曲"                           
+                            "ubMessage":"左手肘過度伸直 請微微彎曲",
+                            "lbMessage":"左手肘過於彎曲 請再伸直一些"                           
                         }
                         
                     }
@@ -674,13 +703,13 @@
                         "type":"simple",
                         "joints":[12,14,16],
                         "ub":170,
-                        "lb":80,
-                        "name":"右手臂",
+                        "lb":60,
+                        "name":"右手肘",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手臂過於彎曲 請再伸直一些",
-                            "lbMessage":"右手臂過度伸直 請微微彎曲"
+                            "ubMessage":"右手肘過度伸直 請微微彎曲",
+                            "lbMessage":"右手肘過於彎曲 請再伸直一些"
                         } 
                     }
                 ,
@@ -689,12 +718,12 @@
                         "joints":[23,11,13],
                         "ub":95,
                         "lb":60,
-                        "name":"左手肘",
+                        "name":"左手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手臂位置過低 請再抬高一些",
-                            "lbMessage":"左手臂位置過高 使其離身體更近一些"
+                            "ubMessage":"左手臂位置過高 使其離身體更近一些",
+                            "lbMessage":"左手臂位置過低 請再抬高一些"
                         } 
                     }
                 ,
@@ -703,12 +732,12 @@
                         "joints":[24,12,14],
                         "ub":95,
                         "lb":60,
-                        "name":"右手肘",
+                        "name":"右手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手臂位置過低 請再抬高一些",
-                            "lbMessage":"右手臂位置過高 使其離身體更近一些"
+                            "ubMessage":"右手臂位置過高 使其離身體更近一些",
+                            "lbMessage":"右手臂位置過低 請再抬高一些"
                         } 
                     }    
                                 
@@ -744,8 +773,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手臂舉至平行即可 請勿和右手臂交錯",
-                            "lbMessage":"左手臂伸展過度"
+                            "ubMessage":"左手臂伸展過度",
+                            "lbMessage":"左手臂舉至平行即可 請勿和右手臂交錯"
                         }
                         
                     }
@@ -759,8 +788,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手臂舉至平行即可 請勿和左手臂交錯",
-                            "lbMessage":"右手臂伸展過度"
+                            "ubMessage":"右手臂伸展過度",
+                            "lbMessage":"右手臂舉至平行即可 請勿和左手臂交錯"
                         } 
                     }
                 ,
@@ -768,13 +797,13 @@
                         "type":"simple",
                         "joints":[11,13,15],
                         "ub":160,
-                        "lb":130,
+                        "lb":120,
                         "name":"左手肘",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左肘彎曲角度過小 建議手肘微開",
-                            "lbMessage":"左手肘彎曲角度過大 建議手肘微彎"
+                            "ubMessage":"左手肘過度伸直 建議手肘微彎",
+                            "lbMessage":"左手肘過度彎曲 建議手肘微開"
                         } 
                     }
                 ,
@@ -782,13 +811,13 @@
                         "type":"simple",
                         "joints":[12,14,16],
                         "ub":160,
-                        "lb":130,
+                        "lb":120,
                         "name":"右手肘",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手肘彎曲角度過小 建議手肘微開",
-                            "lbMessage":"右手肘彎曲角度過大 建議手肘微彎"
+                            "ubMessage":"右手肘過度伸直 建議手肘微彎",
+                            "lbMessage":"右手肘過度彎曲 建議手肘微開"
                         } 
                     }    
                                 
@@ -822,8 +851,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手大小臂夾角過小 請稍微張開",
-                            "lbMessage":"左手大小臂夾角過大 請稍微彎曲"
+                            "ubMessage":"左手大小臂夾角過大 請稍微彎曲",
+                            "lbMessage":"左手大小臂夾角過小 請稍微張開"
                         }
                         
                     }
@@ -837,8 +866,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手大小臂夾角過小 請稍微張開",
-                            "lbMessage":"右大小臂夾角過大 請稍微彎曲"
+                            "ubMessage":"右大小臂夾角過大 請稍微彎曲",
+                            "lbMessage":"右手大小臂夾角過小 請稍微張開"
                         } 
                     }
                 ,
@@ -851,8 +880,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手臂過於聚攏 請稍微外開",
-                            "lbMessage":"左手臂過於外開 請稍微聚攏 符合窄距"
+                            "ubMessage":"左手臂過於外開 請稍微聚攏 符合窄距",
+                            "lbMessage":"左手臂過於聚攏 請稍微外開"
                         } 
                     }
                 ,
@@ -865,8 +894,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手臂過於聚攏 請稍微外開",
-                            "lbMessage":"右手臂過於外開 請稍微聚攏 符合窄距"
+                            "ubMessage":"右手臂過於外開 請稍微聚攏 符合窄距",
+                            "lbMessage":"右手臂過於聚攏 請稍微外開"
                         } 
                     }    
                                 
@@ -927,8 +956,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手肘彎曲角度過小 建議手肘微開",
-                            "lbMessage":"左手肘彎曲角度過大 建議手肘微彎"
+                            "ubMessage":"左手肘彎曲角度過大 建議手肘微彎",
+                            "lbMessage":"左手肘彎曲角度過小 建議手肘微開"
                         } 
                     }
                 ,
@@ -941,8 +970,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手肘彎曲角度過小 建議手肘微開",
-                            "lbMessage":"右手肘彎曲角度過大 建議手肘微彎"
+                            "ubMessage":"右手肘彎曲角度過大 建議手肘微彎",
+                            "lbMessage":"右手肘彎曲角度過小 建議手肘微開"
                         } 
                     }    
                                 
@@ -978,8 +1007,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左臂初始位置手臂不宜交錯",
-                            "lbMessage":"左大臂與肩成一條直線即可 不宜過度張開"
+                            "ubMessage":"左大臂與肩成一條直線即可 不宜過度張開",
+                            "lbMessage":"左臂初始位置手臂不宜交錯"
                         }
                         
                     }
@@ -993,8 +1022,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右臂初始位置手臂不宜交錯",
-                            "lbMessage":"左大臂與肩成一條直線即可 不宜過度張開"
+                            "ubMessage":"右大臂與肩成一條直線即可 不宜過度張開",
+                            "lbMessage":"右臂初始位置手臂不宜交錯"
                         } 
                     }
                 ,
@@ -1002,13 +1031,13 @@
                         "type":"simple",
                         "joints":[11,13,15],
                         "ub":170,
-                        "lb":130,
+                        "lb":120,
                         "name":"左手肘",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手肘彎曲角度過小 建議手肘微開",
-                            "lbMessage":"左手肘彎曲角度過大 建議手肘微彎"
+                            "ubMessage":"左手肘過度伸直 建議手肘微彎",
+                            "lbMessage":"左手肘過度彎曲 建議手肘微開"
                         } 
                     }
                 ,
@@ -1016,13 +1045,13 @@
                         "type":"simple",
                         "joints":[12,14,16],
                         "ub":170,
-                        "lb":130,
+                        "lb":120,
                         "name":"右手肘",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手肘彎曲角度過小 建議手肘微開",
-                            "lbMessage":"右手肘彎曲角度過大 建議手肘微彎"
+                            "ubMessage":"右手肘過度伸直 建議手肘微彎",
+                            "lbMessage":"右手肘過度彎曲 建議手肘微開"
                         } 
                     }    
                                 
@@ -1051,13 +1080,13 @@
                     {
                         "type":"simple",
                         "joints":[11,13,15],
-                        "ub":155,
+                        "ub":180,
                         "lb":75,
                         "name":"左手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手臂過度伸直 請稍微彎曲避免受傷",
+                            "ubMessage":"",
                             "lbMessage":"左手臂過度彎曲 請調整彎曲角度"
                         }
                         
@@ -1066,13 +1095,13 @@
                     {
                         "type":"simple",
                         "joints":[12,14,16],
-                        "ub":155,
+                        "ub":180,
                         "lb":75,
                         "name":"右手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手臂過度伸直 請稍微彎曲避免受傷",
+                            "ubMessage":"",
                             "lbMessage":"右手臂過度彎曲 請調整彎曲角度"
                         } 
                     }                                                
@@ -1155,8 +1184,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手臂過度彎曲 請調整彎曲角度",
-                            "lbMessage":"左手臂過度伸直 請稍微彎曲避免受傷"
+                            "ubMessage":"左手臂過度伸直 請稍微彎曲避免受傷",
+                            "lbMessage":"左手臂過度彎曲 請調整彎曲角度"
                         }
                         
                     }
@@ -1170,8 +1199,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手臂過度彎曲 請調整彎曲角度",
-                            "lbMessage":"左手臂過度伸直 請稍微彎曲避免受傷"
+                            "ubMessage":"右手臂過度伸直 請稍微彎曲避免受傷",
+                            "lbMessage":"右手臂過度彎曲 請調整彎曲角度"
                         } 
                     }                                                
                 ],
@@ -1198,14 +1227,14 @@
                     {
                         "type":"simple",
                         "joints":[11,13,15],
-                        "ub":170,
-                        "lb":80,
+                        "ub":175,
+                        "lb":60,
                         "name":"左手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手臂過度彎曲 請調整彎曲角度",
-                            "lbMessage":"左手臂過度伸直 請稍微彎曲避免受傷"
+                            "ubMessage":"左手臂過度伸直 請稍微彎曲避免受傷",
+                            "lbMessage":"左手臂過度彎曲 請調整彎曲角度"
                         }
                         
                     }
@@ -1213,14 +1242,14 @@
                     {
                         "type":"simple",
                         "joints":[12,14,16],
-                        "ub":170,
-                        "lb":80,
+                        "ub":175,
+                        "lb":60,
                         "name":"右手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手臂過度彎曲 請調整彎曲角度",
-                            "lbMessage":"左手臂過度伸直 請稍微彎曲避免受傷"
+                            "ubMessage":"右手臂過度伸直 請稍微彎曲避免受傷",
+                            "lbMessage":"右手臂過度彎曲 請調整彎曲角度"
                         } 
                     }                                                
                 ],
@@ -1300,8 +1329,8 @@
                     "correction":
                     {
                         "type": 2,
-                        "ubMessage":"左手肘過度彎曲 請稍微伸直避免受傷",
-                        "lbMessage":"左手臂過度伸直 請稍微調整角度"
+                        "ubMessage":"左手臂過度伸直 請稍微調整角度",
+                        "lbMessage":"左手肘過度彎曲 請稍微伸直避免受傷"
                     }
                     
                 }
@@ -1315,8 +1344,8 @@
                     "correction":
                     {
                         "type": 2,
-                        "ubMessage":"右手肘過度彎曲 請稍微伸直避免受傷",
-                        "lbMessage":"右手臂過度伸直 請稍微調整角度"
+                        "ubMessage":"右手臂過度伸直 請稍微調整角度",
+                        "lbMessage":"右手肘過度彎曲 請稍微伸直避免受傷"
                     }
                     
                 }
@@ -1383,8 +1412,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手肘過度彎曲 請稍微伸直避免受傷",
-                            "lbMessage":"左手臂過度伸直 請稍微調整角度"
+                            "ubMessage":"左手臂過度伸直 請稍微調整角度",
+                            "lbMessage":"左手肘過度彎曲 請稍微伸直避免受傷"
                         }
                     
                     }
@@ -1398,8 +1427,8 @@
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手肘過度彎曲 請稍微伸直避免受傷",
-                            "lbMessage":"右手臂過度伸直 請稍微調整角度"
+                            "ubMessage":"右手臂過度伸直 請稍微調整角度",
+                            "lbMessage":"右手肘過度彎曲 請稍微伸直避免受傷"
                         }
                     
                     }
@@ -1785,14 +1814,14 @@
     },
 
     "l5":{
-        "name":"前跨蹲",
+        "name":"俯臥啞鈴腿彎舉",
         "parts":
             [
                     {
                         "type":"simple",
                         "joints":[23,25,27],
                         "ub":170,
-                        "lb":75,
+                        "lb":65,
                         "name":"左腿",
                         "correction":
                         {
@@ -1807,7 +1836,7 @@
                         "type":"simple",
                         "joints":[24,26,28],
                         "ub":170,
-                        "lb":75,
+                        "lb":65,
                         "name":"右腿",
                         "correction":
                         {

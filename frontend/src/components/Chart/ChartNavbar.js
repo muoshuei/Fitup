@@ -1,8 +1,4 @@
 import { ChartEnum } from "./Enums/ChartEnum";
-import CurveImage from "./images/curve_chart.png";
-import BarImage from "./images/bar_chart.png";
-import RadarImage from "./images/curve_chart.png";
-import HistImage from "./images/bar_chart_2.png";
 const ChartNavbar = ({handleOnTypeChange}) => {
     const sideTabs = [
         {

@@ -30,3 +30,5 @@ mydatabase1.db
 mediapipe.html
 pyvenv.cfg
 Externals/
+server.crt
+server.key

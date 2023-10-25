@@ -28,6 +28,7 @@ function Signin(){
       account: formData.mail,
       password: formData.password
     };
+    console.log(obj)
     await dispatch(signInAction(obj, setShowPopupcorrect, setShowPopup))
 }
   const handleChange = (event) => {

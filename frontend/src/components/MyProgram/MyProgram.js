@@ -14,7 +14,7 @@ const MyProgram = () => {
   const [preferenceList, setPreferenceList] = useState([]);
   useEffect(()=>{
     setPreferenceList(
-      userData.preferenceList.map((e) => {
+      [...userData.preferenceList.map((e) => {
         const fullNameMap = {
           "b": "body",
           "ab": "abs",
@@ -41,7 +41,12 @@ const MyProgram = () => {
           image: fullNameMap[splittedId.part],
           strength: splittedId.strength,
         }
-      }) 
+      }), {
+        id: "demo",
+        name: "測試用",
+        image: "shoulder",
+        strength: "weak"
+      }]
     )
   },[userData.preferenceList.length])
   const navigate = useNavigate();

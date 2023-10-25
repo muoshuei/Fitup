@@ -18,15 +18,14 @@
 }
 
 .chart-sidetab-element:hover{
-    transform: scale(1.1);
+    transform: scale(1.03);
     
 }
 .chart-component{
-    padding: 25px;
+    padding: 10px 0px 0px 0px ;
     position: relative;
     height: 100%;
     width: 100%;
-    padding-left: 0px;
     display: flex;
     justify-content: center;
     align-items: center;

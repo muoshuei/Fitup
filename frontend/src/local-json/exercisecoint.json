@@ -552,7 +552,7 @@
 
     "l5_1":{
         "id" : "l5_1",
-        "name":"前跨蹲",
+        "name":"俯臥啞鈴腿彎舉",
         "detail" : {
             "type" : "countBased",
             "count" : 8
@@ -560,7 +560,7 @@
     },
     "l5_2":{
         "id" : "l5_2",
-        "name":"前跨蹲",
+        "name":"俯臥啞鈴腿彎舉",
         "detail" : {
             "type" : "countBased",
             "count" : 10
@@ -568,7 +568,7 @@
     },
     "l5_3":{
         "id" : "l5_3",
-        "name":"前跨蹲",
+        "name":"俯臥啞鈴腿彎舉",
         "detail" : {
             "type" : "countBased",
             "count" : 12

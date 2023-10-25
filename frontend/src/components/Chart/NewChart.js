@@ -8,8 +8,9 @@ import RadarChart from "./Charts/RadarChart";
 import NotFoundChart from "./Charts/NotFoundChart";
 import Histogram from "./Charts/Histogram";
 import "./NewChart.css";
-import Cookies from "js-cookie";
+
 import { fetchAvgAccuracyData, fetchTotalTimeData, fetchAccuracySummaryData, fetchCountsData } from "../../apis/chart";
+import { useSelector } from "react-redux";
 
 const NewChart = () => {
     const [chartType, setChartType] = useState(ChartEnum.Curve);
@@ -17,10 +18,11 @@ const NewChart = () => {
     const [data2, setData2] = useState({"records": []});
     const [data3, setData3] = useState({"records": []});
     const [data4, setData4] = useState({"records": []});
+    const userData = useSelector((state) => state.auth?.userData)
     useEffect(()=>{
         const fetchData = async () => {
             try{
-                const user_id = Cookies.get('user_id');
+                const user_id = userData.id;
                 if (user_id) {
                     const d1 = await fetchAvgAccuracyData(user_id);
                     setData(d1);
@@ -35,7 +37,7 @@ const NewChart = () => {
                 console.error("Error fetching curve data:", error);
             }
         }
-        fetchData();
+        fetchData();    
     },[])
 
     const handleOnChartTypeChange = (type) => {
@@ -46,7 +48,7 @@ const NewChart = () => {
         <TopNavbar></TopNavbar>
         <div className="chart-main-section">
             <ChartNavbar handleOnTypeChange={handleOnChartTypeChange}></ChartNavbar>
-            <Chart type={chartType} data={data} data2={data2} data3={data3} data4={data4}></Chart>
+            <Chart key={chartType} type={chartType} data={data} data2={data2} data3={data3} data4={data4}></Chart>
         </div>
     </>
     )

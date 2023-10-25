@@ -15,8 +15,8 @@ def catch_all(path):
     return render_template("index.html")
 
 if __name__ == '__main__':
-    host = '127.0.0.1'
+    # host = '127.0.0.1'
+    host = '0.0.0.0'
     port = 8000
     debug = True
-    options = None
-    app.run(host, port, debug, options)
+    app.run(host, port, debug)

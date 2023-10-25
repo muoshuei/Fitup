@@ -1,9 +1,8 @@
-import { handleApiError } from "./utils";
+import { BASE_API_URL, handleApiError } from "./utils";
 
-const BASE_URL = 'http://localhost:8000'
 export const signIn = async (formData) => {
     try {
-      const res = await fetch(`${BASE_URL}/api/signin`, 
+      const res = await fetch(`${BASE_API_URL}/api/signin`, 
       {
         method: "POST",
         headers: {
@@ -20,7 +19,7 @@ export const signIn = async (formData) => {
   
   export const signUp = async (formData) => {
     try {
-      const res = await fetch(`${BASE_URL}/api/signup`, 
+      const res = await fetch(`${BASE_API_URL}/api/signup`, 
       {
         method: "POST",
         headers: {
@@ -40,7 +39,7 @@ export const signIn = async (formData) => {
   
   export const logout = async () => {
     try {
-      const res = await fetch(`${BASE_URL}/api/logout`, 
+      const res = await fetch(`${BASE_API_URL}/api/logout`, 
       {
         method: "POST",
         headers: {
@@ -55,7 +54,7 @@ export const signIn = async (formData) => {
 
   export const updateUserData = async (formData) => {
     try {
-      const res = await fetch(`${BASE_URL}/api/userdata`, 
+      const res = await fetch(`${BASE_API_URL}/api/userdata`, 
       {
         method: "PUT",
         headers: {

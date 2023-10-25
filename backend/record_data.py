@@ -21,10 +21,10 @@ for i in range(0, 100):
     accuracy = round(random.random(), 4)
     time = random.randint(27, 91)
     count = random.choice([8, 10, 12, 16])
-    rand_days = random.randint(1, 7)
+    rand_days = random.randint(1, 10)
     dt = datetime.datetime.now() - datetime.timedelta(days=rand_days)
     date = str(dt.date())
-    user_id = random.randint(1, 4)
+    user_id = 4
     part = random.choice(parts)
     index = random.randint(1, range_map[part])
     exercise_id = part + str(index)
