@@ -43,5 +43,4 @@ class Helper:
         return [Helper.__menu_map[i] for i, c in enumerate(pre_str) if c == '1']
 
 if __name__ == '__main__':
-    a = Helper.get_new_preference_string("000000100000000001", 3)
-    print(a)
+    pass
