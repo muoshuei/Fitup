@@ -21,7 +21,7 @@ for i in range(0, 100):
     accuracy = round(random.random(), 4)
     time = random.randint(27, 91)
     count = random.choice([8, 10, 12, 16])
-    rand_days = random.randint(1, 10)
+    rand_days = random.randint(1, 7)
     dt = datetime.datetime.now() - datetime.timedelta(days=rand_days)
     date = str(dt.date())
     user_id = 4

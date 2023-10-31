@@ -25,10 +25,10 @@ const MyInfo = () => {
             <img src={infobg} className="info-background-image" alt='info_background'></img>
             <div  className='wrapper  d-flex align-items-center  w-100'>
                 <div className='basic-information '>
-                    <div class='InfoTitle'>基本資料</div>
+                    <div className='InfoTitle'>基本資料</div>
                      
-                    <div class='InfoTop'>
-                        <img src={usericon} class='InfoIcon' alt='usericon'></img>
+                    <div className='InfoTop'>
+                        <img src={usericon} className='InfoIcon' alt='usericon'></img>
                         <div style={{fontSize: '30px'}}>{data.name}</div>
                     </div>
                     <div className='form-group  was-validated mb-2'>
@@ -67,13 +67,13 @@ const MyInfo = () => {
                                 <tr>
                                     <td className='Infoline'>• BMI :</td>
                                     <td className='info_data'>
-                                        {data.bmi}
+                                        {Math.round(data.bmi * 100) / 100} 
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                         <br/>
-                        <button class='InfoEditButton' onClick={() => navigate('/changeinfo')}>修改資料</button>
+                        <button className='InfoEditButton' onClick={() => navigate('/changeinfo')}>修改資料</button>
                     </div>        
                 </div>
             </div>

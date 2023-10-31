@@ -13,7 +13,7 @@ import { IntervalEnum } from '../Enums/ChartEnum';
 */
 class ChartHelper{
     static getChartSVG(){
-        return d3.select('svg');
+        return d3.selectAll('svg');
     }
     static clearChart(){
         this.getChartSVG().selectAll('*').remove();

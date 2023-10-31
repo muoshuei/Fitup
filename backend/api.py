@@ -70,6 +70,7 @@ def delete_menu():
 @api_blueprint.route('/train', methods=['POST'])
 def save_train_data():
    data = request.get_json()
+   print(data)
    user_id = data['user_id']
    accuracy=data['accuracy']
    time = data['time']
@@ -255,8 +256,8 @@ def signin():
       cursor.close()
       return jsonify(res)
 
-@api_blueprint.route('/chart/avgacc/<user_id>', methods=['GET'])
-def get_avg_acc_data(user_id):
+@api_blueprint.route('/chart/avgaccdate/<user_id>', methods=['GET'])
+def get_avg_acc_date_data(user_id):
    db = MySQLConnection.get_instance(credentials=credentials)
 
    cursor = db.cursor()
@@ -264,6 +265,20 @@ def get_avg_acc_data(user_id):
    cursor.execute(query, (user_id, ))
    result = cursor.fetchall()
    obj = {"records": [{"avg_accuracy": str(round(row[0], 4)), "date": str(row[1]), "exercise_id": row[2]} for row in result]}
+
+   db.commit()
+   cursor.close()
+   return jsonify(obj)
+
+@api_blueprint.route('/chart/avgacc/<user_id>', methods=['GET'])
+def get_avg_acc_data(user_id):
+   db = MySQLConnection.get_instance(credentials=credentials)
+
+   cursor = db.cursor()
+   query = "SELECT SUM(accuracy * time) / SUM(time) AS avg_accuracy, exercise_id FROM record WHERE user_id = %s GROUP BY exercise_id"
+   cursor.execute(query, (user_id, ))
+   result = cursor.fetchall()
+   obj = {"records": [{"avg_accuracy": str(round(row[0], 4)), "exercise_id": row[1]} for row in result]}
 
    db.commit()
    cursor.close()

@@ -2,7 +2,8 @@ export const ChartEnum = {
     Curve: 0,
     Bar: 1,
     Radar: 2,
-    Hist: 3
+    Hist: 3,
+    MultiRadar: 4
 }
 
 export const IntervalEnum = {
@@ -66,8 +67,8 @@ export const Parts = [
     },
     {
         name: "肩",
-        abbr: ["s1", "s2", "s3", "s4", "s5", "s6","s7", "p1"],
-        actions: ['啞鈴肩推', '啞鈴前平舉', '啞鈴側平舉', '俯身啞鈴飛鳥', '直立划船', '阿諾肩推', '過頭前平舉', '伏地挺身'],
+        abbr: ["p1", "s1", "s2", "s3", "s4", "s5", "s6","s7"],
+        actions: [ '伏地挺身','啞鈴肩推', '啞鈴前平舉', '啞鈴側平舉', '俯身啞鈴飛鳥', '直立划船', '阿諾肩推', '過頭前平舉'],
     },
 ]
 

@@ -6,7 +6,7 @@ const initialState = {
 }
 const authReducer = (state = initialState, action) => {
     const {type, payload} = action;
-    console.log(type)
+
     switch(type){
         case types.SET_USER_DATA:
             return {
@@ -29,7 +29,6 @@ const authReducer = (state = initialState, action) => {
                 ...state,
             }
         case types.SIGNIN_SUCCESS: 
-            console.log(payload)
             return {
                 ...state,
                 userData: payload ? payload.user : null,

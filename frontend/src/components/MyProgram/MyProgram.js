@@ -42,10 +42,22 @@ const MyProgram = () => {
           strength: splittedId.strength,
         }
       }), {
-        id: "demo",
-        name: "測試用",
-        image: "shoulder",
-        strength: "weak"
+        id: "demo1",
+        name: "展示用-1",
+        image: "demo",
+        strength: "1"
+      },
+      {
+        id: "demo2",
+        name: "展示用-2",
+        image: "demo",
+        strength: "2"
+      },
+      {
+        id: "demo3",
+        name: "展示用-3",
+        image: "demo",
+        strength: "3"
       }]
     )
   },[userData.preferenceList.length])

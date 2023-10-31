@@ -8,7 +8,7 @@ const RadarChart = ({data}) => {
     },[])
     
     return (
-        <div>
+        <div className="svg-container">
             <svg></svg> 
         </div>
     )
@@ -19,11 +19,16 @@ const draw = (data) => {
     const RADIUS = 200;
     const TOTAL = 5;
     const ARC = 2 * Math.PI;
-    const fivepointnum = data;
+    
+    const fivepointnum = [0,0,0,0,0];
+
+    data.map(e=>{
+        fivepointnum[e.part_id - 1] = e.accuracy;
+    })
     let fivepoint = ""
     fivepointnum.map((f, i)=>{
-        let x = RADIUS * f * Math.cos(((i+1) / 5 - 1 / 4) * ARC);
-        let y = RADIUS * f * Math.sin(((i+1) / 5 - 1 / 4) * ARC);
+        let x = RADIUS * (f * 0.8 + 0.2) * Math.cos(((i+1) / 5 - 1 / 4) * ARC);
+        let y = RADIUS * (f * 0.8 + 0.2) * Math.sin(((i+1) / 5 - 1 / 4) * ARC);
         fivepoint += x + ',' + y + ' ';
     })
     const WIDTH = 1000;

@@ -84,7 +84,7 @@ const TopNavbar = () => {
                 <div className='dropdown-menu topnav-usericon-expandable'>
                   
                   <Link to='/signin' onClick={handleLogout} className='dropdown-item topnav-dropdown-item-custom'>登出</Link>
-                  <Link to='/others' className='dropdown-item topnav-dropdown-item-custom'>其他</Link>
+                  <Link to='/' className='dropdown-item topnav-dropdown-item-custom'>其他</Link>
                 </div>
               </div>
               <div>歡迎, {userData.name}</div>

@@ -7,7 +7,7 @@ class DataProcessor {
                 DataProcessor.isPart(e.exercise_id, partEnum) && 
                 DataProcessor.isInInterval(e.date, intervalEnum)
             );
-        const result = {};
+        const result = {"":[]};
         filteredData.forEach(e => {
             if(!result[e.exercise_id]){
                 result[e.exercise_id] = [];
@@ -16,29 +16,62 @@ class DataProcessor {
         });
         return result;
     }
-    static parseToTimeData(data, intervalEnum, partEnum, actionType){
-        const result = data.filter(e => 
-            this.isPart(e.exercise_id, partEnum) &&
-            this.isInInterval(e.date, intervalEnum));
-        return result
-    }
-    static parseToAvgAccuracyData(data){
-        return data.map((e)=> Math.round(e.accuracy*10000)/10000);
-    }
-    static parseToCountData(data, intervalEnum, partEnum){
-        const result = data.filter(e => 
+    static parseToTimeData(data, intervalEnum, partEnum){
+        const filteredData = data.filter(e => 
             DataProcessor.isPart(e.exercise_id, partEnum) &&
             DataProcessor.isInInterval(e.date, intervalEnum));
+        const result = {"":[]};
+        filteredData.forEach(e => {
+            if(!result[e.exercise_id]){
+                result[e.exercise_id] = [];
+            }
+            result[e.exercise_id].push(e);
+
+            // if(!result[""][e.date]){
+            //     result[""][e.date] = {"date": e.date, "total_time": e.total_time};
+            // }
+            // else{
+            //     result[""][e.date].total_time = result[""][e.date].total_time + e.total_time;
+            // }
+        });
         return result;
     }
+    static parseToAvgAccuracyData(data){
+        const result = [...data];
+        result.map(e => {e.accuracy = Math.round(e.accuracy*10000)/10000});
+        return result;
+    }
+    static parseToCountData(data, partEnum){
 
+        const result = data.filter(e => DataProcessor.isPart(e.exercise_id, partEnum));
+        return result;
+    }
+    static parseToAccuracyDataV2(data){
+
+        const result = {
+            [PartsEnum.Abs]: [], 
+            [PartsEnum.Arm]: [], 
+            [PartsEnum.Chest]: [], 
+            [PartsEnum.Shoulder]: [],
+            [PartsEnum.Leg]: []
+        };
+        data.forEach(e => {
+            Object.keys(result).map((k, i)=>{
+                if(DataProcessor.isPart(e.exercise_id, Number(k))){
+                    result[k].push(e);
+                }  
+            })
+        });
+
+        return result;
+    }
     static isInInterval(date, intervalEnum){
         //Input will always get midnight time (YYYY-MM-DD)
         const inputDate = new Date(date);
         //Set to midnight of today
         const currentDate = new Date();
-        const timezoneOffset = - currentDate.getTimezoneOffset() / 60;
-        currentDate.setHours(timezoneOffset, 0, 0, 0);
+        // const timezoneOffset = - currentDate.getTimezoneOffset() / 60;
+        // currentDate.setHours(timezoneOffset, 0, 0, 0);
         switch(intervalEnum){
             case IntervalEnum.Today:{
                 // Avoid using "==" and "===" operator to perform a Date object comparison

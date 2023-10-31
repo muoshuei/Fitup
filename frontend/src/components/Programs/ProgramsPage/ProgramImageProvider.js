@@ -16,6 +16,9 @@ import ShoulderS from './images/ShoulderS.png';
 import LegW from './images/LegW.png';
 import LegM from './images/LegM.png';
 import LegS from './images/LegS.png';
+import demo1 from './images/demo1.png';
+import demo2 from './images/demo2.png';
+import demo3 from './images/demo3.png';
 const imageSet = 
 {
     "body":{
@@ -48,5 +51,10 @@ const imageSet =
         "medium": LegM,
         "strong": LegS
     },
+    "demo":{
+        "1": demo1,
+        "2": demo2,
+        "3": demo3
+    }
 };
 export default imageSet;

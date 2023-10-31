@@ -125,7 +125,7 @@ const ProgramCard = ({entry, strength, programListId, preferenceList, handleExpa
             </thead>
             <tbody className={expand?"program-expanded":"program-unexpanded"}>
                 {partData.sets[strength].exerciseList.map((ex, index)=>
-                    <tr>
+                    <tr key={ex.name + ex.description}>
                         <td>動作{index+1}: </td>
                         <td>{ex.name} {ex.description}</td>
                     </tr>

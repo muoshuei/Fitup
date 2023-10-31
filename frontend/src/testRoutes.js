@@ -1,7 +1,6 @@
 import APITest from "./components/APITest/APITest";
-import NewChart from "./components/Chart/NewChart";
 import SpeechTest from "./components/SpeechTest/SpeechTest";
-
+import Chart from "./components/Chart/Chart";
 const testRoutes = [
     {
         path: "/apitest",
@@ -12,8 +11,8 @@ const testRoutes = [
         element: <SpeechTest/>
     },
     {
-        path: "/newchart",
-        element: <NewChart/>
+        path: "/oldchart",
+        element: <Chart/>
     }
 ];
 export default testRoutes;

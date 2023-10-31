@@ -4,7 +4,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import fitnessMenu from "../../local-json/fitnessmenu.json"
 import "./TrainWrapper.css";
 import LogoImage from '../assets/fitup3.png';
-import { timeDays } from "d3";
 
 
 function TrainWrapper(props){
@@ -32,6 +31,9 @@ function TrainWrapper(props){
         if(index > 0 && index < programList.length){
             setIndex((index) =>　index - 1);
         }
+    }
+    const handleSkip = () => {
+        setTime(1);
     }
     
     useEffect(()=>{
@@ -66,7 +68,7 @@ function TrainWrapper(props){
     return (
         <div className="train_wrapper_container">
             <div className="topbar">
-                <Link to="/" className="logo_image_container">
+                <Link to="/home" className="logo_image_container">
                     <img src={LogoImage} className="logo_image" alt="Logo" />
                 </Link>
                 {fitnessMenu[programListId].name}
@@ -92,6 +94,7 @@ function TrainWrapper(props){
                 <div className="train-timer-text">
                         <b>{time}</b>
                 </div>
+                <button className="btn btn-warning train-skip " onClick={handleSkip}>跳過</button>
             </div>
             :
             <></>

@@ -14,9 +14,9 @@ import ExerciseCountManager from './modules/ExerciseCountManager';
 import AngleCalculator from './modules/AngleCalculator';
 import ExerciseParser from './modules/ExerciseParser';
 import { useNavigate } from 'react-router-dom';
-import Cookies from 'js-cookie';
-import { sendTrainData } from '../../apis/train';
 
+import { sendTrainData } from '../../apis/train';
+import { useSelector } from 'react-redux';
 
 
 const accuracyManager = new AccuracyManager();
@@ -30,6 +30,7 @@ function Train(props){
     const [active, setActive] = useState(false);
     const [timerState, setTimerState] = useState("");
     const [lines, setLines] = useState([]);
+    const [userId, setUserId] = useState(0);
     const [data, setData] = useState(
         {
             timer:"",
@@ -41,6 +42,7 @@ function Train(props){
     );
     
     const navigate = useNavigate();
+    const userData = useSelector((state) => state.auth?.userData);
 
     const detail = 
     exerciseDetails[props.exerciseId] 
@@ -77,6 +79,8 @@ function Train(props){
             tmplines.push(partLines);
         }
         setLines(tmplines);
+        setUserId(userData.id);
+
     }, []);
     useEffect(()=>{
         if(data.exerciseCount >= requireCount){
@@ -103,8 +107,10 @@ function Train(props){
             });
 
             const pose = new Pose({locateFile: (file) => {
+                console.log(file);
                 return `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`;
             }});
+            // const pose = new Pose();
             pose.setOptions({
                 modelComplexity: 1,
                 smoothLandmarks: true,
@@ -118,7 +124,6 @@ function Train(props){
             const sendToMediaPipe = async () => {
                 if (inputVideoRef.current) {
                     if (!inputVideoRef.current.videoWidth) {
-                        console.log(inputVideoRef.current.videoWidth);
                         requestAnimationFrame(sendToMediaPipe);
                     } else {
                         await pose.send({ image: inputVideoRef.current });
@@ -225,20 +230,20 @@ function Train(props){
     }
     const handleSave = async () => {
         const dateObject = new Date();
-        const user_id = Cookies.get('user_id');
         const year = dateObject.getFullYear()
         const month = String(dateObject.getMonth()+1).padStart(2,"0")
         const date = String(dateObject.getDate()).padStart(2, '0')
-        // 将从 Cookie 中读取的数据反序列化为 JSON 对象
+
         const obj = {
+            user_id: userId,
             accuracy: accuracyManager.getAccuracy(),
             time: accuracyManager.getTotalTimeInSeconds(),
             count: exerciseCountManager.count,
             date: `${year}-${month}-${date}`, 
             exercise_id: name,
-            user_id: user_id
         };
-        // sendTrainData(obj)
+        console.log(obj);
+        sendTrainData(obj)
     }
     return (
         <div>

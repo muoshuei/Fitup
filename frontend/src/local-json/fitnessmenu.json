@@ -4,11 +4,20 @@
         "name": "動作-強度",
         "order" : ["p1_1"]
     },
-    "demo":{
-        "menuId": "demo",
-        "name": "動作-強度",
-        "order1" : ["s1_1", "s2_1", "s3_1", "c2_1", "ar1_1", "ab5_1", "l1_1", "l4_1", "l5_1"],  
-        "order": ["s1_1"]
+    "demo1":{
+        "menuId": "demo1",
+        "name": "展示用-1",
+        "order" : ["s1_1", "s2_1", "c2_1"]
+    },
+    "demo2":{
+        "menuId": "demo2",
+        "name": "展示用-2",
+        "order" : ["s3_1", "ar1_1"]
+    },
+    "demo3":{
+        "menuId": "demo3",
+        "name": "展示用-3",
+        "order" : ["ab5_1", "l1_1", "l5_1"]  
     },
     "sWeak": {
         "menuid" : "sWeak",

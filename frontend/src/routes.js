@@ -1,4 +1,4 @@
-import Chart from "./components/Chart/Chart";
+
 import Feature from "./components/Feature/Feature";
 import HomePage from "./components/HomePage/HomePage";
 import HomeFitup from "./components/HomeFitup/HomeFitup"
@@ -48,6 +48,7 @@ import L3ExerciseDetails from './components/DetailPages/Leg/L3ExerciseDetails';
 import L4ExerciseDetails from './components/DetailPages/Leg/L4ExerciseDetails';
 import L5ExerciseDetails from './components/DetailPages/Leg/L5ExerciseDetails';
 import NotFound from "./pages/NotFound";
+import NewChart from "./components/Chart/NewChart";
 
 
 const routes = [
@@ -105,7 +106,7 @@ const routes = [
     },
     {
         path: "/chart",
-        element: <Chart />
+        element: <NewChart/>
     },
     {
         path: "/info",

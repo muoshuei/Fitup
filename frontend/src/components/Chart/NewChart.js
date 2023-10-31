@@ -3,17 +3,18 @@ import TopNavbar from "../TopNavbar/TopNavbar"
 import { ChartEnum } from "./Enums/ChartEnum";
 import ChartNavbar from "./ChartNavbar";
 import BarChart from "./Charts/BarChart";
-import CurveChart from "./Charts/CurveChart";
 import RadarChart from "./Charts/RadarChart";
 import NotFoundChart from "./Charts/NotFoundChart";
 import Histogram from "./Charts/Histogram";
 import "./NewChart.css";
+import "./Chart.css";
 
 import { fetchAvgAccuracyData, fetchTotalTimeData, fetchAccuracySummaryData, fetchCountsData } from "../../apis/chart";
 import { useSelector } from "react-redux";
+import MultiRadarChart from "./Charts/MultiRadarChart";
 
 const NewChart = () => {
-    const [chartType, setChartType] = useState(ChartEnum.Curve);
+    const [chartType, setChartType] = useState(-1);
     const [data, setData] = useState({"records": []});
     const [data2, setData2] = useState({"records": []});
     const [data3, setData3] = useState({"records": []});
@@ -34,7 +35,7 @@ const NewChart = () => {
                     setData4(d4);
                 }
             }catch(error){
-                console.error("Error fetching curve data:", error);
+                console.error("Error fetching data:", error);
             }
         }
         fetchData();    
@@ -57,7 +58,7 @@ const Chart = ({type, data, data2, data3, data4}) => {
     return (
     <div className="chart-component">
         {
-            type == ChartEnum.Curve ? <CurveChart data={data}></CurveChart> :
+            type == ChartEnum.MultiRadar ? <MultiRadarChart data={data}></MultiRadarChart> :
             type == ChartEnum.Hist ? <Histogram data={data2}></Histogram> :
             type == ChartEnum.Radar ? <RadarChart data={data3}></RadarChart> :
             type == ChartEnum.Bar ? <BarChart data={data4}></BarChart> :
