@@ -16,12 +16,12 @@ const L2ExerciseDetails = () => {
          <img src={l2} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '130px' }}>前跨蹲</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '110px', fontSize: '24px' }}>Forward Lunge</span>
+        <b><font face="monospace" >前跨蹲</font></b><br/>
+        <span style={{ fontFamily: 'serif', fontSize: '24px' }}>Forward Lunge</span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn" style={{ marginLeft: '100px'}}><b>觀看影片</b></button>                               
+     <button className="custom-btn"><b>觀看影片</b></button>                               
       </div>
    
     </div>

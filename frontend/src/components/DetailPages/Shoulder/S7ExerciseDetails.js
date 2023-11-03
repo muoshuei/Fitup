@@ -15,13 +15,13 @@ const S7ExerciseDetails = () => {
          <img src={s7} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '100px' }}>過頭前平舉</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '85px', fontSize: '24px' }}>Overhead Front Raise
+        <b><font face="monospace">過頭前平舉</font></b><br/>
+        <span style={{ fontFamily: 'serif', fontSize: '24px' }}>Overhead Front Raise
         </span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn" style={{  marginLeft: '100px'}}><b>觀看影片</b></button>                               
+     <button className="custom-btn"><b>觀看影片</b></button>                               
       </div>
    
     </div>

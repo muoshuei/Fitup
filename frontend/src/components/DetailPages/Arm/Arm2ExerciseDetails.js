@@ -15,12 +15,12 @@ const H2ExerciseDetails = () => {
          <img src={arm2} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '110px' }}>三頭屈伸</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '24px', fontSize: '24px' }}>Seated Dumbbell Tricep Extension</span>
+        <b><font face="monospace">三頭屈伸</font></b><br/>
+        <span style={{ fontFamily: 'serif', fontSize: '24px' }}>Seated Dumbbell Tricep Extension</span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn"  style={{  marginLeft: '100px'}}><b>觀看影片</b></button>                               
+     <button className="custom-btn" ><b>觀看影片</b></button>                               
       </div>
    
     </div>

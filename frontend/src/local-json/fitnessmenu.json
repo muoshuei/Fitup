@@ -7,12 +7,12 @@
     "demo1":{
         "menuId": "demo1",
         "name": "展示用-1",
-        "order" : ["s1_1", "s2_1", "c2_1"]
+        "order" : ["s1_1", "s3_1"]
     },
     "demo2":{
         "menuId": "demo2",
         "name": "展示用-2",
-        "order" : ["s3_1", "ar1_1"]
+        "order" : ["s2_1", "c2_1", "ar1_1"]
     },
     "demo3":{
         "menuId": "demo3",

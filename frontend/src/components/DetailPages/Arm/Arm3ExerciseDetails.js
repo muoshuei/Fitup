@@ -16,12 +16,12 @@ const H3ExerciseDetails = () => {
          <img src={arm3} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '110px' }}>錘式彎舉</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '110px', fontSize: '24px' }}>Hammer Curl</span>
+        <b><font face="monospace">錘式彎舉</font></b><br/>
+        <span style={{ fontFamily: 'serif', fontSize: '24px' }}>Hammer Curl</span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn"  style={{  marginLeft: '100px'}}><b>觀看影片</b></button>                               
+     <button className="custom-btn"><b>觀看影片</b></button>                               
       </div>
    
     </div>

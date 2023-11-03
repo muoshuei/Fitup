@@ -81,9 +81,12 @@ function TrainWrapper(props){
             <div className="bottombar">
                 {index !== 0 ? <button onClick={handlePrev}>上個動作</button> : <></>}
                 <div>{index}/{programList.length}</div>
+                {/* {index === programList.length - 1 
+                ? <Link to="/program/new">回到菜單頁面</Link>
+                : <></>} */}
                 {index === programList.length - 1 
                 ? <Link to="/program/new">回到菜單頁面</Link>
-                : <></>}
+                : <button onClick={handleNext}>下個動作</button>}
             </div>
 
             {achieved 

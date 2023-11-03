@@ -16,13 +16,13 @@ const C3ExerciseDetails = () => {
          <img src={c3} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '95px' }}>窄距上斜胸推</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '20px', fontSize: '20px' }}>Close Grip Dumbbell Inclined Chest Press
+        <b><font face="monospace">窄距上斜胸推</font></b><br/>
+        <span style={{ fontFamily: 'serif', fontSize: '20px' }}>Close Grip Dumbbell Inclined Chest Press
         </span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn"  style={{  marginLeft: '100px'}}><b>觀看影片</b></button>                               
+     <button className="custom-btn"><b>觀看影片</b></button>                               
       </div>
    
     </div>

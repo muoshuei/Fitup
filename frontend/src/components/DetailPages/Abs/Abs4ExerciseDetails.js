@@ -16,12 +16,12 @@ const B4ExerciseDetails = () => {
          <img src={abs4} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '105px' }}>單車式捲腹</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '100px' , fontSize: '28px' }}>Bicycle Crunch</span>
+        <b><font face="monospace">單車式捲腹</font></b><br/>
+        <span style={{ fontFamily: 'serif', fontSize: '28px' }}>Bicycle Crunch</span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn" style={{  marginLeft: '106px'}}><b>觀看影片</b></button>                               
+     <button className="custom-btn"><b>觀看影片</b></button>                               
       </div>
    
     </div>

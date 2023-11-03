@@ -15,13 +15,13 @@ const C2ExerciseDetails = () => {
          <img src={c2} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '110px' }}>啞鈴上夾胸</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '78px', fontSize: '20px' }}>Dumbbell Inclined Bench Fly
+        <b><font face="monospace" >啞鈴上夾胸</font></b><br/>
+        <span style={{ fontFamily: 'serif', fontSize: '20px' }}>Dumbbell Inclined Bench Fly
         </span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn"  style={{  marginLeft: '110px'}}><b>觀看影片</b></button>                               
+     <button className="custom-btn"><b>觀看影片</b></button>                               
       </div>
    
     </div>

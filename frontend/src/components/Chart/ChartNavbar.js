@@ -18,7 +18,7 @@ const ChartNavbar = ({handleOnTypeChange}) => {
         },
         {
             type: ChartEnum.Bar,
-            text: "運動組數統計",
+            text: "運動次數統計",
         },
     ]
     const handleSelect = (type) => {

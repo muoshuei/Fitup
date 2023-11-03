@@ -15,12 +15,12 @@ const S1ExerciseDetails = () => {
          <img src={s1} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '120px' }}>啞鈴肩推</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '50px' , fontSize: '28px'}}>Dumbbell Shoulder Press</span>
+        <b><font face="monospace">啞鈴肩推</font></b><br/>
+        <span style={{ fontFamily: 'serif', fontSize: '28px'}}>Dumbbell Shoulder Press</span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn" style={{  marginLeft: '100px'}}><b>觀看影片</b></button>                               
+     <button className="custom-btn"><b>觀看影片</b></button>                               
       </div>
    
     </div>

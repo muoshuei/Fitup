@@ -12,13 +12,13 @@ const S4ExerciseDetails = () => {
          <img src={s4} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '95px' }}>俯身啞鈴飛鳥</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '74px', fontSize: '24px' }}>Bent Over Dumbbell Flye
+        <b><font face="monospace">俯身啞鈴飛鳥</font></b><br/>
+        <span style={{ fontFamily: 'serif', fontSize: '24px' }}>Bent Over Dumbbell Flye
         </span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn" style={{ marginLeft: '100px'}}><b>觀看影片</b></button>                               
+     <button className="custom-btn"><b>觀看影片</b></button>                               
       </div>
    
     </div>

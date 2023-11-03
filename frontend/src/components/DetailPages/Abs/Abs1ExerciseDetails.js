@@ -90,7 +90,7 @@ const C1ExerciseDetails = () => {
             <h4><b>⚠注意事項</b></h4>
             <p className="step"> 
             🔹初學者要避免一次做太多，可以從一組5下開始做起，然後每回多加一下，<br/>
-            <span style={{marginLeft: '18px' }}>
+            <span>
             直到每回可以做15下一組，再慢慢進展至可以做達3組 </span>
             </p>
             <p className="step"> 
@@ -101,7 +101,7 @@ const C1ExerciseDetails = () => {
             <span style={{fontSize: '12px'}}><b>➜右手手肘接觸左膝，左手手肘接觸右膝等動作<br/>
             </b> 
             </span>
-            <p style={{marginLeft: '18px' }}> 
+            <p> 
             對增強腹部肌肉力量無顯著幫助，且讓下背因壓迫受傷
             </p></p>
             <p>

@@ -15,13 +15,13 @@ const S3ExerciseDetails = () => {
          <img src={s3} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '100px' }}>啞鈴側平舉</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '78px', fontSize: '24px' }}>Dumbbell Lateral Raise
+        <b><font face="monospace">啞鈴側平舉</font></b><br/>
+        <span style={{ fontFamily: 'serif',  fontSize: '24px' }}>Dumbbell Lateral Raise
         </span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn" style={{  marginLeft: '100px'}}><b>觀看影片</b></button>                               
+     <button className="custom-btn" ><b>觀看影片</b></button>                               
       </div>
    
     </div>

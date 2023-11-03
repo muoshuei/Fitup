@@ -16,13 +16,13 @@ const C4ExerciseDetails = () => {
          <img src={c4} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '95px' }}>仰臥屈臂上拉</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '98px', fontSize: '24px' }}>Dumbbell Pullover
+        <b><font face="monospace">仰臥屈臂上拉</font></b><br/>
+        <span style={{ fontFamily: 'serif', fontSize: '24px' }}>Dumbbell Pullover
         </span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn"  style={{  marginLeft: '105px'}}><b>觀看影片</b></button>                               
+     <button className="custom-btn"><b>觀看影片</b></button>                               
       </div>
    
     </div>

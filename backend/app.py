@@ -12,7 +12,7 @@ CORS(app, resources={r"*": {"origins": "*"}})
 @app.route("/<string:path>")
 @app.route('/<path:path>')
 def catch_all(path):
-    return render_template("index.html")
+    return app.send_static_file("index.html")
 
 if __name__ == '__main__':
     host = '127.0.0.1'

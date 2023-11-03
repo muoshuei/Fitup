@@ -16,13 +16,13 @@ const S6ExerciseDetails = () => {
          <img src={s6} className="w-100"/>
       <p></p>
       <h2>
-        <b><font face="monospace" style={{ marginLeft: '65px' }}>阿諾肩推(坐姿版)</font></b><br/>
-        <span style={{ fontFamily: 'serif', marginLeft: '120px', fontSize: '24px' }}>Arnold Press
+        <b><font face="monospace">阿諾肩推(坐姿版)</font></b><br/>
+        <span style={{ fontFamily: 'serif', fontSize: '24px' }}>Arnold Press
         </span>
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn" style={{  marginLeft: '100px'}}><b>觀看影片</b></button>                               
+     <button className="custom-btn"><b>觀看影片</b></button>                               
       </div>
    
     </div>

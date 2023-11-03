@@ -109,7 +109,7 @@ const drawDimension = (width, height, padding, parts, max) => {
     .attr("text-anchor", "middle")
     .attr('class', 'xText')
     .style("font-size", "25px")
-    .text("組數");
+    .text("次數");
     //畫出y軸
     let yAxis = d3.axisLeft(yScale);
     //新增y軸
