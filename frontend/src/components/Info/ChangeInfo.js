@@ -39,7 +39,7 @@ const Changeinfo = () => {
             <img src={infobg} className="info-background-image" alt="info_background"></img>
             <div  className='wrapper  d-flex align-items-center  w-100'>
                 <div className='change-information '>
-                    <div class='InfoTop'>
+                    <div class='InfoTopBar'>
                         <div class='Back' onClick={()=>navigate(-1)}>
                             <img src = { Back } alt='return'></img>
                         </div>

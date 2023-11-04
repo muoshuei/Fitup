@@ -31,13 +31,9 @@
     height: 60vh;
     justify-content: flex-start; 
 }
-.Back {
-    width: 400px;
-    display: flex;
-    align-items: left;
-    justify-content: left;
+.Back{
+    margin-left: 10px;
 }
-
 .Back img:hover {
     content: url('/src/components/Info/images/Back1.png');
 }
@@ -65,7 +61,6 @@ td.info_table {
     color: white;
     border-radius: 10px;
     width:250px;
-    margin-left: 35px;
 }
 
 .InfoIcon {
@@ -77,10 +72,12 @@ td.info_table {
     margin: 20px;
 }
 
-
+.InfoTopBar {
+    display: flex;
+    align-items: center;
+}
 
 .InfoTop {
-   
     display: flex;
     justify-content: center;
     align-items: center;

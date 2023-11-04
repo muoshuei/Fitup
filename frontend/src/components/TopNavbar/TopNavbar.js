@@ -48,8 +48,8 @@ const TopNavbar = () => {
                   <b>訓練菜單</b>
                 </a>
                 <div className='dropdown-menu action-expandable'>
-                  <Link to='/program/new' className='dropdown-item action-dropdown-item-custom'>新增菜單</Link>
-                  <Link to='/program/mine' className='dropdown-item action-dropdown-item-custom'>我的菜單</Link>
+                  <Link to='/newprogram' className='dropdown-item action-dropdown-item-custom'>新增菜單</Link>
+                  <Link to='/myprogram' className='dropdown-item action-dropdown-item-custom'>我的菜單</Link>
                 </div>
               </div>
 

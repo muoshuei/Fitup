@@ -21,7 +21,7 @@ canvas{
 .bottombar{
     padding: 10px 10px;
     position: fixed;
-    width: 100%;
+    width: 1300px;
     bottom: 0;
     z-index: 100;
     font-size:large;
@@ -79,8 +79,17 @@ canvas{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 .train-skip{
     margin: 0;
     transform: translateY(200%);
+}
+.outer_wrapper{
+    position: relative;
+}
+.overlay_iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }

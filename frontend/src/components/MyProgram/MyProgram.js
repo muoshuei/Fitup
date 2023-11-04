@@ -84,7 +84,7 @@ const MyProgram = () => {
       <div className="menu-list">
         <div className="new-menu">
           <h2 className='mymenu'>新增菜單</h2>
-          <Link to="/program/new" className='react-link'>
+          <Link to="/newprogram" className='react-link'>
             <div className='plus-sign'><b>+</b></div>
           </Link>
         </div>

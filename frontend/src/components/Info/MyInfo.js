@@ -1,4 +1,5 @@
 import{ React,  useState, useEffect } from 'react';
+import Back from './images/Back.png';
 import usericon from './images/usericon.png';
 import infobg from './images/infobg.png'
 import './MyInfo.css';
@@ -25,11 +26,18 @@ const MyInfo = () => {
             <img src={infobg} className="info-background-image" alt='info_background'></img>
             <div  className='wrapper  d-flex align-items-center  w-100'>
                 <div className='basic-information '>
-                    <div className='InfoTitle'>基本資料</div>
+                    <div className="InfoTopBar">
+                        <div class='Back' onClick={()=>navigate(-1)}>
+                            <img src = { Back } alt='return'></img>
+                        </div>
+                        <div className='InfoTitle'>基本資料</div>
+                    </div>
+                    
                      
                     <div className='InfoTop'>
                         <img src={usericon} className='InfoIcon' alt='usericon'></img>
                         <div style={{fontSize: '30px'}}>{data.name}</div>
+                        
                     </div>
                     <div className='form-group  was-validated mb-2'>
                         <table className="info_table">

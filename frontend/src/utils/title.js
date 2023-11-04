@@ -7,8 +7,8 @@ const titleMap = {
     "/changeinfo": "Personal Info",
     "/action/:part": "Action",
     "/action/:part/:id": "Details",
-    "/program/new": "New Program",
-    "/program/mine": "My Program",
+    "/newprogram": "New Program",
+    "/myprogram": "My Program",
     "/train": "Training",
     "/chart": "Statistics"
 

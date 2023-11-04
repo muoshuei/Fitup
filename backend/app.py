@@ -7,7 +7,6 @@ app.register_blueprint(api_blueprint, url_prefix='/api')
 
 CORS(app, resources={r"*": {"origins": "*"}})
 
-
 @app.route('/', defaults={'path': ''})
 @app.route("/<string:path>")
 @app.route('/<path:path>')

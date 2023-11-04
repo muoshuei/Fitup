@@ -93,11 +93,11 @@ const routes = [
         element: <LegMainPage />
     },
     {
-        path: "/program/new",
+        path: "/newprogram",
         element: <ProgramNavPage />
     },
     {
-        path: "/program/mine",
+        path: "/myprogram",
         element: <MyProgram />
     },
     {

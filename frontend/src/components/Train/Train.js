@@ -80,7 +80,8 @@ function Train(props){
         }
         setLines(tmplines);
         setUserId(userData.id);
-
+        pauseButton.current.disabled = true;
+        resetButton.current.disabled = true;
     }, []);
     useEffect(()=>{
         if(data.exerciseCount >= requireCount){
@@ -268,6 +269,7 @@ function Train(props){
                         <button className="btn btn-danger btn_custom" ref={resetButton} id="reset" onClick={handleReset}>　重置　</button>
                         <button className="btn btn-warning btn_custom" ref={leaveButton} id="leave" onClick={()=>{navigate('/program/new')}}>離開偵測</button>
                         {/* <button className="btn btn-danger btn_custom" id="save" onClick={handleSave}>　重置　</button> */}
+                        {/* <button className="btn btn-secondary btn_custom" onClick={props.handleOpenDetail}>展開詳細資訊</button> */}
                     </div>
                 </div>
                 
