@@ -267,7 +267,7 @@ function Train(props){
                         <button className="btn btn-primary btn_custom" ref={startButton} id="start" onClick={handleStart}>開始偵測</button>
                         <button className="btn btn-secondary btn_custom" ref={pauseButton} id="pause" onClick={handlePause}>暫停偵測</button>
                         <button className="btn btn-danger btn_custom" ref={resetButton} id="reset" onClick={handleReset}>　重置　</button>
-                        <button className="btn btn-warning btn_custom" ref={leaveButton} id="leave" onClick={()=>{navigate('/program/new')}}>離開偵測</button>
+                        <button className="btn btn-warning btn_custom" ref={leaveButton} id="leave" onClick={()=>{navigate('/newprogram')}}>離開偵測</button>
                         {/* <button className="btn btn-danger btn_custom" id="save" onClick={handleSave}>　重置　</button> */}
                         {/* <button className="btn btn-secondary btn_custom" onClick={props.handleOpenDetail}>展開詳細資訊</button> */}
                     </div>
