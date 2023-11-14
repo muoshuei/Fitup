@@ -1,35 +1,27 @@
-# react-flask-mediapipe-pose
+# Fitup
+A fitness web application with computer vision technology. Detecting body and analyzing postures to determine exercise outcome, such as action accuracies, time taken, etc. Aiming to improve physical appearance and social anxiety with AI guidance. 
 
 ## Install Guide
 
-See 'frontend/package.json' to see all the other used react dependencies
+pip install -r requirements.txt
 
-### Set up python virtual environment
+cd frontend
 
-pip install virtualenv
+npm install
 
-virtualenv --python=python3.10 venv
+npm run build
 
-Use the following command to activate virtualenv
-**.\Scripts\activate**
+## Start Server
 
-### Download the required python packages
+Run app.py
 
-pip install -q mediapipe==0.10.0
+## Core tech stacks
 
-pip install flask
+react, mediapipe, redux, d3, flask, mysql
 
-pip install opencv-python
 
-### Create frontend folder
 
-**Make sure you have _create-react-app_ globally installed**
 
-npx create-react-app frontend
-
-cd into frontend folder:
-
-run npm i axios
 
 
 
