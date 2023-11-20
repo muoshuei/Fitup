@@ -144,7 +144,11 @@ const draw = (data) => {
             })
             .text(function(d, i) {
                 return radarpointer.fieldNames[i];
-            }).style('font-size', '20px');
+            })
+            .style('font-size', '20px')
+            .attr('class', function(d, i){
+                if(pointsnum[i] <= 0.5) return 'chart-red-text';
+            });
 
         svg.append('polygon')
             .attr('class', 'accuratepolygon')
@@ -170,7 +174,11 @@ const draw = (data) => {
                 .text(function(d,i) {
                     return (Math.round(pointsnum[i] * 10000) / 100) + '%';
                 })
-                .style('font-size', '20px');
+                .style('font-size', '20px')
+                .attr('class', function(d, i){
+                    if(pointsnum[i] <= 0.5) return 'chart-red-text';
+                });
+                
         svg.append("text")
         .attr("x",25)
         .attr("y",50)
