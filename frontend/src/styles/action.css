@@ -38,15 +38,6 @@
 .bg-amos{
   background-color: #f1eef1 ;
 }
-.step {
-  margin-bottom: 0.8em; 
-  font-size: 16px;
-    }
-
-.step2 {
-  margin-bottom: 2em; 
-  font-size: 18px;
-    }
 
 .btn-container {
   display: flex;
