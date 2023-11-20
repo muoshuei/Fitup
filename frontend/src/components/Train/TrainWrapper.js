@@ -16,7 +16,6 @@ function TrainWrapper(props){
     const data = useLocation();
     const programListId = data.state ? data.state.programListId : "default";
     const programList = fitnessMenu[programListId] ? fitnessMenu[programListId].order : fitnessMenu["default"].order;
-    const iframeRef = useRef(null);
     const navigate = useNavigate();
 
     const handleAchieved = (restTime) => {
@@ -109,12 +108,6 @@ function TrainWrapper(props){
                 <></>
                 }
             </div>
-            {   
-                <iframe hidden={!detailOpen} src={`/action/${parser.getPart(programList[index])}`} ref={iframeRef} className="overlay_iframe"
-                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                </iframe>
-            }
-            
         </div>
     );
 }
