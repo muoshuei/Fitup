@@ -42,7 +42,7 @@ function TrainWrapper(props){
     }
     useEffect(()=>{
         if(programListId === "default")
-            navigate("/program/mine");
+            navigate("/myprogram");
     });
     
     useEffect(() => {
@@ -65,7 +65,7 @@ function TrainWrapper(props){
     },[time])
     useEffect(()=>{
         if(index >= programList.length){
-            navigate("/program/mine");
+            navigate("/myprogram");
             return;
         }
     },[index])
@@ -90,7 +90,7 @@ function TrainWrapper(props){
                     ? <Link to="/program/new">回到菜單頁面</Link>
                     : <></>} */}
                     {index === programList.length - 1 
-                    ? <Link to="/program/new">回到菜單頁面</Link>
+                    ? <Link to="/newprogram">回到菜單頁面</Link>
                     : <button onClick={handleNext}>下個動作</button>}
                     
                 </div>
