@@ -55,6 +55,9 @@ const imageSet =
         "1": demo1,
         "2": demo2,
         "3": demo3
+    },
+    "default": {
+        "1": BodyS
     }
 };
 export default imageSet;

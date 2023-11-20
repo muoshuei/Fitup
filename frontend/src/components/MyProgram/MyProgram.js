@@ -58,7 +58,37 @@ const MyProgram = () => {
         name: "展示用-3",
         image: "demo",
         strength: "3"
-      }]
+      },
+      {
+        id: "ab",
+        name: "腹測試",
+        image: "default",
+        strength: "1"
+      },
+      {
+        id: "ar",
+        name: "手測試",
+        image: "default",
+        strength: "1"
+      },
+      {
+        id: "c",
+        name: "胸測試",
+        image: "default",
+        strength: "1"
+      },
+      {
+        id: "l",
+        name: "腿測試",
+        image: "default",
+        strength: "1"
+      },
+      {
+        id: "s",
+        name: "肩測試",
+        image: "default",
+        strength: "1"
+      },]
     )
   },[userData.preferenceList.length])
   const navigate = useNavigate();
