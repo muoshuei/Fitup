@@ -135,13 +135,13 @@ const drawData = (data, parts, width, height, padding, max) => {
     let actionname = Parts[parts].actions;
     let xAxisWidth = width - (padding * 14); //x軸長度
     let yAxisWidth = height - (padding * 8); //y軸長度
-    let rate = xAxisWidth / max;
+    let rate = xAxisWidth / max * 0.94;
     let xScale = d3.scaleLinear(); //x比例尺
     let yScale = d3.scaleBand(); //y比例尺
     //x軸定義
     xScale.rangeRound([0, xAxisWidth]) //值域
     .domain([0, max]) //定義域
-    .nice();  
+    .nice()
     //y軸定義
     yScale.rangeRound([0, yAxisWidth]) //值域
     .domain(actionname);  //定義域
@@ -174,5 +174,34 @@ const drawData = (data, parts, width, height, padding, max) => {
     .attr('width', function(d) {
         return d * rate;})
     .attr('height', 240 / 4);
+    bar.on('mouseover', handleMouseOver)
+    .on('mouseleave', handleMouseLeave);
+    function handleMouseOver(d, i) {
+        let rectX = Number(d3.select(this).attr('x'));
+        let rectY = Number(d3.select(this).attr('y'));
+        let width = Number(d3.select(this).attr('width'))
+        d3.select(this)
+        .attr('fill', '#ff1') //變色       
+
+        svg.append('text') // 加上文字標籤
+        .attr('class', 'infoText')
+        .attr("x", function() {
+            return rectX + width;
+        }) //x座標
+        .attr('y', function() {
+            return rectY - 10;
+        }) //Y座標                        
+        .style('fill', '#000')
+        .style('font-size', '18px')
+        .style('font-weight', 'bold')
+        .style("text-anchor", 'middle')
+        .text(d.target.__data__);
+    }
+    function handleMouseLeave() {
+        d3.select(this)
+        .attr('fill', '#abdff1');
+        // 移除文字標籤
+        svg.select('.infoText').remove();
+    }
 }
 export default BarChart;

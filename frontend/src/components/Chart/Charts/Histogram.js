@@ -261,6 +261,35 @@ const drawData = (data, interval, parts, action, width, height, padding, max) =>
         return barWidth;
     }
     );
+    bar.on('mouseover', handleMouseOver)
+    .on('mouseleave', handleMouseLeave);
+    function handleMouseOver(d, i) {
+        let rectX = Number(d3.select(this).attr('x'));
+        let rectY = Number(d3.select(this).attr('y'));
+        let width = Number(d3.select(this).attr('width'))
+        d3.select(this)
+        .attr('fill', '#ff1') //變色       
+
+        svg.append('text') // 加上文字標籤
+        .attr('class', 'infoText')
+        .attr("x", function() {
+            return rectX + width/2;
+        }) //x座標
+        .attr('y', function() {
+            return rectY - 10;
+        }) //Y座標                        
+        .style('fill', '#000')
+        .style('font-size', '18px')
+        .style('font-weight', 'bold')
+        .style("text-anchor", 'middle')
+        .text(d.target.__data__);
+    }
+    function handleMouseLeave() {
+        d3.select(this)
+        .attr('fill', '#abdff1');
+        // 移除文字標籤
+        svg.select('.infoText').remove();
+    }
     if(!data[action]){
         svg.append("text")
         .attr("x", width / 2)
