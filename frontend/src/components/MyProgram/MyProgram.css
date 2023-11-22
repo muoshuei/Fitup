@@ -34,6 +34,7 @@ h1 {
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff; /* 白色背景，使菜單區域突顯出來 */
+  transition: transform 0.3s ease-in-out;
 }
 
 .new-menu:hover {
