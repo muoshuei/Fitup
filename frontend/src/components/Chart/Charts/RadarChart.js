@@ -43,7 +43,7 @@ const draw = (data) => {
     };
     //會用到的數
    const LEVEL = 5; //五角形個數
-
+    const errorPercentage = 0.35;
     //網軸的五角形的座標
     let polygons = {
         webs: [],
@@ -124,7 +124,7 @@ const draw = (data) => {
         .text(function(d, i) {
             return radarpointer.fieldNames[i];
         }).attr('class', function(d, i){
-            if(fivepointnum[i] <= 0.5) return 'chart-red-text';
+            if(fivepointnum[i] <= errorPercentage) return 'chart-red-text';
         });
 
     svg.append('polygon')
@@ -153,7 +153,7 @@ const draw = (data) => {
             })
             .style('font-size', '20px')
             .attr('class', function(d, i){
-                if(fivepointnum[i] <= 0.5) return 'chart-red-text';
+                if(fivepointnum[i] <= errorPercentage) return 'chart-red-text';
             });
 }
 export default RadarChart;
