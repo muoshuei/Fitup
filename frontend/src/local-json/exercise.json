@@ -352,7 +352,7 @@
                         "type":"simple",
                         "joints":[11,13,15],
                         "ub":170,
-                        "lb":150,
+                        "lb":120,
                         "name":"左手肘",
                         "correction":
                         {
@@ -366,7 +366,7 @@
                         "type":"simple",
                         "joints":[12,14,16],
                         "ub":170,
-                        "lb":150,
+                        "lb":120,
                         "name":"右手肘",
                         "correction":
                         {
@@ -379,8 +379,8 @@
                     {
                         "type":"surfaces",
                         "joints":[[12,24,23],[26,25,24]],
-                        "ub":75,
-                        "lb":45,
+                        "ub":60,
+                        "lb":30,
                         "name":"腰部",
                         "correction":
                         {  
@@ -393,8 +393,8 @@
                     {
                         "type":"simple",
                         "joints":[23,25,27],
-                        "ub":145,
-                        "lb":120,
+                        "ub":170,
+                        "lb":110,
                         "name":"左膝",
                         "correction":
                         {
@@ -407,8 +407,8 @@
                     {
                         "type":"simple",
                         "joints":[24,26,28],
-                        "ub":145,
-                        "lb":120,
+                        "ub":170,
+                        "lb":110,
                         "name":"右膝",
                         "correction":
                         {
@@ -607,13 +607,13 @@
                         "type":"simple",
                         "joints":[23,11,13],
                         "ub":180,
-                        "lb":10,
+                        "lb":5,
                         "name":"左手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"左手啞鈴下放時 不宜超過大腿",
-                            "lbMessage":"左手啞鈴上舉時 前臂至耳朵兩旁即可"                           
+                            "ubMessage":"左手啞鈴上舉時 前臂至耳朵兩旁即可",
+                            "lbMessage":"左手啞鈴下放時 不宜超過大腿"                           
                         }
                         
                     }
@@ -622,21 +622,21 @@
                         "type":"simple",
                         "joints":[24,12,14],
                         "ub":180,
-                        "lb":10,
+                        "lb":5,
                         "name":"右手臂",
                         "correction":
                         {
                             "type": 2,
-                            "ubMessage":"右手啞鈴下放時 不宜超過大腿",
-                            "lbMessage":"右手啞鈴上舉時 前臂至耳朵兩旁即可"
+                            "ubMessage":"右手啞鈴上舉時 前臂至耳朵兩旁即可",
+                            "lbMessage":"右手啞鈴下放時 不宜超過大腿"
                         } 
                     }
                 ,
                     {
                         "type":"simple",
                         "joints":[11,13,15],
-                        "ub":170,
-                        "lb":150,
+                        "ub":180,
+                        "lb":130,
                         "name":"左手肘",
                         "correction":
                         {
@@ -649,8 +649,8 @@
                     {
                         "type":"simple",
                         "joints":[12,14,16],
-                        "ub":170,
-                        "lb":150,
+                        "ub":180,
+                        "lb":130,
                         "name":"右手肘",
                         "correction":
                         {
@@ -1178,8 +1178,8 @@
                     {
                         "type":"simple",
                         "joints":[11,13,15],
-                        "ub":170,
-                        "lb":45,
+                        "ub":180,
+                        "lb":75,
                         "name":"左手臂",
                         "correction":
                         {
@@ -1193,8 +1193,8 @@
                     {
                         "type":"simple",
                         "joints":[12,14,16],
-                        "ub":170,
-                        "lb":45,
+                        "ub":180,
+                        "lb":75,
                         "name":"右手臂",
                         "correction":
                         {
@@ -1277,7 +1277,7 @@
                     {
                         "type":"surfaces",
                         "joints":[[12,24,23],[26,25,24]],
-                        "ub":100,
+                        "ub":160,
                         "lb":0,
                         "name":"腰部",
                         "correction":
@@ -1298,8 +1298,8 @@
         "joints":[11,12,23,24,25,26],
         "counterBounds":
         {
-            "lb":10,
-            "ub":60
+            "lb":0,
+            "ub":180
         }
     },
 
@@ -1652,7 +1652,7 @@
                         "type":"simple",
                         "joints":[23,25,27],
                         "ub":180,
-                        "lb":75,
+                        "lb":85,
                         "name":"左腿",
                         "correction":
                         {
@@ -1667,7 +1667,7 @@
                         "type":"simple",
                         "joints":[24,26,28],
                         "ub":180,
-                        "lb":75,
+                        "lb":85,
                         "name":"右腿",
                         "correction":
                         {
