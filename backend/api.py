@@ -329,5 +329,7 @@ def get_counts_data(user_id):
    db.commit()
    cursor.close()
    return jsonify(obj)
-    
+@api_blueprint.route('/logout', methods=['POST'])
+def logout():
+   return jsonify({})
 
