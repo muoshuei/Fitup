@@ -1,4 +1,5 @@
 class Helper:
+    #DUMMY - A dummy character prefix to work-around database type detection for digits
     __menu_map = ("DUMMY", "bWeak", "bMedium", "bStrong", 
                     "abWeak", "abMedium", "abStrong", 
                     "arWeak", "arMedium", "arStrong",
