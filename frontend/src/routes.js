@@ -49,6 +49,7 @@ import L4ExerciseDetails from './components/DetailPages/Leg/L4ExerciseDetails';
 import L5ExerciseDetails from './components/DetailPages/Leg/L5ExerciseDetails';
 import NotFound from "./pages/NotFound";
 import NewChart from "./components/Chart/NewChart";
+import DetailPage from "./components/DetailPages/DetailPage";
 
 
 const routes = [
@@ -223,6 +224,11 @@ const routes = [
     {
         path: "/action/p/1",
         element: <P1ExerciseDetails/>
+    },
+    ,  
+    {
+        path: "/detail",
+        element: <DetailPage/>
     },
     {
         path: "/feature",

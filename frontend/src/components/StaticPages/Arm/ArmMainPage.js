@@ -113,10 +113,10 @@ function ArmMainPage() {
                             onClick={
                               () => {
                                 if(exerciseNames[currentImageIndex + index] == "伏地挺身"){
-                                  navigate("/action/p/1");
+                                  navigate("/detail", {state: {exerciseId: "p1"}});
                                 }
                                 else{
-                                  navigate("/action/arm/" + (1+index+(showFirstSet?0:4)));
+                                  navigate("/detail", {state: {exerciseId: `ar${(1+index+(showFirstSet?0:4))}`}});
                                 }
                               }
                             }

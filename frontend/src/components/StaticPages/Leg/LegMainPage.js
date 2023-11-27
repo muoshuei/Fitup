@@ -109,7 +109,7 @@ function LegMainPage() {
                           <button
                             className="btn btn5 custom-button"
                             style={{ marginBottom: '-30px' }} // 調整按鈕位置
-                            onClick={() => {navigate("/action/leg/" + (1+index+(showFirstSet?0:4)))}}
+                            onClick={() => {navigate("/detail", {state: {exerciseId: `l${(1+index+(showFirstSet?0:4))}`}})}}
                           >
                             {exerciseNames[currentImageIndex + index]}
                           </button>

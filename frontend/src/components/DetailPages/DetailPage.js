@@ -1,15 +1,14 @@
 import React from 'react';
-import abs1 from './Abs/images/Abs1.png'
 import TopNavbar from '../TopNavbar/TopNavbar';
-import { detailContents } from './details';
 import "./details.css";
 import { useLocation } from 'react-router-dom';
+import { detailContents, detailImageMap } from './DetailContentProvider';
 const DetailPage = (props) => {
     const data = useLocation();
-    const exerciseId = data.state ? data.state.exerciseId: "ab1";
+    const exerciseId = data.state ? data.state.exerciseId: "p1";
     
     const details = detailContents[exerciseId];
-    const imageSrc = abs1;
+    const imageSrc = detailImageMap[exerciseId];
     return (
     <>
     <TopNavbar></TopNavbar>

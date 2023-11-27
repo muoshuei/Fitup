@@ -113,7 +113,7 @@ function AbsMainPage() {
                           <button
                             className="btn btn5 custom-button"
                             style={{ marginBottom: '-30px' }} // 調整按鈕位置
-                            onClick={() => {navigate("/action/abs/" + (1+index+(showFirstSet?0:4)))}}
+                            onClick={() => {navigate("/detail", {state: {exerciseId: `ab${(1+index+(showFirstSet?0:4))}`}})}}
                           >
                             {exerciseNames[currentImageIndex + index]}
                           </button>
