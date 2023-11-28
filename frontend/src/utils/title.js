@@ -10,21 +10,18 @@ const titleMap = {
     "/newprogram": "New Program",
     "/myprogram": "My Program",
     "/train": "Training",
-    "/chart": "Statistics"
-
+    "/chart": "Statistics",
+    "/detail": "Details"
 }
 export const getTitleFromRoute = (path) => {
     if (titleMap[path]){
         return (`${titleMap[path]} | Fitup`);
     }
     const actionRegex = /^\/action\/(\w+)$/;
-    const detailRegex = /^\/action\/(\w+)\/(\d+)$/;
     const programRegex = /^\/program\/(\w+)$/
 
     if(programRegex.test(path))
         return "New Program | Fitup" 
-    else if(detailRegex.test(path))
-        return "Details | Fitup";
     else if(actionRegex.test(path))
         return "Actions | Fitup"
     return ("Fitup")
