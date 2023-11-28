@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import TopNavbar from '../TopNavbar/TopNavbar';
 import "./details.css";
 import { useLocation } from 'react-router-dom';
-import { detailContents, detailImageMap } from './DetailContentProvider';
+import { detailContents, detailImageMap, detailVideoMap } from './DetailContentProvider';
 const DetailPage = (props) => {
+    const [showVideo, setShowVideo] = useState(true);
+      const videoRef = useRef(null);
+    
+      const handleClick = () => {
+        if (videoRef.current) {
+          videoRef.current.scrollIntoView({
+            behavior: 'smooth',
+          });
+        }
+      };
     const data = useLocation();
     const exerciseId = data.state ? data.state.exerciseId: "p1";
     
     const details = detailContents[exerciseId];
     const imageSrc = detailImageMap[exerciseId];
+    const vp1 = detailVideoMap[exerciseId];
     return (
     <>
     <TopNavbar></TopNavbar>
@@ -24,7 +35,7 @@ const DetailPage = (props) => {
       </h2>
       <div className="btn-container">
       <p></p>                
-     <button className="custom-btn" ><b>觀看影片</b></button>                               
+     <button className="custom-btn" onClick={handleClick}><b>觀看影片</b></button>                               
       </div>
    
     </div>
@@ -100,6 +111,19 @@ const DetailPage = (props) => {
             }     
               </div>
             </div>
+            {vp1 && showVideo && (
+                <div className="row">
+                <div className="video-container" ref={videoRef}>
+                    <video controls className="centered-video">
+                    <source src={vp1} type="video/mp4" />
+                    </video>
+                </div>  
+            
+                <div className="col-12">
+                <p></p>
+                </div> 
+                </div> 
+            )}
         </div>
     </div>
     </>
