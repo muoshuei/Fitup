@@ -60,6 +60,12 @@ const MyProgram = () => {
         strength: "3"
       },
       {
+        id: "demo4",
+        name: "展示用-4",
+        image: "demo",
+        strength: "3"
+      },
+      {
         id: "ab",
         name: "腹測試",
         image: "default",
