@@ -331,5 +331,6 @@ def get_counts_data(user_id):
    return jsonify(obj)
 @api_blueprint.route('/logout', methods=['POST'])
 def logout():
-   return jsonify({})
+   obj = {}
+   return jsonify(obj)
 
