@@ -3,6 +3,7 @@ import * as d3 from "d3"
 import ChartHelper from "../module/ChartHelper";
 import DataProcessor from "../module/DataProcessor";
 import { Parts, PartsEnum } from "../Enums/ChartEnum";
+import { errorPercentage } from "../Enums/ChartEnum";
 const MultiRadarChart = ({data}) => {
 
     useEffect(()=>{
@@ -65,7 +66,6 @@ const draw = (data) => {
         //會用到的數
         const LEVEL = 5; //五角形個數
 
-        const errorPercentage = 0.35;
         //網軸的五角形的座標
         let polygons = {
             webs: [],

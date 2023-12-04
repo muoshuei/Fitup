@@ -84,3 +84,5 @@ export const Colors = [
     '#000000',
     '#808080'
 ]
+
+export const errorPercentage = 0.45;

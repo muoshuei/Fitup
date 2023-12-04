@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import * as d3 from "d3"
 import ChartHelper from "../module/ChartHelper";
 import DataProcessor from "../module/DataProcessor";
+import { errorPercentage } from "../Enums/ChartEnum";
 const RadarChart = ({data}) => {
     useEffect(()=>{
         draw(DataProcessor.parseToAvgAccuracyData(data.records));
@@ -43,7 +44,6 @@ const draw = (data) => {
     };
     //會用到的數
    const LEVEL = 5; //五角形個數
-    const errorPercentage = 0.35;
     //網軸的五角形的座標
     let polygons = {
         webs: [],
