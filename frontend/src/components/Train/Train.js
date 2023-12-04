@@ -73,9 +73,17 @@ function Train(props){
         exerciseCountManager.setBounds(lookupMap.counterBounds.lb, lookupMap.counterBounds.ub);
         let tmplines = [];
         for(let i = 0; i < lookupMap.parts.length; i++){
+            const currPart = lookupMap.parts[i];
             let partLines = [];
-            partLines.push([lookupMap.parts[i].joints[0], lookupMap.parts[i].joints[1]]);
-            partLines.push([lookupMap.parts[i].joints[1], lookupMap.parts[i].joints[2]]);
+            if(currPart.type === "surfaces"){
+                currPart?.lines.forEach(e => {
+                    partLines.push(e);
+                });
+            }
+            else if(currPart.type === "simple"){
+                partLines.push([currPart.joints[0], currPart.joints[1]]);
+                partLines.push([currPart.joints[1], currPart.joints[2]]);
+            }
             tmplines.push(partLines);
         }
         setLines(tmplines);
