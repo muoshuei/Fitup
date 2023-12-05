@@ -27,27 +27,27 @@
     "ab":{
         "menuId": "ab",
         "name": "腹測試",
-        "order" : ["ab1_1", "ab2_1", "ab3_1", "ab4_1", "ab5_1"]  
+        "order" : ["ab1_1"]  
     },
     "ar":{
         "menuId": "ar",
         "name": "手測試",
-        "order" : ["ar1_1", "ar2_1", "ar3_1", "ar4_1", "p1_1"]  
+        "order" : ["ar1_1"]  
     },
     "c":{
         "menuId": "c",
         "name": "胸測試",
-        "order" : ["c1_1", "c2_1", "c3_1", "c4_1", "c5_1"]  
+        "order" : ["c2_1"]  
     },
     "l":{
         "menuId": "l",
         "name": "腿測試",
-        "order" : ["l1_1", "l2_1", "l3_1", "l4_1", "l5_1"]  
+        "order" : ["l1_1"]  
     },
     "s":{
         "menuId": "s",
         "name": "肩測試",
-        "order" : ["s1_1", "s2_1", "s3_1", "s4_1", "s5_1", "s6_1", "s7_1"]  
+        "order" : ["s3_1"]  
     },
     "sWeak": {
         "menuid" : "sWeak",
