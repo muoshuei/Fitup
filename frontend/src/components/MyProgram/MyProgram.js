@@ -44,57 +44,52 @@ const MyProgram = () => {
       }), {
         id: "demo1",
         name: "展示用-1",
-        image: "demo",
-        strength: "1"
+        image: "body",
+        strength: "weak"
       },
       {
         id: "demo2",
         name: "展示用-2",
-        image: "demo",
-        strength: "2"
+        image: "body",
+        strength: "medium"
       },
       {
         id: "demo3",
         name: "展示用-3",
-        image: "demo",
-        strength: "3"
-      },
-      {
-        id: "demo4",
-        name: "展示用-4",
-        image: "demo",
-        strength: "3"
-      },
-      {
-        id: "ab",
-        name: "腹測試",
-        image: "default",
-        strength: "1"
-      },
-      {
-        id: "ar",
-        name: "手測試",
-        image: "default",
-        strength: "1"
-      },
-      {
-        id: "c",
-        name: "胸測試",
-        image: "default",
-        strength: "1"
-      },
-      {
-        id: "l",
-        name: "腿測試",
-        image: "default",
-        strength: "1"
+        image: "body",
+        strength: "strong"
       },
       {
         id: "s",
-        name: "肩測試",
-        image: "default",
-        strength: "1"
-      },]
+        name: "啞鈴側平舉",
+        image: "shoulder",
+        strength: "weak"
+      },
+      {
+        id: "ar",
+        name: "二頭彎舉",
+        image: "arm",
+        strength: "weak"
+      },
+      {
+        id: "c",
+        name: "啞鈴上夾胸",
+        image: "chest",
+        strength: "weak"
+      },
+      {
+        id: "ab",
+        name: "仰臥起坐",
+        image: "abs",
+        strength: "weak"
+      },
+      {
+        id: "l",
+        name: "深蹲",
+        image: "leg",
+        strength: "weak"
+      },
+      ]
     )
   },[userData.preferenceList.length])
   const navigate = useNavigate();
