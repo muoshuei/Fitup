@@ -26,9 +26,7 @@ frontend/yarn-error.log*
 __pycache__
 
 #custom
-mydatabase1.db
 mediapipe.html
 pyvenv.cfg
-Externals/
 server.crt
 server.key
